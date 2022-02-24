@@ -1,0 +1,26 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .external-link-popup { 
+            .modal-dialog {
+                display: flex;
+                margin-top: 100px;
+                align-items: center;
+                min-height: calc(100% - 1rem);
+            }
+            .modal {
+                padding-top: 10px;
+                opacity: 1 !important;
+                display: block !important;
+                position: relative !important;
+        
+                &-content {
+                    margin-top: 45px;
+                }
+            }
+    
+            .modal-dialog-centered::before {
+                height: auto !important;
+            }
+        }
+    }
+}

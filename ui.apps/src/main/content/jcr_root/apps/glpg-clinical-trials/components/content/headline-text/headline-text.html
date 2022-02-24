@@ -1,0 +1,8 @@
+<sly data-sly-test="${wcmmode.edit && !properties.text}">
+    <p class="component-title bg-white text-center py-2 d-flex justify-content-center align-items-center">
+        <span>${component.title}</span>
+    </p>
+</sly>
+<div class="${properties.removeSpacing}">
+    <sly data-sly-include="text.html"/>
+</div>

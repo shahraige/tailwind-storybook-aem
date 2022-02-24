@@ -1,0 +1,56 @@
+<sly data-sly-test="${wcmmode.edit}">
+    <p class="component-title bg-white text-center py-2 d-flex justify-content-center align-items-center">
+        <span>${component.title}</span>
+    </p>
+</sly>
+
+<div class="main-navigation__inner">
+    <div class="main-navigation__close">
+        <button class="main-navigation__close-btn"></button>
+    </div>
+    <sly data-sly-use.navigationUse="com.glpg.clinicaltrials.core.components.use.MainNavigationUse">
+        <sly data-sly-test="${navigationUse.navigationMenus}">
+            <ul>
+                <sly data-sly-list.menuItem="${navigationUse.navigationMenus}">
+                    <sly data-sly-test.hasChildren="${menuItem.hasChildren}"></sly>
+                    <sly data-sly-test="${hasChildren}">
+                        <sly data-sly-call="${navigationItemWithChild @ myMenu = menuItem}"></sly>
+                    </sly>
+                    <sly data-sly-test="${!hasChildren}">
+                        <sly data-sly-call="${navigationItemWithoutChild @ myMenu = menuItem}"></sly>
+                    </sly>
+                </sly>
+            </ul>
+        </sly>
+    </sly>
+</div>
+
+<template data-sly-template.navigationItemWithChild="${@ myMenu}">
+    <li class="has-children ${myMenu.visibility} ${myMenu.enableSearchOverlay == true ? 'enable-overlay' : ''}">
+        <sly data-sly-use.urlFormatter="${'com.glpg.clinicaltrials.core.components.use.LinkFormatterUse' @ link= myMenu.pagePath}"></sly>
+        <a href="${urlFormatter.url}" title="${myMenu.pageTitle}">
+            ${myMenu.pageTitle}
+        </a>
+        <span class="angle-down"></span>
+        <ul class="sub-menu">
+            <sly data-sly-list.menuItem="${myMenu.menuItems}">
+                <sly data-sly-test.hasChildren="${menuItem.hasChildren}"></sly>
+                <sly data-sly-test="${hasChildren}">
+                    <sly data-sly-call="${navigationItemWithChild @ myMenu = menuItem}"></sly>
+                </sly>
+                <sly data-sly-test="${!hasChildren}">
+                    <sly data-sly-call="${navigationItemWithoutChild @ myMenu = menuItem}"></sly>
+                </sly>
+            </sly>
+        </ul>
+    </li>
+</template>
+
+<template data-sly-template.navigationItemWithoutChild="${@ myMenu}">
+    <li class="${myMenu.visibility} ${myMenu.enableSearchOverlay == true ? 'clickToOverlay' : ''}">
+        <sly data-sly-use.urlFormatter="${'com.glpg.clinicaltrials.core.components.use.LinkFormatterUse' @ link= myMenu.pagePath}"></sly>
+        <a href="${urlFormatter.url}" title="${myMenu.pageTitle}">
+            ${myMenu.pageTitle}
+        </a>
+    </li>
+</template>

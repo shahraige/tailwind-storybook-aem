@@ -1,0 +1,45 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .icon-number {
+            &__inner {
+                position: relative;
+                padding-left: 32px;   
+
+                .tooltip-icon {                
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    svg,
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        padding: 5px;
+                        border-radius: 50%;
+                        background-color: #9497a2;
+                        cursor: pointer;
+                        &:hover {
+                            background: #00BFB2;
+                        }
+                    }
+                }
+                
+                .icon-number-content {
+                    padding-top: 5px;
+                    line-height: 22px;
+                    .icon-number-title {
+                        margin: 0;
+                        font-weight: 600;
+                    }
+                    .icon-number-number {
+                        margin: 0;
+                        a {
+                            color: #004C45;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }            
+        }
+    }
+}

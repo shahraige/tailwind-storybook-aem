@@ -1,0 +1,229 @@
+<sly data-sly-test="${wcmmode.edit}">
+    <p class="component-title bg-white text-center py-2 d-flex justify-content-center align-items-center">
+        <span>${component.title}</span>
+    </p>
+</sly>
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 40%;
+        margin: auto;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    .container {
+        padding: 2px 16px;
+    }
+    img {
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        margin: auto;
+    }
+
+    .tooltip1 {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+
+    .tooltip1 .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        bottom: 0%;
+        left: 50%;
+        margin-left: -0px;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    .tooltip1 .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+
+    .tooltip1:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .popoverBtn {
+        position: absolute;
+        top: 7px;
+        right: -74px;
+        background-color: rgb(235, 60, 150);
+        border-radius: 50%;
+        border: none;
+        padding: 0px 2px;
+        width: 23px;
+        height: 25px;
+    }
+</style>
+<div
+        ng-controller="searchDetailController as ctrl"
+        ng-cloak
+>
+    <sly data-sly-use.searchDetails="com.glpg.clinicaltrials.core.components.use.SearchDetailsUse" />
+
+    <sly data-sly-test="${searchDetails.hasError}">
+        <p>${searchDetails.errorMessage}</p>
+    </sly>
+
+    <sly data-sly-test="${!searchDetails.hasError}">
+        <sly data-sly-test.clinicalTrialModel="${searchDetails.clinicalTrialModel}">
+            <h1>Trial Condition(s):</h1>
+            <h1> N/A </h1><br>
+            <b>Study status: </b><p>${clinicalTrialModel.trial_status}</p>
+            <h2>Trial Description  </h2><br> <p>${clinicalTrialModel.clinical_trial_summary}</p> <br>
+            <b>Protocol Number: </b><p>${clinicalTrialModel.id}</p><br>
+            <b>ClinicalTrials gov Identifier: </b><p>${clinicalTrialModel.gov_identifier}</p><br>
+            <p>EudraCT Number: N/A </p><br>
+            <hr>
+            <h1>Trial Purpose</h1><br>
+            <p>${clinicalTrialModel.clinical_trial_purpose}</p><br><br>
+            <hr>
+            <h1>Trial Summary</h1>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="https://clinicaltrials.merckgroup.com/images/medical-condition.png" alt="Avatar" style="width:50%">
+                        <div class="tooltip1">
+                            <button type="right" class="popoverBtn btn btn-secondary">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></button>
+                            <span class="tooltiptext">${properties.condition}</span>
+                        </div>
+                        <div class="container">
+                            <h4><b>Conditions</b></h4>
+                            <p>N/A</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="https://clinicaltrials.merckgroup.com/images/Gender-Female-Male.png" alt="Avatar" style="width:50%">
+                        <div class="tooltip1">
+                            <button type="right" class="popoverBtn btn btn-secondary">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></button>
+                            <span class="tooltiptext">${properties.gender}</span>
+                        </div>
+                        <div class="container">
+                            <h4><b>Gender</b></h4>
+                            <p>${clinicalTrialModel.gender}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="https://clinicaltrials.merckgroup.com/images/age-range.png" alt="Avatar" style="width:50%">
+                        <div class="tooltip1">
+                            <button type="right"  class="popoverBtn btn btn-secondary">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></button>
+                            <span class="tooltiptext">${properties.age}</span>
+                        </div>
+                        <div class="container">
+                            <h4><b>Age</b></h4>
+                            <sly data-sly-list="${clinicalTrialModel.std_age}">
+                                <p>${item == "Adult" ? "18+ Years" : ""}</p>
+                                <p>${item== "Child" ? "17 Years" : ""}</p>
+                                <p>${item == "Older Adult" ? "66+ Years" : ""}</p>
+                            </sly>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="https://clinicaltrials.merckgroup.com/images/inclusion-exclusion-criteria.png" alt="Avatar" style="width:50%">
+                        <div class="tooltip1">
+                            <button type="right"  class="popoverBtn btn btn-secondary">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></button>
+                            <span class="tooltiptext">${properties.inclusionExclusion}</span>
+                        </div>
+                        <div class="container">
+                            <h4><b>Inclusion | Exclusion</b></h4>
+                            <p>N/A</p>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="https://clinicaltrials.merckgroup.com/images/treatment.png" alt="Avatar" style="width:50%">
+                        <div class="tooltip1">
+                            <button type="right" class="popoverBtn btn btn-secondary">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></button>
+                            <span class="tooltiptext">${properties.medicine}</span>
+                        </div>
+                        <div class="container">
+                            <h4><b>Medicine</b></h4>
+                            <p>${clinicalTrialModel.type_of_drug}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="https://clinicaltrials.merckgroup.com/images/study-type.png" alt="Avatar" style="width:50%">
+                        <div class="tooltip1">
+                            <button type="right"  class="popoverBtn btn btn-secondary">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></button>
+                            <span class="tooltiptext">${properties.studyType}</span>
+                        </div>
+                        <div class="container">
+                            <h4><b>Study Type</b></h4>
+                            <p>N/A</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="https://clinicaltrials.merckgroup.com/images/study-phase.png" alt="Avatar" style="width:50%">
+                        <div class="tooltip1">
+                            <button type="right"  class="popoverBtn btn btn-secondary">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></button>
+                            <span class="tooltiptext">${properties.phases}</span>
+                        </div>
+                        <div class="container">
+                            <h4><b>Phase</b></h4>
+                            <p>${clinicalTrialModel.phase[0]}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="https://clinicaltrials.merckgroup.com/images/study-duration.png" alt="Avatar" style="width:50%">
+                        <div class="tooltip1">
+                            <button type="right" class="popoverBtn btn btn-secondary">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 192 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></button>
+                            <span class="tooltiptext">${properties.trialDuration}</span>
+                        </div>
+                        <div class="container">
+                            <h4><b>Trial Duration</b></h4>
+                            <p>N/A</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <hr>
+            <h1>Inclusion and Exclusion
+                Criteria</h1>
+            <p><p>${clinicalTrialModel.inclusion_exclusion_criteria}</p></p>
+        </sly>
+    </sly>
+</div>

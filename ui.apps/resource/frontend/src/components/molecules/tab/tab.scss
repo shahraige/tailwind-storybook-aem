@@ -1,0 +1,118 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .tab {
+            $this: tab !default;
+
+            .#{$this}__inner {
+
+                .#{$this}-header {
+                    overflow: hidden;
+                    @include media-breakpoint-down(xs) {
+                        [class*="col-"] {
+                            padding: 0 !important;
+                        }
+                    }
+
+                    .nav-tabs {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        border: 0;
+                        overflow-x: scroll;
+                        -ms-overflow-style: none;  /* IE and Edge */
+                        scrollbar-width: none;  /* Firefox */
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .nav-item {
+                            display: block;
+                            flex: 1;
+                            min-width: rem(180px);
+                            margin: 0;
+                            @include media-breakpoint-down(lg){
+                                min-width: rem(160px);
+                            }
+
+                            &:not(:last-child) {
+                                @include media-breakpoint-up(lg) {
+                                    margin-right: rem(30px);
+                                }
+                                
+                                @include media-breakpoint-down(md) {
+                                    margin-right: rem(20px);
+                                }
+                            }
+
+                            font-size: rem(22px);
+                            line-height: rem(30px);
+                            font-weight: 700;
+                            text-align: center;
+
+                            .nav-link {
+                                display: block;
+                                border: 0;
+                                margin: 0;
+                                position: relative;
+                                white-space: nowrap;
+                                padding: rem(10px)  rem(10px) rem(15px)  rem(10px);
+                                color: #BFC3D1;
+
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    height: 4px;
+                                    background-color: #BFC3D1;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                }
+
+                                &.active {
+                                    color: $primary;
+                                    &:after {
+                                        background-color: $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .#{$this}-content {
+                    position: relative;
+                    background: $color-athens-gray;
+                    padding: rem(64px) 0 rem(75px) 0;
+
+                    .tab-indicators{
+                        display: none;
+                        margin-top: 10px;
+                        margin-bottom: 30px;
+                        @include media-breakpoint-down(sm){
+                            display: flex;
+                        }
+                        li{
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background-color: $color-ghost;
+                            &.active{
+                                background-color: $primary;
+                            }
+                        }
+                    }
+                }
+
+                .#{$this}-pane {
+                    &:not(.active) {
+                        display: none;
+                    }
+                    &:not(.show) {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}

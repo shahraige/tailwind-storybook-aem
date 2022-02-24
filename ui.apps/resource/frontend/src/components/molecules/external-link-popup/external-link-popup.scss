@@ -1,0 +1,95 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .external-link-popup {
+            .modal {
+                background-color: rgba(51,63,72,0.8);
+                opacity: 1;
+                //display: block !important;
+                .modal-dialog {
+                    max-width: rem(1170px);
+                    width: 90%;
+                    padding-bottom: 10px;
+                    @include media-breakpoint-down (md) {
+                        align-items: flex-start;
+                    }
+                }
+                .modal-content {
+                    border: 0;
+                    margin: auto;
+                    max-width: rem(880px);
+                    background-color: transparent;
+                    box-shadow: 0 0 30px 2px rgba(0,0,0,0.5);
+                    @include media-breakpoint-down (md) {
+                        margin: 14px auto;
+                    }
+                }
+                .modal-header {
+                    position: relative;
+                    padding: rem(59px) rem(100px) 0;
+                    border-bottom: 0;
+                    background-color: $white;
+                    @include media-breakpoint-down (md) {
+                        margin-bottom: -1px;
+                        padding: rem(44px) rem(47px) 0 rem(25px);
+                    }
+                }
+
+                .modal-header-close {
+                    outline: 0;
+                    margin: 0;
+                    padding: 0;
+                    background: transparent;
+                    border: transparent;
+                    position: absolute;
+                    top: rem(30px);
+                    right: rem(31px);
+                    z-index: 1024;
+                    @include media-breakpoint-down (md) {
+                        top: rem(18px);
+                        right: rem(19px);
+                    }
+                    img {
+                        width: rem(40px);
+                        @include media-breakpoint-down (md) {
+                            width: rem(16px);
+                        }
+                    }
+                }
+                .modal-body {
+                    h5{
+                        font-size: rem(20px);
+                        line-height: rem(25px);
+                        margin-bottom: rem(30px);
+                    }
+                    
+                    background-color: $white;
+                    padding: rem(85px) rem(95px) rem(95px) rem(95px);
+                    @include media-breakpoint-down (md) {
+                        padding: 11px rem(19px) rem(24px) rem(25px);
+                    }
+                    .modal-body-content {      
+                        text-align: center;                  
+                        @include media-breakpoint-down (md) {
+                            // max-height: rem(233px);
+                            // overflow: auto;
+                            padding-right: rem(28px);
+                        }
+                    }
+
+                    .button-link{
+                        width: 100%;
+                        margin-bottom: 0;
+                        margin-top: rem(50px);
+                        .btn{
+                            font-size: rem(20px);
+                            padding: rem(10px) rem(70px);
+                            @include media-breakpoint-down (lg) {
+                                padding: rem(3px) rem(12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<sly data-sly-test="${wcmmode.edit}">
+    <p class="component-title bg-white text-center py-2 d-flex justify-content-center align-items-center">
+        <span>${component.title}</span>
+    </p>
+</sly>
+
+<!-- Start Header component markup, Copy from here -->
+<div class="header__wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="header__inner">
+                    <div class="logo">
+                        <div class="image-extension section">
+                            <div class="image-extension section" data-sly-resource="${'image-extension' @ resourceType='glpg-clinical-trials/components/content/image-extension'}"></div>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <button class="hamburger-btn">
+                            <img src="/etc.clientlibs/glpg-clinical-trials/clientlibs/assets/resources/images/icons/hamburger-icon.svg" alt="Menu" />
+                        </button>
+                        <div class="main-navigation section"  data-sly-resource="${'main-navigation' @ resourceType='glpg-clinical-trials/components/content/main-navigation'}">
+                            <!-- Start main-navigation component markup, Copy from here -->
+                <!--            <div class="anchor-navigation section"></div>-->
+                            <!-- End main-navigation component markup, Copy from here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End header component markup, Copy from here -->

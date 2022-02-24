@@ -1,0 +1,143 @@
+ul li span[class^=bullet-]:before {
+    top     : 0;
+    left    : 0;
+    content : "";
+    width   : 10px;
+    height  : 21px;
+    margin  : auto;
+    display : block;
+    position: absolute;
+    bottom  : calc(100% - 1.5em)
+}
+
+ul li span[class^=bullet-].bullet-arrow:before {
+    opacity   : .5;
+    background: url(/etc.clientlibs/glpg-clinical-trials/clientlibs/assets/resources/images/icons/chevron-right-solid.svg) no-repeat
+}
+
+ul li span[class^=bullet-].bullet-check {
+    position: relative
+}
+
+ul li span[class^=bullet-].bullet-check:before {
+    top            : 0;
+    width          : 28px;
+    height         : 28px;
+    left           : -3rem;
+    position       : absolute;
+    background     : url(/etc.clientlibs/glpg-clinical-trials/clientlibs/assets/resources/images/icons/icon-checkmark-circle.png) no-repeat;
+    background-size: cover
+}
+.brandx-section-header {
+    display       : block;
+    font-weight   : 500;
+    text-align    : center;
+    font-size     : 1.125rem;
+    padding-top   : 2.188rem;
+    line-height   : 1.563rem;
+    color         : #707070;
+    letter-spacing: .063rem
+}
+
+.brandx-section-header:after {
+    content   : "";
+    display   : block;
+    height    : .25rem;
+    width     : 2.5rem;
+    margin    : .563rem auto 0;
+    background: #e5e9ea
+}
+
+.brandx-sub-header {
+    display       : block;
+    color         : #005dac;
+    font-weight   : 700;
+    text-align    : center;
+    font-size     : 2.25rem;
+    font-family   : Ubuntu, sans-serif;
+    letter-spacing: -.045rem
+}
+
+.brandx-info-header {
+    display    : block;
+    text-align : center;
+    font-size  : 1.25rem;
+    line-height: 1.625rem
+}
+
+.brandx-headerbar {
+    padding      : 0;
+    opacity      : 1;
+    width        : 100%;
+    height       : 36px;
+    color        : #fff;
+    display      : block;
+    font-size    : 16px;
+    font-weight  : 500;
+    line-height  : 36px;
+    text-align   : center;
+    border-radius: 5px;
+    white-space  : nowrap;
+    background   : transparent linear-gradient(180deg, #005dac, #005DACCC) 0 0 no-repeat padding-box
+}
+
+.brandx-chart-label,
+.brandx-chart-label-500,
+.brandx-chart-label-550,
+.brandx-chart-label-830 {
+    margin       : 0 auto;
+    color        : #005dac;
+    font-weight  : 500;
+    text-align   : center;
+    line-height  : 1.375rem;
+    border-radius: .625rem;
+    background   : transparent linear-gradient(180deg, #e5e9ea, #f3f3f4 20%, #fff 49%, #f3f3f4 81%, #e5e9ea) 0 0 no-repeat padding-box
+}
+
+.brandx-chart-label {
+    max-width     : 100%;
+    padding       : .625rem;
+    font-size     : 1rem;
+    min-width     : 10.938rem;
+    display       : inline-block;
+    letter-spacing: .05rem
+}
+
+.brandx-chart-label-830 {
+    display  : block;
+    font-size: 1.125rem;
+    max-width: 51.875rem;
+    padding  : 1.188rem 5.313rem
+}
+
+.brandx-chart-label-550 {
+    display  : block;
+    font-size: 1.125rem;
+    max-width: 34.375rem;
+    padding  : 1.188rem 1rem
+}
+
+.brandx-chart-label-550 {
+    padding: 1rem
+}
+
+.brandx-chart-label-550 {
+    max-width: 100%
+}
+
+.brandx-chart-label-500 {
+    display  : block;
+    font-size: 1.125rem;
+    max-width: 31.25rem;
+    padding  : 1.188rem 1rem
+}
+
+.lead {
+    font-size  : 1.25rem;
+    font-weight: 300
+}
+.small,
+small {
+    font-size  : 80%;
+    font-weight: 400
+}

@@ -1,0 +1,30 @@
+@media screen {
+  [data-site-id="#{$site-id}"] {
+    .image-extension {
+      img:not(.no-bgap) {
+        margin-bottom: $cmp-bottom-gap;
+      }
+    }
+
+    .image-container {
+      display: flex;
+
+      a img {
+        width: 100%;
+      }
+    }
+
+    // Lazyload effects
+    // ---------------------------
+    img:not([src]) {
+      visibility: hidden;
+    }
+
+    /* Fixes Firefox anomaly during image load */
+    @-moz-document url-prefix() {
+      img:-moz-loading {
+        visibility: hidden;
+      }
+    }
+  }
+}

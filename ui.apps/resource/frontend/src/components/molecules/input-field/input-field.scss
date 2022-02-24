@@ -1,0 +1,17 @@
+@media screen {
+   [data-site-id="#{$site-id}"] {
+      .cmp-alert {
+         margin-bottom: $cmp-bottom-gap;
+
+         p {
+            margin-bottom: 0;
+         }
+      }
+
+      .testbg {
+         width     : 200px;
+         height    : 300px;
+         background: url("#{$root-path}images/galapagos.png") no-repeat;
+      }
+   }
+}

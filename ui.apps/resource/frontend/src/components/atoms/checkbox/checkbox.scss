@@ -1,0 +1,76 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .checkbox {
+            display: inline-block;
+            cursor: pointer;
+            width: rem(18px);
+            height: rem(18px);
+            min-width: rem(18px);
+            //border: 1px solid #979797;
+            //border-radius: rem(5px);
+            margin-right: rem(15px);
+            font-size: rem(20px);
+            margin-top: rem(3px);
+            position: relative;
+            color: $white;
+            border-radius: rem(2px);
+            border: 2px solid #fafbfc;
+            background-color: #fafbfc;
+
+            svg {
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                vertical-align: top;
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        .form-check {
+            .form-check-label {
+                font-size: rem(14px);
+                color: #232424;
+            }
+
+            input.input-checkbox {
+                display: none;
+
+                & ~ .form-check-label {
+                    display: flex;
+                }
+
+                &.check--medium ~ * .checkbox,
+                &.check--medium ~ .checkbox {
+                    font-size: rem(26px);
+                    width: rem(24px);
+                    height: rem(24px);
+                }
+
+                &.check--large ~ * .checkbox,
+                &.check--large ~ .checkbox {
+                    font-size: rem(30px);
+                    width: rem(30px);
+                    height: rem(30px);
+                }
+
+                &:checked ~ * .checkbox,
+                &:checked ~ .checkbox {
+                    background: $color-aqua-deep;
+                    border-color: $color-aqua-deep;
+                    border-radius: rem(2px);
+
+                    svg {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                &:disabled ~ * .checkbox,
+                &:disabled ~ .checkbox {
+                    opacity: 0.3;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}

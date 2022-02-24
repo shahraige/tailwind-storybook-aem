@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:ClientLibraryFolder"
+          allowProxy="{Boolean}true"
+          categories="[glpg-clinical-trials.publish.footer]"
+          embed="[
+                  apps.glpg-clinical-trials.components.content.search-result,
+                  apps.glpg-clinical-trials.components.content.search-detail,
+                  apps.glpg-clinical-trials.components.content.medical-condition-dropdown,
+                  apps.glpg-clinical-trials.components.content.search-filter-overlay,
+                  glpg-clinical-trials.js.components,
+                  glpg-commons.thirdparty
+          ]"
+          jsProcessor="[min:gcc]"/>

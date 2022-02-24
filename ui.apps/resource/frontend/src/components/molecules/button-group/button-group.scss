@@ -1,0 +1,13 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .button-group {
+            &>div {
+                display  : flex;
+                flex-wrap: wrap;
+            }
+            .button-link:not(:last-child) {
+                margin-right: rem(40px);
+            }
+        }
+    }
+}

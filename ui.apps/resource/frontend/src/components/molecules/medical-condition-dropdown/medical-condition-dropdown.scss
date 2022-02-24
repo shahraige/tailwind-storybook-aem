@@ -1,0 +1,112 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .medical-condition-dropdown {
+            position: relative;
+            &__inner {
+                position: relative;                           
+                .btn-group {
+                    .dropdown-toggle {
+                        width: 100%;
+                        text-align: left;
+                        position: relative;
+                        background-color: $primary;
+                        color: #ffffff;
+                        text-transform: uppercase;
+                        padding: rem(15px) rem(17px);
+                        border-radius: rem(4px);
+                        box-shadow: 0 0 rem(1px) $primary;
+                        font-size: rem(16px);
+                        font-weight: 700;
+                        border: 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        padding-right: 40px;
+                        min-height: rem(56px);
+                        transition: all .3s ease;
+
+                        &:hover{
+                            transition: all .3s ease;
+                            background-color: $secondary;
+                        }
+
+                        // &:focus{
+                        //     box-shadow: 0 0 0 0.2rem $secondary;
+                        // }
+
+                        @include media-breakpoint-down (lg) {
+                            min-height: rem(50px);
+                        }
+                        @include media-breakpoint-down (sm) {
+                            line-height: rem(18px);
+                            padding: rem(12px) rem(50px) rem(12px) rem(17px);
+                        }
+                        &:after {                                
+                            position: absolute;   
+                            content: "";
+                            top: rem(21px);
+                            right: rem(17px);
+                            width: rem(16px);
+                            height: rem(9px);
+                            border: 0;
+                            background:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTdweCIgaGVpZ2h0PSI5cHgiIHZpZXdCb3g9IjAgMCAxNyA5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPjhFQ0I4MUMxLTFGQkMtNDlENS04RkZELUNENjMzMDVFMjJCMDwvdGl0bGU+CiAgICA8ZyBpZD0iRGVzaWduIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJMYW5kaW5nLXBhZ2VfRFQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNTA5LjAwMDAwMCwgLTc1MC4wMDAwMDApIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMi40MTA3MTQyOSI+CiAgICAgICAgICAgIDxnIGlkPSJDb250ZW50LWJveCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc2LjAwMDAwMCwgMjg3LjUyODEzMSkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IkRyb3Bkb3duX3N0YXRpY19MQVJHRSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTguOTc5OTY3LCA0MzkuMTMwMjc2KSI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Imljb24tLy1kcm9wZG93biIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTM2LjAwMDAwMCwgMjQuNTAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwb2x5bGluZSBpZD0iUGF0aC03IiBwb2ludHM9IjAgMi40NjY1OTgzNWUtMTMgNi40MzQ1NzA2OSA2LjQyODU3MTQzIDEzIDEuNjUzNDA5NTVlLTEzIj48L3BvbHlsaW5lPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+')
+                            no-repeat;
+                        }
+                    }
+                }
+                .btn-group.show {
+                    .dropdown-toggle {
+                        z-index: 10001;
+                        position: relative;
+                        background-color: $secondary;                  
+                        &:after {    
+                            position: absolute;   
+                            content: "";
+                            top: rem(21px);
+                            right: rem(17px);
+                            width: rem(16px);
+                            height: rem(9px);
+                            border: 0;
+                            transform: rotate(180deg);
+                            background:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTdweCIgaGVpZ2h0PSI5cHgiIHZpZXdCb3g9IjAgMCAxNyA5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPjhFQ0I4MUMxLTFGQkMtNDlENS04RkZELUNENjMzMDVFMjJCMDwvdGl0bGU+CiAgICA8ZyBpZD0iRGVzaWduIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJMYW5kaW5nLXBhZ2VfRFQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNTA5LjAwMDAwMCwgLTc1MC4wMDAwMDApIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMi40MTA3MTQyOSI+CiAgICAgICAgICAgIDxnIGlkPSJDb250ZW50LWJveCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODc2LjAwMDAwMCwgMjg3LjUyODEzMSkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IkRyb3Bkb3duX3N0YXRpY19MQVJHRSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTguOTc5OTY3LCA0MzkuMTMwMjc2KSI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Imljb24tLy1kcm9wZG93biIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTM2LjAwMDAwMCwgMjQuNTAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwb2x5bGluZSBpZD0iUGF0aC03IiBwb2ludHM9IjAgMi40NjY1OTgzNWUtMTMgNi40MzQ1NzA2OSA2LjQyODU3MTQzIDEzIDEuNjUzNDA5NTVlLTEzIj48L3BvbHlsaW5lPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+')
+                            no-repeat;    
+                        }
+                    }
+                    .dropdown-menu {
+                        border: 0;
+                        width: 100%;
+                        padding-bottom: 0;
+                        margin-top: rem(-8px);                        
+                        border-radius: rem(5px);
+                        box-shadow: 0 rem(1px) rem(5px) rgba(0,0,0,0.17);
+                        .slimScrollDiv {
+                            height: auto !important;
+                            border-radius: 5px; 
+                        }                        
+                        .item_wrapper {                               
+                            height: rem(210px) !important;                         
+                            overflow: auto;                                                        
+                            .dropdown-item {
+                                white-space: normal;
+                                font-weight: 600;
+                                padding: rem(9px) rem(17px);
+                                color: $color-cape-code;
+                                font-size: rem(16px);
+                                &:nth-child(even){
+                                    background-color: #f3f5f8;                                    
+                                }
+                                &:hover {
+                                    color: #000000;
+                                }
+                                &:focus, &:active {
+                                    background-color: #f3f5f8;
+                                    border: 0;
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        }        
+    }
+}

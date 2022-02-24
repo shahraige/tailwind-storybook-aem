@@ -1,0 +1,11 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .cookie-toolbar {
+            &__box {
+                position: relative;
+                transform: inherit !important;
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,197 @@
+@media screen {
+  [data-site-id="#{$site-id}"] {
+    .headline-text {
+      &>div:not(.mb-0) {
+        margin-bottom: $cmp-bottom-gap;
+      }
+
+      .cmp-text {
+
+        // Override AEM specific RTE classes ...
+        // @note Keep in mind: the text from bootstarp
+        // @see `ui.apps/resources/frontend/src/app/styles/bootstrap/_variables-bootstrap-override-dmpro-220.scss`
+        p {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        a{
+          &:hover{
+            color: $secondary;
+          }
+        }
+
+        h1{
+          // @include media-breakpoint-down(sm){
+          //   font-size: rem(42px);
+          // }
+        }
+
+        .font-weight-semibold{
+          font-weight: 600;
+        }
+
+        sub,
+        sup {
+          font-size: 75%;
+        }
+
+        sup {
+          top: -0.5em;
+        }
+
+        sub {
+          top: 0.5em;
+        }
+
+        // Lists
+        ul {
+          list-style-type: none;
+          padding-left   : 0px;
+
+          li {
+            position    : relative;
+            padding-left: rem(24px);
+
+            &+li {
+              margin-top: rem(10px);
+            }
+
+            &::before {
+              top             : 0;
+              left            : 0;
+              content         : "";
+              width           : rem(4px);
+              height          : rem(4px);
+              margin          : auto;
+              display         : block;
+              border-radius   : rem(5px);
+              position        : absolute;
+              bottom          : calc(100% - 1.5em);
+              background-color: $color-cape-code;
+            }
+
+            &.empty-li{
+              &:before{
+                display: none !important;
+              }
+            }
+
+            &.no-before{
+              &:before{
+                display: none;
+              }
+            }
+
+            span[class^="bullet-"]{
+              &::before {
+                top: 0;
+                left: 0;
+                content: '';
+                width: 10px;
+                height: 21px;
+                margin: auto;
+                display: block;
+                position: absolute;
+                bottom: calc(100% - 1.5em);
+              }
+              &.bullet-arrow {
+                  &:before{
+                    opacity: 0.5;
+                    background: url("#{$root-path}images/icons/chevron-right-solid.svg") no-repeat;
+                  }
+              }
+              &.bullet-check {
+                position: relative;
+                &:before{
+                  top: 0;
+                  width: 28px;
+                  height: 28px;
+                  left: rem(-48px);
+                  position: absolute;
+                  background: url("#{$root-path}images/icons/icon-checkmark-circle.png") no-repeat;
+                  background-size: cover;
+                }
+              }             
+            }
+          }
+        }
+
+        blockquote,
+        q {
+          font-size  : rem(24px);
+          font-weight: 700;
+          line-height: rem(36px);
+        }
+
+        // AEM BUTTON-LINK
+        &+.button-link {
+          margin-top: rem(20);
+        }
+
+        .verveine-text{
+          font-family: $Verveine;
+        }
+
+        .left-space{
+          display: block;
+          padding-left: rem(100px);
+        }
+
+        .underline-text{
+          position: relative;
+          display: inline-block;
+          margin-bottom: rem(20px);
+          padding-bottom: rem(20px);
+
+          &:after{
+            content: '';
+            width: 100%;
+            display: block;
+            bottom: rem(-8px);
+            position: absolute;
+            height: rem(12px);
+            //min-height: rem(22px);
+            //background-size: 100%;
+            //background-repeat: no-repeat;
+            background-image: url('#{$root-path}images/Stroke_underline.png');
+
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            //max-width: rem(540px);
+            //background-position: center;
+            
+            max-width: rem(600px);
+            background-size: cover;
+            background-repeat: repeat-x;
+            background-position: center;
+          }
+        }
+
+        .indicator{
+          width: rem(21px);
+          height: rem(19px);
+          display: inline-block;
+          margin-right: rem(5px);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: transparent;
+          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAATCAYAAAB/TkaLAAAAAXNSR0IArs4c6QAAAAlwSFlzAAASdAAAEnQB3mYfeAAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAAF7SURBVDhPpZNNK0RRHMavulbKymJWytYHsFEslJLsxM4X4Cvozv0ANmpqwoy85GVBMslGlJJSChsLkqasxEKJQvyece40xr3n3rlz6umcc///53efM3Ou6zjOLhpBGt9mTjO1GFPJZeGjftSOgkIaqDwv4gl6gZbRVFpSjW9FPNf3/S/P8xbZDKOuJsBlvAXxlFTjEmXRDOpICS7gu5K3AjVp11gOoIkUUMFWxalCDfiTn2GO9SDKNADWjSkCvAs8wfErewongLdYTjYAPaNXp6yOP1DzNMese9uZAPxBT44wj1YoDdekLdKUTQA9ome7vi8sqXqW0BjqtoDfqM0S4jURlMZ70uZlskB3qB2G1aOSqlfHGke9IcZnnuV5udL+G5FQDA+kXcDRg1rrnJvsT6NOYUsqTwkdoKEaQPA56p8PHVYoaZ9IO4+zD7UhXfQNnp9bfuvfzzRm7FOXRtEN0kusIxZKqndzE5R2nf1t01ADOGaeRntxQNV/AAeva1aGq2ksAAAAAElFTkSuQmCC');
+        }
+
+        .text-tooltip {
+          font-weight: 700;
+          color: $color-aqua-deep;
+          transition: all 0.3s ease;
+          &:hover{
+            color: $secondary;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+}

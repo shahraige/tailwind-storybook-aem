@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/glpg-clinical-trials"/>
+    <filter root="/conf/glpg-clinical-trials"/>
+    <filter root="/apps/settings/wcm/designs/glpg-clinical-trials"/>
+</workspaceFilter>

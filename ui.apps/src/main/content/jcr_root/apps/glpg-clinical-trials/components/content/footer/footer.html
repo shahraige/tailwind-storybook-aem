@@ -1,0 +1,31 @@
+<sly data-sly-test="${wcmmode.edit}">
+    <p class="component-title bg-white text-center py-2 d-flex justify-content-center align-items-center">
+        <span>${component.title}</span>
+    </p>
+</sly>
+
+<footer id="footer__wrapper" class="footer__wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-12">
+                        <div class="footer__links">
+                            <sly data-sly-resource="${'footer-top-parsys' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12">
+                        <div class="footer__logo">
+                            <div class="image-extension section" data-sly-resource="${'image-extension' @ resourceType='glpg-ibd/components/content/image-extension'}"></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer__legal-text">
+                            <div class="headline-text cmp" data-sly-resource="${'headline-text' @ resourceType='/apps/glpg-ibd/components/content/headline-text'}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

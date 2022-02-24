@@ -1,0 +1,124 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+
+        // AEM decoration tag
+        .text-image {
+
+            // AEM IMAGE / IMAGE-SVG
+            &__wrapper {
+                display          : flex;
+                -webkit-box-align: start;
+                align-items      : flex-start;
+                margin-bottom    : rem(20px);
+
+                &.flex-row-reverse {
+                    .text-image__image {
+                        .image-extension {
+                            margin-right: 0;
+                            margin-left : rem(20px);
+                        }
+                    }
+                }
+            }
+
+            .image,
+            .cmp-image,
+            .image-svg,
+            .image-extension {
+                margin-bottom: 0;
+                margin-right : rem(15px);
+
+                img {
+                    // Override `max-width` handling only when IMAGE is used in this component!
+                    max-width: none;
+                    width    : 100%;
+                }
+            }
+
+            &__body {
+                flex: 1;
+            }
+        }
+
+        .text-image__image {
+            padding  : 0;
+            min-width: rem(50px);
+            display  : flex;
+
+            @include media-breakpoint-down(sm){
+                width: 100%;
+            }
+            
+            .image-extension {
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-bottom: 0;
+                }
+
+                &:not(:first-child) {
+                    position: relative;
+                    padding-left: rem(17px); 
+
+                    &:before {
+                        content         : '';
+                        display         : inline-flex;
+                        height          : rem(27px);
+                        width           : rem(2px);
+                        background-color: $secondary;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+
+        .text-image__body {
+
+            // AEM TEXT
+            .cmp-text {
+                margin-bottom: 0;
+            }
+        }
+
+        //img-small
+        .img-small {
+            img {
+                width: rem(30px) !important;
+            }
+        }
+
+        //img-medium
+        .img-medium {
+            img {
+                width: rem(60px) !important;
+            }
+        }
+
+        //img-big
+        .img-big {
+            img {
+                width: rem(90px) !important;
+            }
+        }
+
+        //img-big
+        .img-full-width {
+            img {
+                width: 100% !important;
+            }
+        }
+
+        //img-original
+        .img-original {
+            img {
+                @include media-breakpoint-up(lg) {
+                    width: auto !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .cmp-accordion {  
+            $this : cmp-accordion !default;          
+            .#{$this}__inner {                
+                .#{$this}--item {
+                    background-color: #F3F5F8;
+                    margin-bottom: rem(20px);
+
+                    .#{$this}-header {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: nowrap;
+                        cursor: pointer;
+                        padding: rem(20px) rem(32px);
+                        @include media-breakpoint-down (md) {
+                            padding-left: 0;
+                            padding-right: 20px;
+                        }
+                        &--img {
+                            margin-right: rem(20px);
+                            margin-left: rem(7.5px);
+                            max-width: rem(100px);
+                            min-width: rem(55px);
+                            display: flex;
+                            justify-content: flex-end;
+                            max-height: 55px;
+                            @include media-breakpoint-down (md) {
+                                max-height: 40px;
+                                margin-left: 9.5px;
+                                margin-right: 0;
+                            }
+                        }
+
+                        &--title {
+                            flex: 1;
+                            font-size: rem(22px);
+                            font-weight: 600;
+                            letter-spacing: 0;
+                            margin: 0;
+                            padding: 0 rem(15px);
+                            line-height: rem(30px);
+                            @include media-breakpoint-down (md) {
+                                font-size: rem(18px);
+                                line-height: rem(24px);
+                                padding-right: 15px;
+                            }
+                            @include media-breakpoint-up (lg) {
+                                padding-right: 10%;
+                            }
+                        }
+
+                        // accordion icon start
+                        .#{$this}-collapse-icon {
+                            width: rem(60px);
+                            height: rem(60px);
+                            min-width: rem(60px);
+                            background: #00bfb2;
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: auto;
+                            &:hover{
+                                background: $secondary;
+                            }
+                            @include media-breakpoint-down (md) {
+                                min-width: 40px;
+                                width: 40px;
+                                height: 40px;
+                            }
+                            span {
+                                display: block;
+                                width: rem(46px);
+                                height: rem(46px);
+                                background-repeat: no-repeat;
+                                background-position: center center;
+                                background-size: contain;                                
+                            }
+                        }
+
+                        &[aria-expanded="false"] {
+                            .#{$this}-collapse-icon {
+                                span {
+                                    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTcgMTFoLTRWN2ExIDEgMCAwMC0xLTEgMSAxIDAgMDAtMSAxdjRIN2ExIDEgMCAwMC0xIDEgMSAxIDAgMDAxIDFoNHY0YTEgMSAwIDAwMSAxIDEgMSAwIDAwMS0xdi00aDRhMSAxIDAgMDAxLTEgMSAxIDAgMDAtMS0xeiIvPjwvc3ZnPg==");
+                                    @include media-breakpoint-down (md) {
+                                        width: 38px;
+                                    }
+                                }
+                            }
+
+                        }
+                        
+                        &[aria-expanded="true"] {
+                            .#{$this}-collapse-icon {
+                                background: #09958B;
+                                &:hover{
+                                    background: $secondary;
+                                }
+                                span {
+                                    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJmaWxsOiAjZmZmZmZmOyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cmVjdCB4PSI2IiB5PSIxMSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjIiIHJ4PSIxIi8+PC9zdmc+");
+                                    @include media-breakpoint-down (md) {
+                                        width: 38px;
+                                    }
+                                }
+                            }
+                        }
+                        // accordion icon end
+                    }
+
+
+                    .#{$this}-content {
+                        padding: 0 rem(10px) rem(10px) rem(10px);
+
+                        &__inner {
+                            padding: rem(30px);
+                            background: $white;
+                            @include media-breakpoint-down (md) {
+                                overflow-y: auto;
+                                max-height: rem(438px);
+                                margin-bottom: rem(15px);
+                                @include scrollbars(.5em, slategray);
+                                &::-webkit-scrollbar-thumb {
+                                    background-color: #bfc3d1;
+                                }
+                                &::-webkit-scrollbar-track {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }                              
+            }
+        }
+    }
+}

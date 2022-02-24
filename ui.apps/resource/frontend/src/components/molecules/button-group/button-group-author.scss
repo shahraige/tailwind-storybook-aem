@@ -1,0 +1,10 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .button-group {
+            .component-title {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

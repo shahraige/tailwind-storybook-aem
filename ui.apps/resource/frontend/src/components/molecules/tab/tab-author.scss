@@ -1,0 +1,7 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+      .cmp-tab {
+        $this: cmp-tab !default;
+      }
+    }
+  }

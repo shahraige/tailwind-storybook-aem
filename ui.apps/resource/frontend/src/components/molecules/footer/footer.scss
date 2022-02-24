@@ -1,0 +1,129 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .footer {
+            &__wrapper {
+                padding-top     : rem(40px);
+                padding-bottom  : rem(40px);
+                background-color: $color-athens-gray;
+
+                @include media-breakpoint-down(md){
+                    padding-top     : rem(30px);
+                    padding-bottom  : rem(30px);
+                }
+
+                .footer__links {
+                    display: flex;
+
+                    @include media-breakpoint-down(lg){
+                        margin-bottom: rem(20px);
+                    }
+                    @include media-breakpoint-down(sm){
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+
+                    .button-link {
+                        text-align   : left;
+                        margin-bottom: rem(20px);
+
+                        @include media-breakpoint-down(md){
+                            margin-bottom: rem(10px);
+                        }
+
+                        .btn-link {
+                            margin         : 0 !important;
+                            padding        : 0;
+                            border         : 0;
+                            outline        : 0;
+                            width          : auto;
+                            min-width      : auto;
+                            font-weight    : 400;
+                            position       : relative;
+                            font-size      : rem(14px);
+                            color          : $color-cape-code;
+                            text-decoration: none;
+                            padding        : 0 rem(7px) 0 rem(5px);
+
+                            &:after {
+                                top             : 50%;
+                                right           : 0;
+                                content         : '';
+                                display         : block;
+                                width           : rem(1px);
+                                height          : rem(12px);
+                                position        : absolute;
+                                background-color: $color-cape-code;
+                                transform       : translateY(-50%);
+                            }
+                        }
+
+                        &:first-child{
+                            .btn-link {
+                                padding: 0 rem(7px) 0 0;
+                            }
+                        }
+
+                        &:last-child {
+                            .btn-link {
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer__logo {
+                    .image-container {
+                        justify-content: flex-end !important;
+                        @include media-breakpoint-down(sm){
+                            justify-content: center !important;
+                        }
+
+                        img {
+                            margin-top   : rem(10px);
+                            margin-bottom: 0;
+                            @include media-breakpoint-down(md){
+                                width: auto;
+                                height: rem(30px);
+                            }
+                            @include media-breakpoint-down(sm){
+                                margin-bottom: rem(20px);
+                            }
+                        }
+                    }
+                }
+
+                .headline-text {
+                    line-height: rem(21px);
+
+                    .cmp-text {
+                        * {
+                            color: $color-cape-code;
+                        }
+
+                        &:not(.footer__bottom .cmp-text) {
+                            margin-bottom: rem(13px);
+                        }
+
+                        p {
+                            margin-bottom: 0;
+                            font-size: rem(14px);
+                            @include media-breakpoint-down(sm){
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .footer__legal-text {
+
+                    .cmp-text,
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

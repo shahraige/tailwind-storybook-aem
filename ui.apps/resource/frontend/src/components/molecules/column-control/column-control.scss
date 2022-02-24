@@ -1,0 +1,27 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        .column-control {
+            .bg-container {
+                background-size    : cover;
+                background-repeat  : no-repeat;
+                background-position: center center;
+            }
+            .tab-50{
+                &>div{
+                    @include media-breakpoint-only(md){
+                        flex:0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+            }
+            .tab-100{
+                &>div{
+                    @include media-breakpoint-only(md){
+                        flex:0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

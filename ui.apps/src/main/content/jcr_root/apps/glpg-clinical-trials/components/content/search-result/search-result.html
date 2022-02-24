@@ -1,0 +1,225 @@
+<sly data-sly-test="${wcmmode.edit}">
+    <p class="component-title bg-white text-center py-2 d-flex justify-content-center align-items-center">
+        <span>${component.title}</span>
+    </p>
+</sly>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<div
+        ng-controller="searchResultController as ctrl"
+        ng-cloak
+>
+    <div class="form-box section">
+        <div class="form-box__content">
+            <form name="searchResultForm"
+                  class="needs-validation"
+                  ng-submit="ctrl.getSearchResult(searchResultForm)"
+                  novalidate>
+                <input type="hidden" id="itemPerPage" value="${properties.itemPerPage}">
+                <input type="hidden" value="${resource.path}" id="currentPagePath"/>
+                <input type="hidden" value="${properties.detailsPageUrl}" id="detailsPageUrl"/>
+                <div class="form-group">
+                    <input type="text"
+                           id="expression"
+                           class="form-control w-100"
+                           name="expression"
+                           ng-model="ctrl.queryData.expression"
+                    >
+                    <div class="left-info">
+                        <label for="expression">
+                            <span>Keyword Search</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Medical Condition :</label>
+                    <select id="exampleFormControlSelect2" multiple="multiple"
+                            ng-model="ctrl.queryData.conditions"
+                    >
+                        <optgroup label="Cancer">
+                            <option value="Brain Cancer">Brain Cancer</option>
+                            <option value="Lung Cancer">Lung Cancer</option>
+                        </optgroup>
+                        <optgroup label="Cardiovascular & Circulatory">
+                            <option value="Heart Failure">Heart Failure</option>
+                            <option value="Hypertension">Hypertension</option>
+                        </optgroup>
+                        <optgroup label="Immunity, Autoimmunity & Inflammatory">
+                            <option value="Psoriasis Arthritis">Arthritis</option>
+                            <option value="Rheumatoid Arthritis">Rheumatoid Arthritis</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Status : </label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox0" value=""
+                               ng-model="ctrl.queryData.studyStatus.allStatus" ng-true-value="'All'"
+                               ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox1">All status</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Recruiting"
+                               ng-model="ctrl.queryData.studyStatus.Recruiting" ng-true-value="'RECSTATUS_RECRUITING'"
+                               ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox1">Recruiting</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Not yet recruiting"
+                               ng-model="ctrl.queryData.studyStatus.notYetRecruiting"
+                               ng-true-value="'RECSTATUS_NOT_YET_RECRUITING'" ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox2">Not Recruiting</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Completed"
+                               ng-model="ctrl.queryData.studyStatus.trialCompleted"
+                               ng-true-value="'RECSTATUS_STUDY_COMPLETED'" ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox3">Trial Completed</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Terminated"
+                               ng-model="ctrl.queryData.studyStatus.terminated" ng-true-value="'RECSTATUS_TERMINATED'"
+                               ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox4">Terminated</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Phase : </label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="phaseCheckbox1" value="Not Applicable"
+                               ng-model="ctrl.queryData.phases.allPhases" ng-true-value="'All'" ng-false-value="''">
+                        <label class="form-check-label" for="phaseCheckbox1">All phases</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="phaseCheckbox2" value="Phase 1"
+                               ng-model="ctrl.queryData.phases.phase1" ng-true-value="'PHASE_1'" ng-false-value="''">
+                        <label class="form-check-label" for="phaseCheckbox2">Phase 1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="phaseCheckbox3" value="Phase 2"
+                               ng-model="ctrl.queryData.phases.phase2" ng-true-value="'PHASE_2'" ng-false-value="''">
+                        <label class="form-check-label" for="phaseCheckbox3">Phase 2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="phaseCheckbox4" value="Phase 3"
+                               ng-model="ctrl.queryData.phases.phase3" ng-true-value="'PHASE_3'" ng-false-value="''">
+                        <label class="form-check-label" for="phaseCheckbox4">Phase 3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="phaseCheckbox5" value="Phase 4"
+                               ng-model="ctrl.queryData.phases.phase4" ng-true-value="'PHASE_4'" ng-false-value="''">
+                        <label class="form-check-label" for="phaseCheckbox5">Phase 4</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Age Range : </label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="ageCheckbox0" value="MIN, 17 Years"
+                               ng-model="ctrl.queryData.ages.allAges" ng-true-value="'All'" ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox1">All ages</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="ageCheckbox1" value="MIN, 17 Years"
+                               ng-model="ctrl.queryData.ages.age1" ng-true-value="'AGERANGE_ONE'" ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox1">0-17 years</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="ageCheckbox2" value="18 Years, 65 Years"
+                               ng-model="ctrl.queryData.ages.age2" ng-true-value="'AGERANGE_TWO'" ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox2">18-65 years</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="ageCheckbox3" value="66 Years, MAX"
+                               ng-model="ctrl.queryData.ages.age3" ng-true-value="'AGERANGE_THREE'" ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox3">66+ years</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Gender : </label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="genderCheckbox0" value="Female"
+                               ng-model="ctrl.queryData.genders.female" ng-true-value="'GENDER_FEMALE'"
+                               ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox1">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="genderCheckbox1" value="Male"
+                               ng-model="ctrl.queryData.genders.male" ng-true-value="'GENDER_MALE'" ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="genderCheckbox2" value="Female"
+                               ng-model="ctrl.queryData.genders.both" ng-true-value="'GENDER_ALL'" ng-false-value="''">
+                        <label class="form-check-label" for="inlineCheckbox2">Both</label>
+                    </div>
+                </div>
+
+                <div class="button-link section" data-ng-click="ctrl.getSearchResult">
+                    <button class="btn btn-brandx btn-block " type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <h4>Search Results</h4>
+    <div class="button-link section" ng-click="ctrl.increasePageNo()">
+        <button class="btn btn-brandx btn-block">
+            Load More
+        </button>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">NCTId</th>
+                <th scope="col">BriefTitle</th>
+                <th scope="col">OverallStatus</th>
+                <th scope="col">Phase</th>
+                <th scope="col">MinimumAge</th>
+                <th scope="col">Gender</th>
+                <th scope="col">View Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="object in ctrl.results">
+                <td>{{object.rank}}</td>
+                <td>{{object.gov_identifier}}</td>
+                <td>{{object.clinical_trial_summary}}</td>
+                <td>{{object.trial_status}}</td>
+                <td>{{object.phase[0]}}</td>
+                <td>{{object.min_age}}</td>
+                <td>{{object.gender}}</td>
+                <td><button type="button" ng-click="ctrl.viewDetails(object.id)">Details</button></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="button-link section" ng-click="ctrl.increasePageNo()">
+            <button class="btn btn-brandx btn-block">
+                Load More
+            </button>
+        </div>
+    </div>
+</div>

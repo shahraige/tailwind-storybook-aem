@@ -1,0 +1,19 @@
+body{
+    &.fixed-datalist{
+        .flexdatalist-results{
+            position: fixed !important;
+            @media only screen and (min-width: 576px)  {
+                max-height: 120px;
+            }
+        }
+    }
+    .i-par-header{
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 1020;
+    }
+    .disabled.update-search {
+        pointer-events: none;
+    }
+}

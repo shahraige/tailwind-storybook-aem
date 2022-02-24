@@ -1,0 +1,43 @@
+<sly data-sly-test="${wcmmode.edit}">
+    <p class="component-title bg-white text-center py-2 d-flex justify-content-center align-items-center">
+        <span>${component.title}</span>
+    </p>
+</sly>
+
+<sly data-sly-use.searchPage="${'com.glpg.clinicaltrials.core.components.use.LinkFormatterUse' @ link= properties.searchResultPagePath }"></sly>
+<sly data-sly-use.notFoundPage="${'com.glpg.clinicaltrials.core.components.use.LinkFormatterUse' @ link= properties.conditionNotFoundPath }"></sly>
+
+<div class="medical-conditon-dropdown__inner"
+     ng-controller="medicalConditionController as ctrl"
+     ng-cloak
+>
+    <input type="hidden" value="${resource.path}" id="currentPagePath"/>
+    <div class="btn-group">
+        <button
+                type="button"
+                class="btn btn-info dropdown-toggle"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+        >
+            ${properties.placeHolderText}
+        </button>
+        <div class="dropdown-menu">
+            <div class="item_wrapper">
+                <a ng-repeat="condition in ctrl.medicalConditions"
+                   class="dropdown-item" target="_blank"
+                   href="${searchPage.url}?condition={{condition}}"
+                >
+                    {{condition}}
+                </a>
+                <sly data-sly-test="${properties.conditionNotFoundLabel && properties.conditionNotFoundPath}">
+                    <a class="dropdown-item" target="_blank"
+                       href="${notFoundPage.url}"
+                    >
+                        ${properties.conditionNotFoundLabel}
+                    </a>
+                </sly>
+            </div>
+        </div>
+    </div>
+</div>

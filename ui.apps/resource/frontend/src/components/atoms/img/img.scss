@@ -1,0 +1,8 @@
+@media screen {
+    [data-site-id="#{$site-id}"] {
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    }
+}

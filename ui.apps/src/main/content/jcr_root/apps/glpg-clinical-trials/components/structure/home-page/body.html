@@ -1,0 +1,16 @@
+<body class="page"
+      data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
+      data-site-id="glpg-ctp-112"
+      ng-app="clinicalTrialApp"
+      data-sly-use.footer="footer.html">
+    <div class="i-par i-par-header"
+         data-sly-resource="${ @path='header', resourceType='foundation/components/iparsys'}"></div>
+    <main class="content-area">
+        <div data-sly-resource="${ @path='body', resourceType='wcm/foundation/components/responsivegrid'}"></div>
+    </main>
+    <div class="i-par i-par-footer"
+         data-sly-resource="${ @path='footer', resourceType='foundation/components/iparsys'}"></div>
+
+<!--    <sly data-sly-include="/apps/glpg-hcpportal/components/structure/home-page/search-popup.html"></sly>-->
+    <sly data-sly-call="${footer.footer @ page = page}"></sly>
+</body>
