@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '../box/box'
 import HeadlineText from '../headline-text/HeadlineText'
-import MedicalConditionDropdown from '../medical-condition-dropdown/medical-condition-dropdown'
 import HtmlComment from '../../particles/html-comment/HtmlComment'
 
 const HeroHeader = props => {

@@ -35,83 +35,32 @@
                 }
                 &.box-danger{
                     &:before{
-                        background-color: $danger;
+                        background-color: red;
                     }
                 }
                 &.box-success{
                     &:before{
-                        background-color: $success;
+                        background-color: green;
                     }
                 }
                 &.box-info{
                     &:before{
-                        background-color: $info;
+                        background-color: orange;
                     }
                 }
                 &.box-white{
                     &:before{
-                        background-color: $white;
+                        background-color: white;
                     }
                 }
                 &.box-dark{
                     &:before{
-                        background-color: $dark;
+                        background-color: black;
                     }
                 }
                 &.box-light{
                     &:before{
                         background-color: #F3F5F8;
-                    }
-                }
-
-                &.opacity-0{
-                    &:before{
-                        opacity: 1;
-                    }
-                }
-                &.opacity-1{
-                    &:before{
-                        opacity: 0.9;
-                    }
-                }
-                &.opacity-2{
-                    &:before{
-                        opacity: 0.8;
-                    }
-                }
-                &.opacity-3{
-                    &:before{
-                        opacity: 0.7;
-                    }
-                }
-                &.opacity-4{
-                    &:before{
-                        opacity: 0.6;
-                    }
-                }
-                &.opacity-5{
-                    &:before{
-                        opacity: 0.5;
-                    }
-                }
-                &.opacity-6{
-                    &:before{
-                        opacity: 0.4;
-                    }
-                }
-                &.opacity-7{
-                    &:before{
-                        opacity: 0.3;
-                    }
-                }
-                &.opacity-8{
-                    &:before{
-                        opacity: 0.2;
-                    }
-                }
-                &.opacity-9{
-                    &:before{
-                        opacity: 0.1;
                     }
                 }
             }
