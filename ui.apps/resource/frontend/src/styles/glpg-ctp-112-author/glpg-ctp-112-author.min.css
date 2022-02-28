@@ -32,14 +32,6 @@
 }
 
 @media screen {
-  [data-site-id="glpg-ctp-112"] .cookie-toolbar__box {
-    position: relative;
-    transform: inherit !important;
-    opacity: 1;
-  }
-}
-
-@media screen {
   [data-site-id="glpg-ctp-112"] .headline-text .text-tooltip {
     font-weight: 700;
     color: #004C45;

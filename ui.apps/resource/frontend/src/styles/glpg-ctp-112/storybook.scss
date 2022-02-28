@@ -1,8 +1,8 @@
 
 @import "variables/_aem-config--glpg-ctp-112";
 @import "variables/__variables-loader--glpg-ctp-112";
-
 @import "thirdparty/__thirdparty-loader--glpg-ctp-112";
+@import "tailwind-css.scss";
 
 @import "foundation/__foundation-loader--glpg-ctp-112";
 @import"sass-functions/__sass-functions-loader--glpg-ctp-112";
