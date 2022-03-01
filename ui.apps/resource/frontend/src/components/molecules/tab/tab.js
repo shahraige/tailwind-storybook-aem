@@ -10,149 +10,35 @@ const Tab = props => {
     return (
         <div className="tab section">
             <HtmlComment text="START tab component markup, Copy from here" />
-            <div className="tab__inner">
-                {/* tab buttons start */}
-                <div className="tab-header" role="tablist">
-                    <div className='container'>
-                        <div className='row'>
-                            <div className='col-md-12'>
-                                
-                                <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                    <li className="nav-item" role="presentation" data-tab-index="0">
-                                        <a
-                                            id="phase1-tab" 
-                                            className="nav-link active" 
-                                            data-toggle="tab" 
-                                            href="#Phase1" 
-                                            role="tab" 
-                                            aria-controls="Phase1" 
-                                            aria-selected="true">
-                                            Phase 1
-                                        </a>
-                                    </li>
-
-                                    <li className="nav-item" role="presentation" data-tab-index="1">
-                                        <a 
-                                            id="phase2-tab" 
-                                            className="nav-link " 
-                                            data-toggle="tab" 
-                                            href="#Phase2" 
-                                            role="tab" 
-                                            aria-controls="Phase2" 
-                                            aria-selected="true">
-                                            Phase 2
-                                        </a>
-                                    </li>
-
-                                    <li className="nav-item" role="presentation" data-tab-index="2">
-                                        <a 
-                                            id="phase3-tab" 
-                                            className="nav-link" 
-                                            data-toggle="tab" 
-                                            href="#Phase3" 
-                                            role="tab" 
-                                            aria-controls="Phase3" 
-                                            aria-selected="false">
-                                            Phase 3
-                                        </a>
-                                    </li>
-
-                                    <li className="nav-item" role="presentation" data-tab-index="3">
-                                        <a 
-                                            id="phase4-tab" 
-                                            className="nav-link" 
-                                            data-toggle="tab" 
-                                            href="#Phase4" 
-                                            role="tab" 
-                                            aria-controls="Phase4" 
-                                            aria-selected="false">
-                                            Phase 4
-                                        </a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
+            <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
+                <ul className="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <li className="mr-2" role="presentation">
+                        <button className="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                    </li>
+                    <li className="mr-2" role="presentation">
+                        <button className="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</button>
+                    </li>
+                    <li className="mr-2" role="presentation">
+                        <button className="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+                    </li>
+                    <li role="presentation">
+                        <button className="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="myTabContent">
+                <div className="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong className="font-medium text-gray-800 dark:text-white">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
                 </div>
-                {/* tab buttons end */}
-
-                {/* tab content start */}
-                <div className="tab-content" id="myTabContent">
-                    <div className='container'>
-                        <div className='row'>
-                            <div className='col-md-12'>
-
-                                <div className='tab-content__inner'>
-                                    <div 
-                                        className="tab-pane fade show active" 
-                                        id="Phase1" 
-                                        role="tabpanel" 
-                                        aria-labelledby="phase1-tab">
-                                        <p>Placeholder content for the tab panel. This one relates to the home tab. Takes you miles high, so high, 'cause she’s got that one international smile. There's a stranger in my bed, there's a pounding in my head. Oh, no. In another life I would make you stay. ‘Cause I, I’m capable of anything. Suiting up for my crowning battle. Used to steal your parents' liquor and climb to the roof. Tone, tan fit and ready, turn it up cause its gettin' heavy. Her love is like a drug. I guess that I forgot I had a choice.</p>
-                                    </div>
-                                    
-                                    <div 
-                                        className="tab-pane fade" 
-                                        id="Phase2" 
-                                        role="tabpane2" 
-                                        aria-labelledby="phase2-tab">
-                                        <p>Placeholder content for the tab panel. This one relates to the profile tab. You got the finest architecture. Passport stamps, she's cosmopolitan. Fine, fresh, fierce, we got it on lock. Never planned that one day I'd be losing you. She eats your heart out. Your kiss is cosmic, every move is magic. I mean the ones, I mean like she's the one. Greetings loved ones let's take a journey. Just own the night like the 4th of July! But you'd rather get wasted.</p>
-                                    </div>
-                                    
-                                    <div 
-                                        className="tab-pane fade" 
-                                        id="Phase3" 
-                                        role="tabpane3" 
-                                        aria-labelledby="phase3-tab">
-                                        <HtmlComment text='tab content parsis start ' />
-                                        <div className='row d-flex align-items-center'>
-                                            <div className="col-md-6 col-lg-7">
-                                                <div className='headline-text cmp'>
-                                                    <div>
-                                                        <div className='cmp-text'>
-                                                            <p>If the results from the studies in Phase 1 and 2 are positive (they have passed safety checks and have shown evidence the treatment may work), then Phase 3 studies will take place. Here, the treatment is tested in a much larger group of people (often 1000 to 3000) with the disease or condition and the treatment is compared with an existing treatment or placebo to see how well it works.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-lg-5">
-                                                <ImageExtension
-                                                    bottom_gap="no-bgap"
-                                                    image_position="justify-content-center"
-                                                    image_size="w-100"
-                                                    image_src="storybook-images/tab-est-image1.png"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <HtmlComment text='tab content parsis end' />
-
-                                    </div>
-
-                                    <div 
-                                        className="tab-pane fade" 
-                                        id="Phase4" 
-                                        role="tabpane4" 
-                                        aria-labelledby="phase4-tab">
-                                        4
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <ol className="carousel-indicators tab-indicators">
-                        <li className="active" data-slide-to="0"></li>
-                        <li data-slide-to="1"></li>
-                        <li data-slide-to="2"></li>
-                        <li data-slide-to="3"></li>
-                    </ol>
+                <div className="p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong className="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
                 </div>
-                {/* tab content end */}
-
+                <div className="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong className="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                </div>
+                <div className="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong className="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                </div>
             </div>
             <HtmlComment text="END tab component markup, Copy from here" />
         </div>
