@@ -6,7 +6,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import crfTheme from './crfTheme';
 // golbal scss  
 import "../styles/glpg-ctp-112/storybook.scss";
-import "../tailwind.css";
+import "../styles/glpg-ctp-112/tailwind-css.scss";
 
 //--------- addons--------
 addDecorator(withKnobs({

@@ -7,9 +7,11 @@
     "test": "craco test",
     "eject": "craco eject",
     "tailwind": "postcss ./tailwind.css -o ./styles/glpg-ctp-112/tailwind-css.scss",
-    "storybook": "start-storybook -p 8000 -s ./public tailwind",
-    "dev": "npm-run-all --parallel tailwind storybook",
-    "build-storybook": "build-storybook -s ./public"
+    "storybook": "start-storybook -p 8000 -s ./public",
+    "build-tailwind": "NODE_ENV=production postcss ./tailwind.css -o ./styles/glpg-ctp-112/tailwind-build.scss",
+    "build-storybook": "build-storybook -s ./public",
+    "dev": "npm-run-all --parallel storybook tailwind",
+    "build": "npm-run-all --parallel build-tailwind build-storybook"
   },
   "repository": {
     "type": "git",
@@ -58,11 +60,13 @@
     "postcss-loader": "^4.0.4",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
+    "tailwind-bootstrap-grid": "^5.0.0",
     "webpack": "^4.43.0"
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "autoprefixer": "^9.8.8",
+    "cssnano": "^5.1.0",
     "flowbite": "^1.3.4",
     "postcss-cli": "^9.1.0",
     "prop-types": "^15.7.2",

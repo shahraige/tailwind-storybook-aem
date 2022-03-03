@@ -7,6 +7,8 @@
             margin-bottom: $cmp-bottom-gap;
             position     : relative;
 
+            
+
             // button style override 
             .btn-link {
 
@@ -36,12 +38,12 @@
             }
 
             // new button type
-            .btn {
-                font-weight: 700;
-                font-size  : 18px;
-                border-width: 2px;
-                padding: 12px 20px;
-            }
+            // .btn {
+            //     font-weight: 700;
+            //     font-size  : 18px;
+            //     border-width: 2px;
+            //     padding: 12px 20px;
+            // }
         }
     }
 }
