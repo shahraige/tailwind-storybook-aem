@@ -95,6 +95,7 @@ storiesOf("Molecules | Column Control", module)
     const cols = text('All device: ', '', numberOfColumns);
     const lg_cols = text('Large device: ', '', numberOfColumns);
     const md_cols = text('Medium device: ', '', numberOfColumns);
+    const container = boolean('Container', false);
 
     return (
             <ColumnControl
@@ -106,6 +107,7 @@ storiesOf("Molecules | Column Control", module)
             gapY={gap_Y}
             horizontalAlignment={horizontalAlignment}
             verticalAlignment={verticalAlignment}
+            container={container}
             />
     );
 })
@@ -121,6 +123,7 @@ storiesOf("Molecules | Column Control", module)
     const lg_cols = text('Large device: ', '', numberOfColumns);
     const md_cols = text('Medium device: ', '', numberOfColumns);
     const n_rows = select(numberRows, numberRowsOptions,'',verticalRow);
+    const container = boolean('Container', false);
 
     return (
             <ColumnControl
@@ -134,6 +137,7 @@ storiesOf("Molecules | Column Control", module)
             verticalAlignment={verticalAlignment}
             n_rows={n_rows}
             flowDirection={flowDirection}
+            container={container}
             />
     );
 })
