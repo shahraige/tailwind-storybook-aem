@@ -108,7 +108,17 @@ storiesOf("Molecules | Column Control", module)
             horizontalAlignment={horizontalAlignment}
             verticalAlignment={verticalAlignment}
             container={container}
-            />
+            >
+               <div className='bg-red-500 p-8 '>
+                  <h2>1</h2>
+                  <p>Box 1</p>
+               </div>
+               <div className='bg-yellow-200 p-8 '>2</div>
+               <div className='bg-blue-300 p-8 '>3</div>
+               <div className='bg-orange-300 p-8 '>4</div>
+               <div className='bg-purple-400 p-8 '>5</div>
+               <div className='bg-green-500 p-8 '>6</div>
+            </ColumnControl>
     );
 })
 
@@ -138,6 +148,16 @@ storiesOf("Molecules | Column Control", module)
             n_rows={n_rows}
             flowDirection={flowDirection}
             container={container}
-            />
+            >
+               <div className='bg-red-500 p-8 '>
+                  <h2>1</h2>
+                  <p>Box 1</p>
+               </div>
+               <div className='bg-yellow-200 p-8 '>2</div>
+               <div className='bg-blue-300 p-8 '>3</div>
+               <div className='bg-orange-300 p-8 '>4</div>
+               <div className='bg-purple-400 p-8 '>5</div>
+               <div className='bg-green-500 p-8 '>6</div>
+            </ColumnControl>
     );
 })
