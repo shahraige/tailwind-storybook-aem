@@ -2,7 +2,7 @@ module.exports = {
     purge: {
       content: [
         './components/**/*.js',
-        './src/**/*.js',
+         "./src/**/*.{js,jsx,ts,tsx}",
         "./node_modules/flowbite/**/*.js"
       ],
     },
