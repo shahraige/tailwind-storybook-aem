@@ -2,25 +2,31 @@ import React from 'react'
 
 const FluidCarousel = (props) =>{
     return(
-<div id="animation-carousel" data-carousel="static" className="relative">
+<div id="animation-carousel" data-carousel="slide" className="relative">
 
     {/* <!-- Carousel wrapper --> */}
     <div className="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
 
         {/* <!-- Item 1 --> */}
         <div className="hidden duration-700 ease-linear " data-carousel-item="active">
-            <div className="bg-red-200 h-full " alt="..." />
+            <div className="bg-red-200 h-full flex justify-center items-center text-lg">1</div>
         </div>
 
         {/* <!-- Item 2 --> */}
         <div className="hidden  duration-700 ease-linear" data-carousel-item="">
-            <div className="bg-green-200 h-full " alt="..." />
+            <div className="bg-green-200 h-full flex justify-center items-center text-lg">2</div>
         </div>
 
         {/* <!-- Item 3 --> */}
-        <div className="hidden duration-700  ease-linear" data-carousel-item="">
-            <div className="bg-yellow-300 h-full  " alt="..." />
+        <div className="hidden  duration-700 ease-linear" data-carousel-item="">
+            <div className="bg-orange-400 h-full flex justify-center items-center text-lg">3</div>
         </div>
+        {/* <!-- Item 3 --> */}
+        {/* <div className="hidden  duration-700 ease-linear" data-carousel-item="">
+            <div className="bg-orange-800 h-full flex justify-center items-center text-lg">4</div>
+        </div> */}
+
+
     </div>
 
     {/* <!-- Slider indicators --> */}
@@ -28,6 +34,7 @@ const FluidCarousel = (props) =>{
         <button type="button" className="w-3 h-3 bg-black bg-opacity-50 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
         <button type="button" className="w-3 h-3 rounded-full bg-black bg-opacity-50  hover:bg-opacity-70 " aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
         <button type="button" className="w-3 h-3 rounded-full bg-black bg-opacity-50  hover:bg-opacity-70 " aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        {/* <button type="button" className="w-3 h-3 rounded-full bg-black bg-opacity-50  hover:bg-opacity-70 " aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button> */}
       
     </div>
 
