@@ -6,6 +6,8 @@ storiesOf("Molecules | Accordion", module)
 
 .add("Accordion", ()=>{
     return (
+    <React.StrictMode>
         <CmpAccordion />
+    </React.StrictMode>
     )
 })
