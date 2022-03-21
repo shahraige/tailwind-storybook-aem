@@ -1,0 +1,25 @@
+@media screen {
+  [data-site-id="hbk-111"] {
+    &.article-page {
+      background-color: $color-athens-gray;
+
+      .header .header__wrapper{
+        // @include media-breakpoint-up(xl) {
+        //   padding: rem(35px) rem(0px) rem(25px) rem(0px);
+        // }
+      }
+    }
+    &.mobile-menu-open{
+      overflow: hidden;
+    }
+    .flexdatalist-results{
+      bottom: 0;
+    }
+    .text-secondary{
+      color: $secondary;
+    }
+    .text-white{
+      color: $white;
+    }
+  }
+}

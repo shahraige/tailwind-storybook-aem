@@ -1,16 +1,14 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import ButtonLink from '../../components/molecules/button-link/ButtonLink';
-import { select, text, boolean } from '@storybook/addon-knobs';
+import React from "react";
+import ButtonLink from "../../components/molecules/button-link/ButtonLink";
 
 // gorup of button
-const Default_Setup = 'Default_Setup';
-const Modal_Setup = 'Modal_Setup';
+const Default_Setup = "Default_Setup";
+const Modal_Setup = "Modal_Setup";
 
 // ------------- select dropdown for knobs -----------
 
-const button_styles_lbl = 'Button Style';
-const button_styles_options = {    
+// Button Styles
+const button_styles_options = {
     primary: 'primary',
     secondary: 'secondary',
     Link: 'link',
@@ -20,71 +18,122 @@ const button_styles_options = {
     light: 'gray-400',
     dark: 'black'
 };
-const button_styles_defaultValue = 'primary';
 
-
-const button_type_lbl = 'Button Type';
+//Button Types
 const button_type_options = {
-    Default: 'rounded-none',
-    Round: 'rounded-full',
+    default: "",
+    round : "round",
+    arrow : "arrow",
 };
-const button_type_defaultValue = 'rounded-full';
 
-
-// button_width
-const button_width_lbl = 'Button Width';
+// Button Width
 const button_width_options = {
-    natural: '',
-    "Half Width": 'w-6/12',
-    "Full Width": 'w-full',
+    natural: "",
+    "Half Width": "w-50",
+    "Full Width": "w-100",
 };
-const button_width_defaultValue = '';
 
 // buttonlink_target
-const buttonlink_target_lbl = 'Target';
 const buttonlink_target_options = {
-    self: '_self',
-    blank: '_blank'
+    self: "_self",
+    blank: "_blank",
 };
-const buttonlink_target_defaultValue = '_self';
 
-// button text color 
-const button_text_color_label = 'Text color: ';
-const button_text_color_defalut = 'text-white';
+// buttonlink_target
+const button_position_options = {
+    Default: "",
+    Center: "text-center",
+    Right: "text-end",
+};
+
+// button text color
 const button_text_options = {
-    'text-white': 'text-white hover:text-blue-600',
-    'text-warning': 'text-blue-600',
-    'text-info': 'text-info',
-    'text-danger': 'text-red-600 hover:text-white',
-    'text-light': 'text-light',
-    'text-dark': 'text-dark'
-}
+    "text-white": "text-white",
+    "text-warning": "text-warning",
+    "text-info": "text-info",
+    "text-danger": "text-danger",
+    "text-light": "text-light",
+    "text-dark": "text-dark",
+};
 
+export default {
+    title: "Molecules/ButtonLink",
+    component: ButtonLink,
+    argTypes: {
+        button_styles: {
+            name: "Button Styles",
+            control: { type: "select", options: button_styles_options },
+        },
+        button_type: {
+            name: "Button Type",
+            control: { type: "select", options: button_type_options },
+        },
+        button_textColor: {
+            name: "Button Text Color",
+            control: { type: "select", options: button_text_options },
+        },
+        button_width: {
+            name: "Button Width",
+            defaultValue: "",
+            control: {
+                type: "inline-radio",
+                options: button_width_options,
+            },
+        },
+        buttonlink_href: {
+            name: "Button href",
+            defaultValue: "#",
+            control: {
+                type: "text",
+            },
+        },
+        buttonlink_target: {
+            name: "Button Target",
+            defaultValue: "_self",
+            control: {
+                type: "inline-radio",
+                options: buttonlink_target_options,
+            },
+        },
+        btn_text: {
+            name: "Button Text",
+        },
+        buttonlink_title: {
+            name: "Button Title",
+        },
+        buttonlink_position: {
+            name: "Button position",
+            control: { type: "select", options: button_position_options },
+        }
+    },
+};
 
+// start
+const Template = (args) => <ButtonLink {...args} />;
 
-storiesOf('Molecules | Button Link', module)
-    .add('Button', () => {
+export const Button_default = Template.bind({});
+Button_default.args = {
+    btn_text: "this is button",
+    button_styles: "primary"
+};
 
-        const btn_text = text('Button Text', 'brandx button', Default_Setup);
-        const button_styles = select(button_styles_lbl, button_styles_options, button_styles_defaultValue, Default_Setup)
-        const button_textColor = select(button_text_color_label, button_text_options, button_text_color_defalut, Default_Setup);
-        const button_width = select(button_width_lbl, button_width_options, button_width_defaultValue, Default_Setup);
-        const button_type = select(button_type_lbl, button_type_options, button_type_defaultValue, Default_Setup);
-        const buttonlink_href = text('Button Link', '#', Default_Setup);
-        const buttonlink_target = select(buttonlink_target_lbl, buttonlink_target_options, buttonlink_target_defaultValue, Default_Setup);
-        const buttonlink_title = text('Title', 'button title', Default_Setup);
+export const Button_round = Template.bind({});
+Button_round.args = {
+    btn_text: "this is button",
+    button_styles: "secondary",
+    button_type : "round"
+};
 
-        return (<ButtonLink
-            btn_text={btn_text}
-            button_styles={button_styles}
-            button_textColor={button_textColor}
-            button_width={button_width}
-            button_type={button_type}
-            buttonlink_href={buttonlink_href}
-            buttonlink_target={buttonlink_target}
-            buttonlink_title={buttonlink_title}
-            enableModal={boolean('EnableModal', false, Modal_Setup )}
-            button_small_tab={boolean('Button small in tab', false, Default_Setup )}
-            modalTarget={text('Modal target ID:', 'exampleModalId-1', Modal_Setup)}
-        />)
-    })
+export const Button_arrow = Template.bind({});
+Button_arrow.args = {
+    btn_text: "this is button",
+    button_styles: "primary",
+    button_type : "arrow"
+};
+
+export const Outline = Template.bind({});
+Outline.args = {
+    btn_text: "this is button",
+    button_styles: "outline-primary"
+};
+

@@ -37,8 +37,8 @@ gulp.task('set-env-node-prod', function () {
 });
 
 //---- const dest paths for aem site -----
-var aem_dest = "../../../src/main/content/jcr_root/apps/glpg-clinical-trials/clientlibs/assets/resources/";
-//var dam_dest = "../../../../ui.content/src/main/content/jcr_root/content/dam/glpg-hcpportal/";
+var aem_dest = "../../../src/main/content/jcr_root/apps/hbk/clientlibs/assets/resources/";
+//var dam_dest = "../../../../ui.content/src/main/content/jcr_root/content/dam/hbk/";
 
 // =PATHS
 // @description Folder paths and variables
@@ -53,7 +53,7 @@ const paths = {
     dest: {
       aem: {
         designs: {
-          glpg_ctp_112: {
+          hbk_111: {
             scripts: aem_dest+"scripts",
             scripts_thirdparty: aem_dest+"scripts/thirdparty"
           }
@@ -69,18 +69,18 @@ const paths = {
     dest: {
       aem: {
         designs: {
-          glpg_ctp_112: aem_dest+"styles",
-          glpg_ctp_112_author:aem_dest+"styles"
+          hbk_111: aem_dest+"styles",
+          hbk_111_author:aem_dest+"styles"
         }
       },
     },
-    glpg_ctp_112: {
-      src: "./styles/glpg-ctp-112",
-      entry: "./styles/glpg-ctp-112/glpg-ctp-112.scss"
+    hbk_111: {
+      src: "./styles/hbk-111",
+      entry: "./styles/hbk-111/hbk-111.scss"
     },
-    glpg_ctp_112_author: {
-      src: "./styles/glpg-ctp-112-author",
-      entry: "./styles/glpg-ctp-112-author/glpg-ctp-112-author.scss"
+    hbk_111_author: {
+      src: "./styles/hbk-111-author",
+      entry: "./styles/hbk-111-author/hbk-111-author.scss"
     }
   },
   fonts: {
@@ -89,7 +89,7 @@ const paths = {
     dest: {
       aem: {
         designs: {
-          glpg_ctp_112:aem_dest+"fonts"
+          hbk_111:aem_dest+"fonts"
         }
       }
     }
@@ -102,7 +102,7 @@ const paths = {
       aem: {
         dam: "./public/images",
         designs: {
-          glpg_ctp_112: "./public/images/"
+          hbk_111: "./public/images/"
         }
       },
       app: "./public/images"
@@ -111,7 +111,7 @@ const paths = {
       aem: {
         //dam: dam_dest+"images",
         designs: {
-          glpg_ctp_112:aem_dest+"images"
+          hbk_111:aem_dest+"images"
         }
       },
       app: "./public/dist/images"
@@ -173,13 +173,13 @@ const imageminOptions = {
 
 // =IMAGES:DESIGNS (ETC/DESIGNS)
 gulp.task('images:designs', function (done) {
-  // glpg-ctp-112
+  // hbk-111
   gulp
-    .src(paths.images.src.aem.designs.glpg_ctp_112 + "/**/*.+(png|jpg|gif|svg|ico)")
+    .src(paths.images.src.aem.designs.hbk_111 + "/**/*.+(png|jpg|gif|svg|ico)")
     .pipe(newer(paths.images.dest.app))
     .pipe(imagemin(imageminOptions))
     .pipe(gulp.dest(paths.images.dest.app))
-    .pipe(gulp.dest(paths.images.dest.aem.designs.glpg_ctp_112));
+    .pipe(gulp.dest(paths.images.dest.aem.designs.hbk_111));
 
   done();
 });
@@ -201,7 +201,7 @@ gulp.task('images', gulp.series(
 gulp.task('fonts', function (done) {
   gulp
     .src(paths.fonts.glob)
-    .pipe(gulp.dest(paths.fonts.dest.aem.designs.glpg_ctp_112));
+    .pipe(gulp.dest(paths.fonts.dest.aem.designs.hbk_111));
   done();
 });
 
@@ -241,8 +241,8 @@ const postcssPluginsOptions = [
   // mqpacker, // Make sure mqpacker is last!
 ];
 
-// =STYLES:glpg_ctp_112
-gulp.task("styles:glpg_ctp_112", function(done) {
+// =STYLES:hbk_111
+gulp.task("styles:hbk_111", function(done) {
   gutil.log(
     gutil.colors.blue("[INFO] ") +
       "Generating CSS files: Sass, PostCSS (Autoprefixer) + Nano"
@@ -254,7 +254,7 @@ gulp.task("styles:glpg_ctp_112", function(done) {
   }
 
   gulp
-    .src(paths.styles.glpg_ctp_112.entry)
+    .src(paths.styles.hbk_111.entry)
     // .pipe(sourcemaps.init())
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sass(sassOptions))
@@ -265,16 +265,16 @@ gulp.task("styles:glpg_ctp_112", function(done) {
     .pipe(cssnano({zindex: false})) // @TODO ESE Add this later!
     .pipe(rename({ suffix: ".min" }))
     // .pipe(sourcemaps.write(paths.sourcemaps.dest))
-    .pipe(gulp.dest(paths.styles.glpg_ctp_112.src))
-    //.pipe(gulp.dest(paths.styles.glpg_ctp_112.dest))
-    .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_ctp_112))
+    .pipe(gulp.dest(paths.styles.hbk_111.src))
+    //.pipe(gulp.dest(paths.styles.hbk_111.dest))
+    .pipe(gulp.dest(paths.styles.dest.aem.designs.hbk_111))
   done();
 });
 
-// =STYLES:glpg_ctp_112_AUTHOR
-gulp.task("styles:glpg_ctp_112_author", function(done) {
+// =STYLES:hbk_111_AUTHOR
+gulp.task("styles:hbk_111_author", function(done) {
   gulp
-    .src(paths.styles.glpg_ctp_112_author.entry)
+    .src(paths.styles.hbk_111_author.entry)
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sass(sassOptions))
     .on("error", notify.onError(function(error) {
@@ -282,16 +282,16 @@ gulp.task("styles:glpg_ctp_112_author", function(done) {
       }))
     .pipe(postcss(postcssPluginsOptions))
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest(paths.styles.glpg_ctp_112_author.src))
-    //.pipe(gulp.dest(paths.styles.glpg_ctp_112_author.dest))
-    .pipe(gulp.dest(paths.styles.dest.aem.designs.glpg_ctp_112_author))
+    .pipe(gulp.dest(paths.styles.hbk_111_author.src))
+    //.pipe(gulp.dest(paths.styles.hbk_111_author.dest))
+    .pipe(gulp.dest(paths.styles.dest.aem.designs.hbk_111_author))
   done();
 });
 
 gulp.task('styles', gulp.series(
   [
-    'styles:glpg_ctp_112',
-    'styles:glpg_ctp_112_author',
+    'styles:hbk_111',
+    'styles:hbk_111_author',
   ], function (done) {
     done();
   }
@@ -304,7 +304,7 @@ gulp.task('styles', gulp.series(
 gulp.task('scripts:thirdparty', function(done) {
   gulp
     .src(paths.scripts.scripts_thirdparty)
-    .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_ctp_112.scripts_thirdparty));
+    .pipe(gulp.dest(paths.scripts.dest.aem.designs.hbk_111.scripts_thirdparty));
   done();
 });
 
@@ -325,7 +325,7 @@ gulp.task('scripts:components', function(done) {
   gulp
     .src(paths.scripts.components)
     .pipe(concat("main.js"))
-    .pipe(gulp.dest(paths.scripts.dest.aem.designs.glpg_ctp_112.scripts))
+    .pipe(gulp.dest(paths.scripts.dest.aem.designs.hbk_111.scripts))
   done();
 });
 

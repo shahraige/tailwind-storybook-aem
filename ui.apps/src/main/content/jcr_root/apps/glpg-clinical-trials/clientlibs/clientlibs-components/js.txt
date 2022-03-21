@@ -1,2 +1,0 @@
-#base=../assets/resources/scripts/thirdparty
-videojs-pip.min.js

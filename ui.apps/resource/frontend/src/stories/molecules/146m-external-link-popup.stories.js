@@ -1,13 +1,13 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
-import ExternalLinkPopup from '../../components/molecules/external-link-popup/external-link-popup'
+import React from 'react';
+import ExternalLikPopup from '../../components/molecules/external-link-popup/external-link-popup';
 
-storiesOf("Molecules | External Link popup", module)
+export default {
+   title: 'Molecules/ExternalLikPopup',
+   component: ExternalLikPopup,
+   argTypes: {}
+};
 
-.add("External Link popup", () =>{
-    return (
-        <>
-            <ExternalLinkPopup/>
-        </>
-    )
-})
+const Template = (args) => <ExternalLikPopup  {...args}/>;
+
+export const ExternalLik_Popup = Template.bind({});
+
