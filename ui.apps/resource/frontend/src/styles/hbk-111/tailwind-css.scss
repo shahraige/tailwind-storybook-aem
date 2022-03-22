@@ -11620,16 +11620,8 @@ textarea.form-control.is-invalid {
   max-height: 100vh;
 }
 
-.min-h-0 {
-  min-height: 0px;
-}
-
-.min-h-full {
-  min-height: 100%;
-}
-
-.min-h-screen {
-  min-height: 100vh;
+.min-h-inherit {
+  min-height: inherit;
 }
 
 .w-0 {
@@ -43271,16 +43263,8 @@ textarea.form-control.is-invalid {
     max-height: 100vh;
   }
 
-  .sm\:min-h-0 {
-    min-height: 0px;
-  }
-
-  .sm\:min-h-full {
-    min-height: 100%;
-  }
-
-  .sm\:min-h-screen {
-    min-height: 100vh;
+  .sm\:min-h-inherit {
+    min-height: inherit;
   }
 
   .sm\:w-0 {
@@ -74504,16 +74488,8 @@ textarea.form-control.is-invalid {
     max-height: 100vh;
   }
 
-  .md\:min-h-0 {
-    min-height: 0px;
-  }
-
-  .md\:min-h-full {
-    min-height: 100%;
-  }
-
-  .md\:min-h-screen {
-    min-height: 100vh;
+  .md\:min-h-inherit {
+    min-height: inherit;
   }
 
   .md\:w-0 {
@@ -105737,16 +105713,8 @@ textarea.form-control.is-invalid {
     max-height: 100vh;
   }
 
-  .lg\:min-h-0 {
-    min-height: 0px;
-  }
-
-  .lg\:min-h-full {
-    min-height: 100%;
-  }
-
-  .lg\:min-h-screen {
-    min-height: 100vh;
+  .lg\:min-h-inherit {
+    min-height: inherit;
   }
 
   .lg\:w-0 {
@@ -136970,16 +136938,8 @@ textarea.form-control.is-invalid {
     max-height: 100vh;
   }
 
-  .xl\:min-h-0 {
-    min-height: 0px;
-  }
-
-  .xl\:min-h-full {
-    min-height: 100%;
-  }
-
-  .xl\:min-h-screen {
-    min-height: 100vh;
+  .xl\:min-h-inherit {
+    min-height: inherit;
   }
 
   .xl\:w-0 {
@@ -168203,16 +168163,8 @@ textarea.form-control.is-invalid {
     max-height: 100vh;
   }
 
-  .\32xl\:min-h-0 {
-    min-height: 0px;
-  }
-
-  .\32xl\:min-h-full {
-    min-height: 100%;
-  }
-
-  .\32xl\:min-h-screen {
-    min-height: 100vh;
+  .\32xl\:min-h-inherit {
+    min-height: inherit;
   }
 
   .\32xl\:w-0 {

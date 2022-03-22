@@ -23,6 +23,11 @@ module.exports = {
     //     // => @media (min-width: 1536px) { ... }
     //   }
     // },
+    theme: {
+      minHeight: {
+        'inherit': 'inherit',
+      }
+    },
     plugins: [
       require('tw-elements/dist/plugin')
     ],
