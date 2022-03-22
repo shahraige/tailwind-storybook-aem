@@ -6,7 +6,7 @@
   "scripts": {
     "test": "craco test",
     "eject": "craco eject",
-    "tailwind": "postcss ./styles/hbk-111/tailwind/tailwind.css -o ./styles/hbk-111/tailwind-css.scss",
+    "tailwind": "postcss ./styles/hbk-111/tailwind/tailwind.css -o ./styles/hbk-111/tailwind-dev.scss",
     "storybook": "start-storybook -p 8000 -s ./public",
     "build-tailwind": "NODE_ENV=production postcss  ./styles/hbk-111/tailwind/tailwind.css -o ./styles/hbk-111/tailwind-build.scss",
     "build-storybook": "build-storybook -s ./public",

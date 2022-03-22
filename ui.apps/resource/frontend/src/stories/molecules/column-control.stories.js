@@ -178,7 +178,7 @@ export default {
  
 const Template = (args) => 
 <ColumnControl {...args}>
-    <div class="bg-red-500 col-span-8 flex items-center p-4">
+    <div class="bg-red-500 col-span-full md:col-span-8 flex items-center p-4">
         <div class="">
             <h2>COMPONENT</h2>
             <p>Box 1</p>
@@ -186,20 +186,20 @@ const Template = (args) =>
         </div>
     </div>
 
-    <div class="bg-yellow-200 col-span-4 flex items-center p-4">
+    <div class="bg-yellow-200 col-span-full md:col-span-4 flex items-center p-4">
         <div class="">
             <h2>COMPONENT</h2>
             <p>Box 2</p>
         </div>
     </div>  
 
-    <div class="bg-purple-200">
+    <div class="bg-purple-200 col-span-full md:col-auto">
         <div class="p-4">
             <h2>COMPONENT</h2>
             <p>Box 3</p>
         </div>
     </div>  
-    <div class="bg-blue-500">
+    <div class="bg-blue-500 col-span-full md:col-auto">
         <div class="p-4">
             <h2>COMPONENT</h2>
             <p>Box 4</p>
@@ -209,11 +209,11 @@ const Template = (args) =>
 
 const Template2 = (args) => 
 <ColumnControl {...args}>
-    <div class="bg-white bg-opacity-25 p-4 col-span-6">
+    <div class="bg-white bg-opacity-25 p-4 col-span-full md:col-span-6">
         <h1>COLUMN CONTROL WITH BG</h1>
     </div>
 
-    <div class="bg-black bg-opacity-25 p-4 col-span-6">
+    <div class="bg-black bg-opacity-25 p-4 col-span-full md:col-span-6">
         <h1 class="text-white">COLUMN CONTROL WITH BG</h1>
     </div>
 </ColumnControl>;
