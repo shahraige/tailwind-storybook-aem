@@ -1,10 +1,12 @@
 module.exports = {
+  mode: 'jit',
     purge: {
       content: [
         './components/**/*.js',
         './src/**/*.js',
       ],
     },
+
     // theme: {
     //   screens: {
     //     'sm': '640px',
@@ -26,9 +28,9 @@ module.exports = {
     theme: {
       minHeight: {
         'inherit': 'inherit',
-      }
+      },
     },
     plugins: [
-      require('tw-elements/dist/plugin')
+      require('tw-elements/dist/plugin'),
     ],
 }

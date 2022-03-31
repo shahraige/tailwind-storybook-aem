@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+    .text-primary{
+        color: #33b6b1; 
+    }
+}
+
+@layer components{
+    .quote-text blockquote{
+        @apply text-primary italic tracking-wider
+    }
+    .quote-text blockquote::before,
+    .quote-text blockquote::after{
+        content: '"';
+        display: inline;
+        color: #33b6b1; 
+    }
+
+    .quote-text blockquote::before{
+        @apply mr-0.5
+    }
+    .quote-text blockquote::after{
+        @apply ml-0.5
+    }
+}
