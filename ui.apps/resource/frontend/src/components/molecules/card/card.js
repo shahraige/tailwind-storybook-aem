@@ -22,16 +22,16 @@ const items =[
 const Card = (props) =>(
     <div className="card section">
         <div className="container mx-auto"> 
-            <div className="grid grid-cols-3 pt-20 gap-x-5">
+            <div className="grid md:grid-cols-3 pt-20 gap-x-5 items-start">
                 {items && items.length>0 && items.map((value)=>{
                     return(
-                        <div className='border border-gray-400 p-8 shadow-sm'>
-                            <div className='bg-red-200 h-24 w-1/2 -mt-20 mx-auto'>
+                        <div className='border border-gray-300 p-8 shadow-md mb-28 md:mb-0'>
+                            <div className='h-40 -mt-28 mx-auto'>
                                 <img src={value.image} className="h-full mx-auto"/>
                             </div>
                             <div className="mt-8">
                                 <HeadlineText>
-                                    <h2>{value.title}</h2>
+                                    <h2 className='font-bold'>{value.title}</h2>
                                     <p className='mt-4'>{value.description}</p>
                                 </HeadlineText>
                             </div>

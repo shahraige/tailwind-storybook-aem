@@ -2859,8 +2859,11 @@ textarea.form-control.is-invalid {
 .mb-2 {
 	margin-bottom: 0.5rem;
 }
-.-mt-20 {
-	margin-top: -5rem;
+.mb-28 {
+	margin-bottom: 7rem;
+}
+.-mt-28 {
+	margin-top: -7rem;
 }
 .mt-8 {
 	margin-top: 2rem;
@@ -2873,6 +2876,9 @@ textarea.form-control.is-invalid {
 }
 .mb-4 {
 	margin-bottom: 1rem;
+}
+.mb-11 {
+	margin-bottom: 2.75rem;
 }
 .box-content {
 	box-sizing: content-box;
@@ -2895,14 +2901,17 @@ textarea.form-control.is-invalid {
 .h-6 {
 	height: 1.5rem;
 }
-.h-20 {
-	height: 5rem;
+.h-40 {
+	height: 10rem;
 }
 .h-full {
 	height: 100%;
 }
 .h-4 {
 	height: 1rem;
+}
+.h-auto {
+	height: auto;
 }
 .min-h-inherit {
 	min-height: inherit;
@@ -2912,9 +2921,6 @@ textarea.form-control.is-invalid {
 }
 .w-6 {
 	width: 1.5rem;
-}
-.w-1\/2 {
-	width: 50%;
 }
 .w-auto {
 	width: auto;
@@ -2941,9 +2947,6 @@ textarea.form-control.is-invalid {
 .list-none {
 	list-style-type: none;
 }
-.grid-cols-3 {
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-}
 .grid-cols-12 {
 	grid-template-columns: repeat(12, minmax(0, 1fr));
 }
@@ -2952,6 +2955,9 @@ textarea.form-control.is-invalid {
 }
 .flex-wrap {
 	flex-wrap: wrap;
+}
+.items-start {
+	align-items: flex-start;
 }
 .items-center {
 	align-items: center;
@@ -3027,9 +3033,9 @@ textarea.form-control.is-invalid {
 	--tw-border-opacity: 1;
 	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
-.border-gray-400 {
+.border-gray-300 {
 	--tw-border-opacity: 1;
-	border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+	border-color: rgba(209, 213, 219, var(--tw-border-opacity));
 }
 .border-transparent {
 	border-color: transparent;
@@ -3037,10 +3043,6 @@ textarea.form-control.is-invalid {
 .bg-gray-100 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-}
-.bg-red-200 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
 }
 .bg-blue-600 {
 	--tw-bg-opacity: 1;
@@ -3151,6 +3153,9 @@ textarea.form-control.is-invalid {
 }
 .font-semibold {
 	font-weight: 600;
+}
+.font-bold {
+	font-weight: 700;
 }
 .uppercase {
 	text-transform: uppercase;
@@ -3343,12 +3348,34 @@ textarea.form-control.is-invalid {
 }
 @media (min-width: 768px) {
 
+	.md\:mb-0 {
+		margin-bottom: 0px;
+	}
+
 	.md\:block {
 		display: block;
 	}
 
+	.md\:hidden {
+		display: none;
+	}
+
+	.md\:grid-cols-3 {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
 	.md\:flex-row {
 		flex-direction: row;
+	}
+}
+@media (min-width: 1024px) {
+
+	.lg\:block {
+		display: block;
+	}
+
+	.lg\:hidden {
+		display: none;
 	}
 }
 @media (min-width: 1280px) {

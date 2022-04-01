@@ -6,7 +6,7 @@
   "scripts": {
     "test": "craco test",
     "eject": "craco eject",
-    "tailwind": "postcss ./styles/hbk-111/tailwind/tailwind.css -o ./styles/hbk-111/tailwind-dev.scss",
+    "tailwind": "postcss ./styles/hbk-111/tailwind/tailwind.css -o ./styles/hbk-111/tailwind-dev.scss --watch",
     "storybook": "start-storybook -p 8000 -s ./public",
     "build-tailwind": "NODE_ENV=production postcss  ./styles/hbk-111/tailwind/tailwind.css -o ./styles/hbk-111/tailwind-build.scss",
     "build-storybook": "build-storybook -s ./public",
@@ -58,6 +58,7 @@
     "path": "^0.12.7",
     "postcss": "^8.4.7",
     "postcss-assets": "^5.0.0",
+    "postcss-import": "^14.1.0",
     "postcss-loader": "^4.0.4",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
