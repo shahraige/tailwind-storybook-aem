@@ -8,6 +8,7 @@
     }
 }
 
+/* 
 @layer components{
     .quote-text blockquote{
         @apply text-primary italic tracking-wider
@@ -25,4 +26,4 @@
     .quote-text blockquote::after{
         @apply ml-0.5
     }
-}
+} */
