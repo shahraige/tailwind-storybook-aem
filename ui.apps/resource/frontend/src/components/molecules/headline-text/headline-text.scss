@@ -18,15 +18,15 @@
          blockquote::before,
          blockquote::after{
             content: '"';
-            display: inline;
+            display: inline-block;
             color: $primary; 
         }
     
          blockquote::before{
-          margin-left: 2px;
+          padding-right: 2px;
         }
          blockquote::after{
-          margin-right: 2px;
+          padding-left: 2px;
         }
       }
     }

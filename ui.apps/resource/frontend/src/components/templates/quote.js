@@ -4,7 +4,7 @@ import HeadlineText from '../molecules/headline-text/HeadlineText';
 
 const Quote = (props) =>{
     return(
-        <div className='business-page'>
+        <div className='quote'>
             <ColumnControl
             container="true"
             >
