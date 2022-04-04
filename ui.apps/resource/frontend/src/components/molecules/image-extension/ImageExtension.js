@@ -1,29 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import HtmlComment from '../../particles/html-comment/HtmlComment';
 
-
 const ImageExtension = (props) => (
-  <div className="image-extension section">
+  <div className="image-extension section mb-11">
     <HtmlComment text="Start image-extension component markup, Copy from here" />
 
-    <div className={`${props.image_position || ''} image-container`}>
+    <div className={`${props.image_position || ''} image-container flex`}>
 
       <a href={props.image_href} className={props.image_size}>
         {/* For Desktops && lAPTOP  */}
-        <img className={`${props.bottom_gap} d-none d-lg-block img-fluid`}
+        <img className={`${props.bottom_gap} w-full hidden lg:block max-w-full h-auto`}
           src={props.image_src}
           srcSet={`${props.image_src} 1920w, ${props.image_src} 1440w, ${props.image_src} 1080w`}
           alt="Desktop Image" />
 
         {/* For TABLET  */}
-        <img className={`${props.bottom_gap} d-none d-md-block d-lg-none img-fluid`}
+        <img className={`${props.bottom_gap} w-full hidden md:block lg:hidden max-w-full h-auto`}
           src={props.image_src}
           srcSet={`${props.image_src} 1920w, ${props.image_src} 1440w, ${props.image_src} 1080w`}
           alt="Tablet Image" />
 
         {/* For Moblie  */}
-        <img className={`${props.bottom_gap} d-md-none img-fluid`}
+        <img className={`${props.bottom_gap} w-full md:hidden max-w-full h-auto`}
           src={props.image_src}
           srcSet={`${props.image_src} 1300w, ${props.image_src} 975w, ${props.image_src} 730w`}
           alt="Mobile Image" />
@@ -34,17 +32,5 @@ const ImageExtension = (props) => (
     <HtmlComment text="End image-extension component markup" />
   </div>
 );
-
-ImageExtension.propTypes = {
-  /** The custom class for set width */
-  image_size: PropTypes.string,
-  /** The custom class for set bottom gap */
-  bottom_gap: PropTypes.string
-};
-
-ImageExtension.defaultProps = {
-  image_size: '',
-  bottom_gap: ''
-};
 
 export default ImageExtension;
