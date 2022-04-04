@@ -24,9 +24,14 @@ module.exports = {
     //   }
     // },
     theme: {
-      minHeight: {
-        'inherit': 'inherit',
-      }
+        extend: {
+          colors : {
+            primary : '#00BFB2',
+          },
+          minHeight: {
+            'inherit': 'inherit',
+          },
+        },
     },
     plugins: [
       require('tw-elements/dist/plugin')

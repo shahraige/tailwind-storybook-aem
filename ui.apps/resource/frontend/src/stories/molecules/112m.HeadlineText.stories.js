@@ -412,3 +412,15 @@ const Template5 = (args) => <HeadlineText {...args} >
     <p><span className="text-circle">4</span> <span className="text-question"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>
 </HeadlineText>;
 
+export const Template6 = (args) => <HeadlineText {...args}>
+    <blockquote>
+        <span className='text-primary italic tracking-wider'>
+            We at HBK believe  that how we conduct our business matters every bit as much as the results we achieve. Our Code of Business Ethics is an important guide for us, setting forth our ethical framework and values, and the resources we have to act with integrity and win – the right way.
+        </span>
+    </blockquote>
+</HeadlineText>
+
+export const BlockQuote = Template6.bind({});
+BlockQuote.args = {
+    customClass: "",
+}
