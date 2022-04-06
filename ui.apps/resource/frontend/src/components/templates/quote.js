@@ -15,7 +15,7 @@ const Quote = (props) =>{
                 <div className='col-span-8 pt-16'>
                     <HeadlineText customClass="text-xl">
                         <blockquote>
-                            <span className='text-primary italic tracking-wider'>
+                            <span className='text-secondary italic tracking-wider'>
                                 We at HBK believe  that how we conduct our business matters every bit as much as the results we achieve. Our Code of Business Ethics is an important guide for us, setting forth our ethical framework and values, and the resources we have to act with integrity and win – the right way.
                             </span>
                         </blockquote>

@@ -1,6 +1,7 @@
-
+@import "tailwind-dev.scss";
 @import "variables/_aem-config--hbk-111";
 @import "variables/__variables-loader--hbk-111";
+
 @import "thirdparty/__thirdparty-loader--hbk-111";
 
 @import "foundation/__foundation-loader--hbk-111";
@@ -10,5 +11,5 @@
 
 @import "pages/__pages-loader--hbk-111";
 
-@import "components/__components-loader--hbk-111";
+@import "components/__components-loader--hbk-111"; 
 /*@import "../../tailwind.css"*/

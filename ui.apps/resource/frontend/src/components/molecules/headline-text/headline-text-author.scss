@@ -1,15 +1,7 @@
 @media screen {
     [data-site-id="#{$site-id}"] {
       .headline-text {
-        .text-tooltip {
-          font-weight: 700;
-          color: $color-aqua-deep;
-          transition: all 0.3s ease;
-          &:hover{
-            color: $secondary;
-            transition: all 0.3s ease;
-          }
-        }
+   
       }
     }
 }

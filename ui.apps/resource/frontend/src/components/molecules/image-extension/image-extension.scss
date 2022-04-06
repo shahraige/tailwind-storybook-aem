@@ -2,7 +2,7 @@
   [data-site-id="#{$site-id}"] {
     .image-extension {
       img:not(.no-bgap) {
-        margin-bottom: $cmp-bottom-gap;
+        // margin-bottom: $cmp-bottom-gap;
       }
     }
 

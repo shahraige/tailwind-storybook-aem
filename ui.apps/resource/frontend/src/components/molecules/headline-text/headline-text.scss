@@ -1,4 +1,4 @@
-@media screen {
+// @media screen {
   [data-site-id="#{$site-id}"] {
     .headline-text {
       &>div:not(.mb-0) {
@@ -12,23 +12,23 @@
         }
         a{
           &:hover{
-            color: $secondary;
+            @extend .text-secondary;
           }
         }
          blockquote::before,
          blockquote::after{
             content: '"';
             display: inline-block;
-            color: $primary; 
+            @extend .text-secondary;
         }
     
          blockquote::before{
-          padding-right: 2px;
+          @extend .pr-1;
         }
          blockquote::after{
-          padding-left: 2px;
+          @extend .pl-1;
         }
       }
     }
   }
-}
+// }

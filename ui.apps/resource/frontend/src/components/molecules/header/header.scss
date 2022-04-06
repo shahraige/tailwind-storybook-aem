@@ -1,0 +1,45 @@
+[data-site-id="#{$site-id}"] {
+    .header {
+        &__inner{
+            .image-extension{
+                a{
+                   
+                    // @media  screen(md) {
+                    //    max-width: 93px;
+                    // }
+                    // @screen md {
+                    //    max-width: 93px;
+                    // }
+
+                    @media screen and (max-width : 768px) {
+                        max-width: 93px;
+                    }
+                    @media screen and (min-width : 1024px) {
+                        max-width: 250px;
+                    }
+                  
+                }
+            }
+
+            .animate-icon{
+                span{
+                    &:first-child{
+                        transform: rotate(-45deg);
+                        // top: 50%;
+                        top:3px;
+                    }
+
+                    &:nth-child(2){
+                        @extend .hidden;
+                    }
+
+                    &:last-child{
+                        transform: rotate(45deg);
+                        // top: 50%;
+                        top:3px;
+                    }
+                }
+            }
+        }
+    }
+}
