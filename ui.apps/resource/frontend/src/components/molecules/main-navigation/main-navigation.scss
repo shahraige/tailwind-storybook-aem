@@ -4,7 +4,7 @@
             &-hover {
                 &:hover {
                     &>.dropdown-menu {
-                        @extend .block;
+                        display: block;
                     }
                 }
 
@@ -27,6 +27,10 @@
                         @extend .absolute;
                         @extend .bottom-0;
                         transition: all .3s ease;
+
+                        @media screen and (max-width:768px){
+                            content: none;
+                        }
                     }
                     &:hover {
                         &::before {
@@ -41,10 +45,55 @@
                         @extend .left-0;
                         @extend .h-4;
                         @extend .w-full;
+
+                        @media screen and (max-width:768px){
+                            content: none;
+                        }
                     }
 
                     .nav-link{
                         padding: 0 !important;
+                    }
+                }
+            }
+
+            @media screen and (max-width:768px) {
+                position: relative;
+            }
+
+            @media screen and (max-width:768px) {
+                .mob-topnav-menu{
+                    transition: all ease .5s;
+                }
+                .navbar-nav{
+                    transition: all ease .5s;
+
+                    .dropdown-menu{
+                        position: absolute;
+                        width: 100%;
+                        left: 100%;
+                        top: 0;
+                        transition: all ease .5s;
+                        z-index: 1;
+
+                        @media screen and (max-width:768px) {
+                            height: calc(100vh - 128px);
+                        }
+                        @media screen and (max-width:576px) {
+                            height: calc(100vh - 88px);
+                        }
+
+                        &>span{
+                            top: 14px;
+                        }
+                    }
+                }
+                .slide-menu{
+                    transform: translateX(-100%);
+
+                    .active>.dropdown-menu{
+                        display: block;
+                        left: 100%;
                     }
                 }
             }

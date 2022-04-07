@@ -14,7 +14,7 @@
                     @media screen and (max-width : 768px) {
                         max-width: 93px;
                     }
-                    @media screen and (min-width : 1024px) {
+                    @media screen and (min-width : 769px) {
                         max-width: 250px;
                     }
                   
@@ -38,6 +38,18 @@
                         // top: 50%;
                         top:3px;
                     }
+                }
+            }
+
+            .navbar-collapse{
+               
+                @media screen and (max-width:768px) {
+                    height: calc(100vh - 128px);
+                    top: 128px;
+                }
+                 @media screen and (max-width:576px) {
+                    height: calc(100vh - 88px);
+                    top: 88px;
                 }
             }
         }
