@@ -50,6 +50,12 @@ module.exports = {
         },
         textOpacity: {
           '54' : '.54'
+        },
+        padding : {
+          '28' : '88px'
+        },
+        borderWidth : {
+          '3' : '3px'
         }
       },
 

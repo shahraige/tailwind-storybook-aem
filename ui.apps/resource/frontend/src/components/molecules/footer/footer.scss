@@ -1,0 +1,15 @@
+[data-site-id="#{$site-id}"] {
+    .footer {
+        &__inner{
+            .button-link{
+                a{
+                    padding: 0 !important;
+                }
+                
+                &:not(:last-child){
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+}

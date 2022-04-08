@@ -130,9 +130,9 @@ const MainNavigation =(props)=>{
 
                                 {(value.children && value.children.length > 0 ? 
                                     <>
-                                        {/* *** Mobile view - sub-menu *** */}
+                                        {/* *** Sub-menu *** */}
                                         <ul 
-                                        className='hidden dropdown-menu lg:-left-1/2  bg-white lg:shadow-md lg:border lg:border-gray-50 lg:w-205 lg:top-full'
+                                        className='hidden dropdown-menu lg:-left-1/2 bg-white lg:shadow-md lg:border lg:border-gray-50 lg:w-205 lg:top-full'
                                         aria-labelledby="navbarDropdown">
                                             
                                             {(showMenu ? 
@@ -173,7 +173,7 @@ const MainNavigation =(props)=>{
                                             {/* *** Mobile view - top-nav-menu ends here *** */}
 
                                         </ul>
-                                        {/* *** Mobile view - sub-menu ends here *** */}
+                                        {/* *** Sub-menu ends here *** */}
                                     </>
                                 : '')}
                             </li>

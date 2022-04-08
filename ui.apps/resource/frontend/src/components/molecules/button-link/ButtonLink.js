@@ -4,6 +4,7 @@ import HtmlComment from '../../particles/html-comment/HtmlComment';
 
 const ButtonLink = (props) => {
   const {
+    customClass,
     modalTarget,
     enableModal,
     buttonlink_target,
@@ -22,7 +23,7 @@ const ButtonLink = (props) => {
       {
         // check is not modal enable then return first otherwise second
         !enableModal ? (
-          <a className={`px-10 py-4 font-semibold text-lg shadow-sm inline-block ${button_styles ? 'bg-' + button_styles : ''} ${button_textColor || ''}  ${button_width || ''} ${button_width || ''} ${props.button_small_tab? 'btn-small-tab':''} ${button_type || ''}`}
+          <a className={` hover:underline px-10 py-4 text-base inline-block ${button_styles ? 'bg-' + button_styles : ''} ${button_textColor || ''}  ${button_width || ''} ${button_width || ''} ${props.button_small_tab? 'btn-small-tab':''} ${button_type || ''} ${customClass}`}
             href={buttonlink_href || ''}
             target={buttonlink_target || ''}
             title={buttonlink_title || ''}

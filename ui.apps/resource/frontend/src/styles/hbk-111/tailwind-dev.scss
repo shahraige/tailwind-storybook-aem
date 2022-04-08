@@ -18944,6 +18944,12 @@ textarea.form-control.is-invalid {
   border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
 }
 
+.divide-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(3px * var(--tw-divide-x-reverse));
+  border-left-width: calc(3px * calc(1 - var(--tw-divide-x-reverse)));
+}
+
 .divide-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-x-reverse: 0;
   border-right-width: calc(4px * var(--tw-divide-x-reverse));
@@ -18972,6 +18978,12 @@ textarea.form-control.is-invalid {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+}
+
+.divide-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(3px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(3px * var(--tw-divide-y-reverse));
 }
 
 .divide-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -19690,6 +19702,10 @@ textarea.form-control.is-invalid {
   border-width: 2px;
 }
 
+.border-3 {
+  border-width: 3px;
+}
+
 .border-4 {
   border-width: 4px;
 }
@@ -19708,6 +19724,10 @@ textarea.form-control.is-invalid {
 
 .border-t-2 {
   border-top-width: 2px;
+}
+
+.border-t-3 {
+  border-top-width: 3px;
 }
 
 .border-t-4 {
@@ -19730,6 +19750,10 @@ textarea.form-control.is-invalid {
   border-right-width: 2px;
 }
 
+.border-r-3 {
+  border-right-width: 3px;
+}
+
 .border-r-4 {
   border-right-width: 4px;
 }
@@ -19750,6 +19774,10 @@ textarea.form-control.is-invalid {
   border-bottom-width: 2px;
 }
 
+.border-b-3 {
+  border-bottom-width: 3px;
+}
+
 .border-b-4 {
   border-bottom-width: 4px;
 }
@@ -19768,6 +19796,10 @@ textarea.form-control.is-invalid {
 
 .border-l-2 {
   border-left-width: 2px;
+}
+
+.border-l-3 {
+  border-left-width: 3px;
 }
 
 .border-l-4 {
@@ -21511,7 +21543,7 @@ textarea.form-control.is-invalid {
 }
 
 .p-28 {
-  padding: 7rem;
+  padding: 88px;
 }
 
 .p-32 {
@@ -21651,7 +21683,7 @@ textarea.form-control.is-invalid {
 }
 
 .last\:p-28:last-child {
-  padding: 7rem;
+  padding: 88px;
 }
 
 .last\:p-32:last-child {
@@ -21808,8 +21840,8 @@ textarea.form-control.is-invalid {
 }
 
 .px-28 {
-  padding-left: 7rem;
-  padding-right: 7rem;
+  padding-left: 88px;
+  padding-right: 88px;
 }
 
 .px-32 {
@@ -21983,8 +22015,8 @@ textarea.form-control.is-invalid {
 }
 
 .py-28 {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 88px;
+  padding-bottom: 88px;
 }
 
 .py-32 {
@@ -22158,8 +22190,8 @@ textarea.form-control.is-invalid {
 }
 
 .last\:px-28:last-child {
-  padding-left: 7rem;
-  padding-right: 7rem;
+  padding-left: 88px;
+  padding-right: 88px;
 }
 
 .last\:px-32:last-child {
@@ -22333,8 +22365,8 @@ textarea.form-control.is-invalid {
 }
 
 .last\:py-28:last-child {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 88px;
+  padding-bottom: 88px;
 }
 
 .last\:py-32:last-child {
@@ -22491,7 +22523,7 @@ textarea.form-control.is-invalid {
 }
 
 .pt-28 {
-  padding-top: 7rem;
+  padding-top: 88px;
 }
 
 .pt-32 {
@@ -22631,7 +22663,7 @@ textarea.form-control.is-invalid {
 }
 
 .pr-28 {
-  padding-right: 7rem;
+  padding-right: 88px;
 }
 
 .pr-32 {
@@ -22771,7 +22803,7 @@ textarea.form-control.is-invalid {
 }
 
 .pb-28 {
-  padding-bottom: 7rem;
+  padding-bottom: 88px;
 }
 
 .pb-32 {
@@ -22911,7 +22943,7 @@ textarea.form-control.is-invalid {
 }
 
 .pl-28 {
-  padding-left: 7rem;
+  padding-left: 88px;
 }
 
 .pl-32 {
@@ -23051,7 +23083,7 @@ textarea.form-control.is-invalid {
 }
 
 .last\:pt-28:last-child {
-  padding-top: 7rem;
+  padding-top: 88px;
 }
 
 .last\:pt-32:last-child {
@@ -23191,7 +23223,7 @@ textarea.form-control.is-invalid {
 }
 
 .last\:pr-28:last-child {
-  padding-right: 7rem;
+  padding-right: 88px;
 }
 
 .last\:pr-32:last-child {
@@ -23331,7 +23363,7 @@ textarea.form-control.is-invalid {
 }
 
 .last\:pb-28:last-child {
-  padding-bottom: 7rem;
+  padding-bottom: 88px;
 }
 
 .last\:pb-32:last-child {
@@ -23471,7 +23503,7 @@ textarea.form-control.is-invalid {
 }
 
 .last\:pl-28:last-child {
-  padding-left: 7rem;
+  padding-left: 88px;
 }
 
 .last\:pl-32:last-child {
@@ -40109,6 +40141,12 @@ textarea.form-control.is-invalid {
     border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
   }
 
+  .sm\:divide-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--tw-divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+
   .sm\:divide-x-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-x-reverse: 0;
     border-right-width: calc(4px * var(--tw-divide-x-reverse));
@@ -40137,6 +40175,12 @@ textarea.form-control.is-invalid {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+  }
+
+  .sm\:divide-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--tw-divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--tw-divide-y-reverse));
   }
 
   .sm\:divide-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -40855,6 +40899,10 @@ textarea.form-control.is-invalid {
     border-width: 2px;
   }
 
+  .sm\:border-3 {
+    border-width: 3px;
+  }
+
   .sm\:border-4 {
     border-width: 4px;
   }
@@ -40873,6 +40921,10 @@ textarea.form-control.is-invalid {
 
   .sm\:border-t-2 {
     border-top-width: 2px;
+  }
+
+  .sm\:border-t-3 {
+    border-top-width: 3px;
   }
 
   .sm\:border-t-4 {
@@ -40895,6 +40947,10 @@ textarea.form-control.is-invalid {
     border-right-width: 2px;
   }
 
+  .sm\:border-r-3 {
+    border-right-width: 3px;
+  }
+
   .sm\:border-r-4 {
     border-right-width: 4px;
   }
@@ -40915,6 +40971,10 @@ textarea.form-control.is-invalid {
     border-bottom-width: 2px;
   }
 
+  .sm\:border-b-3 {
+    border-bottom-width: 3px;
+  }
+
   .sm\:border-b-4 {
     border-bottom-width: 4px;
   }
@@ -40933,6 +40993,10 @@ textarea.form-control.is-invalid {
 
   .sm\:border-l-2 {
     border-left-width: 2px;
+  }
+
+  .sm\:border-l-3 {
+    border-left-width: 3px;
   }
 
   .sm\:border-l-4 {
@@ -42676,7 +42740,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:p-28 {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .sm\:p-32 {
@@ -42816,7 +42880,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:last\:p-28:last-child {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .sm\:last\:p-32:last-child {
@@ -42973,8 +43037,8 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .sm\:px-32 {
@@ -43148,8 +43212,8 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .sm\:py-32 {
@@ -43323,8 +43387,8 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:last\:px-28:last-child {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .sm\:last\:px-32:last-child {
@@ -43498,8 +43562,8 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:last\:py-28:last-child {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .sm\:last\:py-32:last-child {
@@ -43656,7 +43720,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:pt-28 {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .sm\:pt-32 {
@@ -43796,7 +43860,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:pr-28 {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .sm\:pr-32 {
@@ -43936,7 +44000,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:pb-28 {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .sm\:pb-32 {
@@ -44076,7 +44140,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:pl-28 {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .sm\:pl-32 {
@@ -44216,7 +44280,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:last\:pt-28:last-child {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .sm\:last\:pt-32:last-child {
@@ -44356,7 +44420,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:last\:pr-28:last-child {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .sm\:last\:pr-32:last-child {
@@ -44496,7 +44560,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:last\:pb-28:last-child {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .sm\:last\:pb-32:last-child {
@@ -44636,7 +44700,7 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:last\:pl-28:last-child {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .sm\:last\:pl-32:last-child {
@@ -61177,6 +61241,12 @@ textarea.form-control.is-invalid {
     border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
   }
 
+  .md\:divide-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--tw-divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+
   .md\:divide-x-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-x-reverse: 0;
     border-right-width: calc(4px * var(--tw-divide-x-reverse));
@@ -61205,6 +61275,12 @@ textarea.form-control.is-invalid {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+  }
+
+  .md\:divide-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--tw-divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--tw-divide-y-reverse));
   }
 
   .md\:divide-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -61923,6 +61999,10 @@ textarea.form-control.is-invalid {
     border-width: 2px;
   }
 
+  .md\:border-3 {
+    border-width: 3px;
+  }
+
   .md\:border-4 {
     border-width: 4px;
   }
@@ -61941,6 +62021,10 @@ textarea.form-control.is-invalid {
 
   .md\:border-t-2 {
     border-top-width: 2px;
+  }
+
+  .md\:border-t-3 {
+    border-top-width: 3px;
   }
 
   .md\:border-t-4 {
@@ -61963,6 +62047,10 @@ textarea.form-control.is-invalid {
     border-right-width: 2px;
   }
 
+  .md\:border-r-3 {
+    border-right-width: 3px;
+  }
+
   .md\:border-r-4 {
     border-right-width: 4px;
   }
@@ -61983,6 +62071,10 @@ textarea.form-control.is-invalid {
     border-bottom-width: 2px;
   }
 
+  .md\:border-b-3 {
+    border-bottom-width: 3px;
+  }
+
   .md\:border-b-4 {
     border-bottom-width: 4px;
   }
@@ -62001,6 +62093,10 @@ textarea.form-control.is-invalid {
 
   .md\:border-l-2 {
     border-left-width: 2px;
+  }
+
+  .md\:border-l-3 {
+    border-left-width: 3px;
   }
 
   .md\:border-l-4 {
@@ -63744,7 +63840,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:p-28 {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .md\:p-32 {
@@ -63884,7 +63980,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:last\:p-28:last-child {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .md\:last\:p-32:last-child {
@@ -64041,8 +64137,8 @@ textarea.form-control.is-invalid {
   }
 
   .md\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .md\:px-32 {
@@ -64216,8 +64312,8 @@ textarea.form-control.is-invalid {
   }
 
   .md\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .md\:py-32 {
@@ -64391,8 +64487,8 @@ textarea.form-control.is-invalid {
   }
 
   .md\:last\:px-28:last-child {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .md\:last\:px-32:last-child {
@@ -64566,8 +64662,8 @@ textarea.form-control.is-invalid {
   }
 
   .md\:last\:py-28:last-child {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .md\:last\:py-32:last-child {
@@ -64724,7 +64820,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:pt-28 {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .md\:pt-32 {
@@ -64864,7 +64960,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:pr-28 {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .md\:pr-32 {
@@ -65004,7 +65100,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:pb-28 {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .md\:pb-32 {
@@ -65144,7 +65240,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:pl-28 {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .md\:pl-32 {
@@ -65284,7 +65380,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:last\:pt-28:last-child {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .md\:last\:pt-32:last-child {
@@ -65424,7 +65520,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:last\:pr-28:last-child {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .md\:last\:pr-32:last-child {
@@ -65564,7 +65660,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:last\:pb-28:last-child {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .md\:last\:pb-32:last-child {
@@ -65704,7 +65800,7 @@ textarea.form-control.is-invalid {
   }
 
   .md\:last\:pl-28:last-child {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .md\:last\:pl-32:last-child {
@@ -82245,6 +82341,12 @@ textarea.form-control.is-invalid {
     border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
   }
 
+  .lg\:divide-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--tw-divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+
   .lg\:divide-x-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-x-reverse: 0;
     border-right-width: calc(4px * var(--tw-divide-x-reverse));
@@ -82273,6 +82375,12 @@ textarea.form-control.is-invalid {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+  }
+
+  .lg\:divide-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--tw-divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--tw-divide-y-reverse));
   }
 
   .lg\:divide-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -82991,6 +83099,10 @@ textarea.form-control.is-invalid {
     border-width: 2px;
   }
 
+  .lg\:border-3 {
+    border-width: 3px;
+  }
+
   .lg\:border-4 {
     border-width: 4px;
   }
@@ -83009,6 +83121,10 @@ textarea.form-control.is-invalid {
 
   .lg\:border-t-2 {
     border-top-width: 2px;
+  }
+
+  .lg\:border-t-3 {
+    border-top-width: 3px;
   }
 
   .lg\:border-t-4 {
@@ -83031,6 +83147,10 @@ textarea.form-control.is-invalid {
     border-right-width: 2px;
   }
 
+  .lg\:border-r-3 {
+    border-right-width: 3px;
+  }
+
   .lg\:border-r-4 {
     border-right-width: 4px;
   }
@@ -83051,6 +83171,10 @@ textarea.form-control.is-invalid {
     border-bottom-width: 2px;
   }
 
+  .lg\:border-b-3 {
+    border-bottom-width: 3px;
+  }
+
   .lg\:border-b-4 {
     border-bottom-width: 4px;
   }
@@ -83069,6 +83193,10 @@ textarea.form-control.is-invalid {
 
   .lg\:border-l-2 {
     border-left-width: 2px;
+  }
+
+  .lg\:border-l-3 {
+    border-left-width: 3px;
   }
 
   .lg\:border-l-4 {
@@ -84812,7 +84940,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:p-28 {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .lg\:p-32 {
@@ -84952,7 +85080,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:last\:p-28:last-child {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .lg\:last\:p-32:last-child {
@@ -85109,8 +85237,8 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .lg\:px-32 {
@@ -85284,8 +85412,8 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .lg\:py-32 {
@@ -85459,8 +85587,8 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:last\:px-28:last-child {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .lg\:last\:px-32:last-child {
@@ -85634,8 +85762,8 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:last\:py-28:last-child {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .lg\:last\:py-32:last-child {
@@ -85792,7 +85920,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:pt-28 {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .lg\:pt-32 {
@@ -85932,7 +86060,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:pr-28 {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .lg\:pr-32 {
@@ -86072,7 +86200,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:pb-28 {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .lg\:pb-32 {
@@ -86212,7 +86340,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:pl-28 {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .lg\:pl-32 {
@@ -86352,7 +86480,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:last\:pt-28:last-child {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .lg\:last\:pt-32:last-child {
@@ -86492,7 +86620,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:last\:pr-28:last-child {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .lg\:last\:pr-32:last-child {
@@ -86632,7 +86760,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:last\:pb-28:last-child {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .lg\:last\:pb-32:last-child {
@@ -86772,7 +86900,7 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:last\:pl-28:last-child {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .lg\:last\:pl-32:last-child {
@@ -103313,6 +103441,12 @@ textarea.form-control.is-invalid {
     border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
   }
 
+  .xl\:divide-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--tw-divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+
   .xl\:divide-x-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-x-reverse: 0;
     border-right-width: calc(4px * var(--tw-divide-x-reverse));
@@ -103341,6 +103475,12 @@ textarea.form-control.is-invalid {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+  }
+
+  .xl\:divide-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--tw-divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--tw-divide-y-reverse));
   }
 
   .xl\:divide-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -104059,6 +104199,10 @@ textarea.form-control.is-invalid {
     border-width: 2px;
   }
 
+  .xl\:border-3 {
+    border-width: 3px;
+  }
+
   .xl\:border-4 {
     border-width: 4px;
   }
@@ -104077,6 +104221,10 @@ textarea.form-control.is-invalid {
 
   .xl\:border-t-2 {
     border-top-width: 2px;
+  }
+
+  .xl\:border-t-3 {
+    border-top-width: 3px;
   }
 
   .xl\:border-t-4 {
@@ -104099,6 +104247,10 @@ textarea.form-control.is-invalid {
     border-right-width: 2px;
   }
 
+  .xl\:border-r-3 {
+    border-right-width: 3px;
+  }
+
   .xl\:border-r-4 {
     border-right-width: 4px;
   }
@@ -104119,6 +104271,10 @@ textarea.form-control.is-invalid {
     border-bottom-width: 2px;
   }
 
+  .xl\:border-b-3 {
+    border-bottom-width: 3px;
+  }
+
   .xl\:border-b-4 {
     border-bottom-width: 4px;
   }
@@ -104137,6 +104293,10 @@ textarea.form-control.is-invalid {
 
   .xl\:border-l-2 {
     border-left-width: 2px;
+  }
+
+  .xl\:border-l-3 {
+    border-left-width: 3px;
   }
 
   .xl\:border-l-4 {
@@ -105880,7 +106040,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:p-28 {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .xl\:p-32 {
@@ -106020,7 +106180,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:last\:p-28:last-child {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .xl\:last\:p-32:last-child {
@@ -106177,8 +106337,8 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .xl\:px-32 {
@@ -106352,8 +106512,8 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .xl\:py-32 {
@@ -106527,8 +106687,8 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:last\:px-28:last-child {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .xl\:last\:px-32:last-child {
@@ -106702,8 +106862,8 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:last\:py-28:last-child {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .xl\:last\:py-32:last-child {
@@ -106860,7 +107020,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:pt-28 {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .xl\:pt-32 {
@@ -107000,7 +107160,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:pr-28 {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .xl\:pr-32 {
@@ -107140,7 +107300,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:pb-28 {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .xl\:pb-32 {
@@ -107280,7 +107440,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:pl-28 {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .xl\:pl-32 {
@@ -107420,7 +107580,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:last\:pt-28:last-child {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .xl\:last\:pt-32:last-child {
@@ -107560,7 +107720,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:last\:pr-28:last-child {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .xl\:last\:pr-32:last-child {
@@ -107700,7 +107860,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:last\:pb-28:last-child {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .xl\:last\:pb-32:last-child {
@@ -107840,7 +108000,7 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:last\:pl-28:last-child {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .xl\:last\:pl-32:last-child {
@@ -124381,6 +124541,12 @@ textarea.form-control.is-invalid {
     border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
   }
 
+  .xxl\:divide-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--tw-divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+
   .xxl\:divide-x-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-x-reverse: 0;
     border-right-width: calc(4px * var(--tw-divide-x-reverse));
@@ -124409,6 +124575,12 @@ textarea.form-control.is-invalid {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+  }
+
+  .xxl\:divide-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--tw-divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--tw-divide-y-reverse));
   }
 
   .xxl\:divide-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -125127,6 +125299,10 @@ textarea.form-control.is-invalid {
     border-width: 2px;
   }
 
+  .xxl\:border-3 {
+    border-width: 3px;
+  }
+
   .xxl\:border-4 {
     border-width: 4px;
   }
@@ -125145,6 +125321,10 @@ textarea.form-control.is-invalid {
 
   .xxl\:border-t-2 {
     border-top-width: 2px;
+  }
+
+  .xxl\:border-t-3 {
+    border-top-width: 3px;
   }
 
   .xxl\:border-t-4 {
@@ -125167,6 +125347,10 @@ textarea.form-control.is-invalid {
     border-right-width: 2px;
   }
 
+  .xxl\:border-r-3 {
+    border-right-width: 3px;
+  }
+
   .xxl\:border-r-4 {
     border-right-width: 4px;
   }
@@ -125187,6 +125371,10 @@ textarea.form-control.is-invalid {
     border-bottom-width: 2px;
   }
 
+  .xxl\:border-b-3 {
+    border-bottom-width: 3px;
+  }
+
   .xxl\:border-b-4 {
     border-bottom-width: 4px;
   }
@@ -125205,6 +125393,10 @@ textarea.form-control.is-invalid {
 
   .xxl\:border-l-2 {
     border-left-width: 2px;
+  }
+
+  .xxl\:border-l-3 {
+    border-left-width: 3px;
   }
 
   .xxl\:border-l-4 {
@@ -126948,7 +127140,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:p-28 {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .xxl\:p-32 {
@@ -127088,7 +127280,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:last\:p-28:last-child {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .xxl\:last\:p-32:last-child {
@@ -127245,8 +127437,8 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .xxl\:px-32 {
@@ -127420,8 +127612,8 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .xxl\:py-32 {
@@ -127595,8 +127787,8 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:last\:px-28:last-child {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .xxl\:last\:px-32:last-child {
@@ -127770,8 +127962,8 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:last\:py-28:last-child {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .xxl\:last\:py-32:last-child {
@@ -127928,7 +128120,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:pt-28 {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .xxl\:pt-32 {
@@ -128068,7 +128260,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:pr-28 {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .xxl\:pr-32 {
@@ -128208,7 +128400,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:pb-28 {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .xxl\:pb-32 {
@@ -128348,7 +128540,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:pl-28 {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .xxl\:pl-32 {
@@ -128488,7 +128680,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:last\:pt-28:last-child {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .xxl\:last\:pt-32:last-child {
@@ -128628,7 +128820,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:last\:pr-28:last-child {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .xxl\:last\:pr-32:last-child {
@@ -128768,7 +128960,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:last\:pb-28:last-child {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .xxl\:last\:pb-32:last-child {
@@ -128908,7 +129100,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:last\:pl-28:last-child {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .xxl\:last\:pl-32:last-child {
@@ -145449,6 +145641,12 @@ textarea.form-control.is-invalid {
     border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
   }
 
+  .xxxl\:divide-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-x-reverse: 0;
+    border-right-width: calc(3px * var(--tw-divide-x-reverse));
+    border-left-width: calc(3px * calc(1 - var(--tw-divide-x-reverse)));
+  }
+
   .xxxl\:divide-x-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-x-reverse: 0;
     border-right-width: calc(4px * var(--tw-divide-x-reverse));
@@ -145477,6 +145675,12 @@ textarea.form-control.is-invalid {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+  }
+
+  .xxxl\:divide-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-top-width: calc(3px * calc(1 - var(--tw-divide-y-reverse)));
+    border-bottom-width: calc(3px * var(--tw-divide-y-reverse));
   }
 
   .xxxl\:divide-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -146195,6 +146399,10 @@ textarea.form-control.is-invalid {
     border-width: 2px;
   }
 
+  .xxxl\:border-3 {
+    border-width: 3px;
+  }
+
   .xxxl\:border-4 {
     border-width: 4px;
   }
@@ -146213,6 +146421,10 @@ textarea.form-control.is-invalid {
 
   .xxxl\:border-t-2 {
     border-top-width: 2px;
+  }
+
+  .xxxl\:border-t-3 {
+    border-top-width: 3px;
   }
 
   .xxxl\:border-t-4 {
@@ -146235,6 +146447,10 @@ textarea.form-control.is-invalid {
     border-right-width: 2px;
   }
 
+  .xxxl\:border-r-3 {
+    border-right-width: 3px;
+  }
+
   .xxxl\:border-r-4 {
     border-right-width: 4px;
   }
@@ -146255,6 +146471,10 @@ textarea.form-control.is-invalid {
     border-bottom-width: 2px;
   }
 
+  .xxxl\:border-b-3 {
+    border-bottom-width: 3px;
+  }
+
   .xxxl\:border-b-4 {
     border-bottom-width: 4px;
   }
@@ -146273,6 +146493,10 @@ textarea.form-control.is-invalid {
 
   .xxxl\:border-l-2 {
     border-left-width: 2px;
+  }
+
+  .xxxl\:border-l-3 {
+    border-left-width: 3px;
   }
 
   .xxxl\:border-l-4 {
@@ -148016,7 +148240,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:p-28 {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .xxxl\:p-32 {
@@ -148156,7 +148380,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:last\:p-28:last-child {
-    padding: 7rem;
+    padding: 88px;
   }
 
   .xxxl\:last\:p-32:last-child {
@@ -148313,8 +148537,8 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .xxxl\:px-32 {
@@ -148488,8 +148712,8 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .xxxl\:py-32 {
@@ -148663,8 +148887,8 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:last\:px-28:last-child {
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 88px;
+    padding-right: 88px;
   }
 
   .xxxl\:last\:px-32:last-child {
@@ -148838,8 +149062,8 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:last\:py-28:last-child {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .xxxl\:last\:py-32:last-child {
@@ -148996,7 +149220,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:pt-28 {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .xxxl\:pt-32 {
@@ -149136,7 +149360,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:pr-28 {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .xxxl\:pr-32 {
@@ -149276,7 +149500,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:pb-28 {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .xxxl\:pb-32 {
@@ -149416,7 +149640,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:pl-28 {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .xxxl\:pl-32 {
@@ -149556,7 +149780,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:last\:pt-28:last-child {
-    padding-top: 7rem;
+    padding-top: 88px;
   }
 
   .xxxl\:last\:pt-32:last-child {
@@ -149696,7 +149920,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:last\:pr-28:last-child {
-    padding-right: 7rem;
+    padding-right: 88px;
   }
 
   .xxxl\:last\:pr-32:last-child {
@@ -149836,7 +150060,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:last\:pb-28:last-child {
-    padding-bottom: 7rem;
+    padding-bottom: 88px;
   }
 
   .xxxl\:last\:pb-32:last-child {
@@ -149976,7 +150200,7 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:last\:pl-28:last-child {
-    padding-left: 7rem;
+    padding-left: 88px;
   }
 
   .xxxl\:last\:pl-32:last-child {
