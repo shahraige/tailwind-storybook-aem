@@ -25,7 +25,7 @@ const Header = (props) => {
     return (
         <div className="header section">
             <HtmlComment text="* Header cmp markup starts here *" />
-            <div className='header__inner'>
+            <div className='header__inner absolute w-full top-0'>
                 <div className='header__top bg-gray-50 py-2 hidden md:block'>
                     <div className='container'>
                         <ul className='flex justify-end p-0'>
@@ -39,10 +39,10 @@ const Header = (props) => {
                         </ul>
                     </div>
                 </div>
-                <nav className={`w-full lg:flex items-center justify-between navbar navbar-expand-lg bg-white ${toggle ? '':'shadow-md' } `}>
+                <nav className={`w-full lg:flex items-center justify-between navbar navbar-expand-lg bg-white border-b border-gray-55 ${toggle ? '':'shadow-custom-1' } `}>
                     <div className='lg:container w-full flex items-center justify-between relative'>
-                        <div className={`w-full flex flex-wrap items-center justify-between px-5 lg:px-0 py-7 lg:py-0 ${toggle ? 'border-b border-gray-55':'' }`}>
-                                <ImageExtension 
+                        <div className={`w-full flex flex-wrap items-center justify-between px-5 lg:px-0 py-7 lg:py-0`}>
+                            <ImageExtension 
                                 image_position="items-center"
                                 image_src="https://media.hbkworld.com/transform/b98b1541-d4bb-4652-acea-808e81320eb6/HBK-secondary-logo-RGB?io=transform:crop,width:877,height:120"/>
                             <div 

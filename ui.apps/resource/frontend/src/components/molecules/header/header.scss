@@ -1,21 +1,14 @@
 [data-site-id="#{$site-id}"] {
     .header {
         &__inner{
+            font-family: $roboto;
             .image-extension{
                 a{
-                   
-                    // @media  screen(md) {
-                    //    max-width: 93px;
-                    // }
-                    // @screen md {
-                    //    max-width: 93px;
-                    // }
-
-                    @media screen and (max-width : 768px) {
-                        max-width: 93px;
-                    }
-                    @media screen and (min-width : 769px) {
+                     @include media-breakpoint-up(lg) {
                         max-width: 250px;
+                    }
+                     @include media-breakpoint-down(lg) {
+                        max-width: 93px;
                     }
                   
                 }
@@ -25,8 +18,7 @@
                 span{
                     &:first-child{
                         transform: rotate(-45deg);
-                        // top: 50%;
-                        top:3px;
+                        top: 50%;
                     }
 
                     &:nth-child(2){
@@ -35,19 +27,18 @@
 
                     &:last-child{
                         transform: rotate(45deg);
-                        // top: 50%;
-                        top:3px;
+                        top: 50%;
                     }
                 }
             }
 
             .navbar-collapse{
                
-                @media screen and (max-width:768px) {
+                @include media-breakpoint-down(lg) {
                     height: calc(100vh - 128px);
                     top: 128px;
                 }
-                 @media screen and (max-width:576px) {
+                @include media-breakpoint-down(sm) {
                     height: calc(100vh - 88px);
                     top: 88px;
                 }

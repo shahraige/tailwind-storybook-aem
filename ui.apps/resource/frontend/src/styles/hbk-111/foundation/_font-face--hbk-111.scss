@@ -1,23 +1,43 @@
-// Webfont: Fira Sans, Ubuntu
-// ('#{$root-path}/fonts/fira-sans/FiraSans-Regular.ttf')
-
-/* cyrillic-ext */
-// @font-face {
-//     font-family: 'Fira Sans';
-//     font-style: italic;
-//     font-weight: 400;
-//     font-display: swap;
-//     src: local('Fira Sans Italic'), local('FiraSans-Italic'), url(#{$root-path}fonts/Fira_Sans/va9C4kDNxMZdWfMOD5VvkrjEYTLHdQ.woff2) format('woff2');
-//     unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-// }
-
-
-/* Verveine_Trial_Rg */
- @font-face {
-     font-family: 'Verveine';
-     font-style: normal;
-     font-weight: 400;
-     font-display: swap;
-     src: local('Verveine-Regular'), url(#{$root-path}fonts/Verveine/Verveine_Trial_Rg.ttf) format('truetype');
-     //unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
+  /* roboto */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto Regular'), local('Roboto-Regular'), url(#{$root-path}fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto Italic'), local('Roboto-Italic'), url(#{$root-path}fonts/Roboto/Roboto-Italic.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url(#{$root-path}fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Roboto MediumItalic'), local('Roboto-MediumItalic'), url(#{$root-path}fonts/Roboto/Roboto-MediumItalic.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(#{$root-path}fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Roboto BoldItalic'), local('Roboto-BoldItalic'), url(#{$root-path}fonts/Roboto/Roboto-BoldItalic.ttf) format('truetype');
+  }

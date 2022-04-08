@@ -1,0 +1,61 @@
+$b-sm : 480px !default;
+$b-md : 768px !default;
+$b-lg : 1024px !default;
+$b-xl : 1280px !default;
+$b-xxl : 1360px !default;
+$b-xxxl : 1680px !default;
+
+$min-breakpoints: (
+    'sm': $b-sm ,
+    'md': $b-md ,
+    'lg': $b-lg,
+    'xl': $b-xl,
+    'xxl': $b-xxl,
+    'xxxl': $b-xxxl,
+) !default;
+
+$max-breakpoints: (
+    'sm': ($b-sm)-1 ,
+    'md': ($b-md)-1 ,
+    'lg': ($b-lg)-1,
+    'xl': ($b-xl)-1,
+    'xxl': ($b-xxl)-1,
+    'xxxl': ($b-xxxl)-1,
+) !default;
+
+/// Mixin to manage responsive min-breakpoints and max-breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $min-breakpoints
+/// @require $max-breakpoints
+
+@mixin media-breakpoint-up($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($min-breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($min-breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+   
+    // If the key doesn't exist in the map
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available min-breakpoints are: #{map-keys($min-breakpoints)}.";
+    }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($max-breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (max-width: map-get($max-breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+   
+    // If the key doesn't exist in the map
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available max-breakpoints are: #{map-keys($max-breakpoints)}.";
+    }
+}

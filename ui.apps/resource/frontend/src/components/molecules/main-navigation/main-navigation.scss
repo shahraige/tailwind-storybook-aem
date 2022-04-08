@@ -14,6 +14,12 @@
                     }
                 }
             }
+
+            &-menu{
+                @media screen and (min-width : 769px) {
+                    box-shadow: 0 3px 5px rgba(0, 0, 0 , 0.35);
+                }
+            }
         }
 
         &__inner {
@@ -63,17 +69,17 @@
 
             @media screen and (max-width:768px) {
                 .mob-topnav-menu{
-                    transition: all ease .5s;
+                    transition: all ease-out .35s;
                 }
                 .navbar-nav{
-                    transition: all ease .5s;
+                    transition: all ease-out .35s;
 
                     .dropdown-menu{
                         position: absolute;
                         width: 100%;
                         left: 100%;
                         top: 0;
-                        transition: all ease .5s;
+                        transition: all ease-out .35s;
                         z-index: 1;
 
                         @media screen and (max-width:768px) {
@@ -84,7 +90,7 @@
                         }
 
                         &>span{
-                            top: 14px;
+                            top: 16px;
                         }
                     }
                 }
