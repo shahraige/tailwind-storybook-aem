@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
    @font-face {
    font-family: 'Roboto';
     font-style: normal;
@@ -45,19 +45,6 @@
       font-display: swap;
       src: local('Roboto BoldItalic'), local('Roboto-BoldItalic'), url(fonts/Roboto/Roboto-BoldItalic.ttf) format('truetype');
     }
-}
-
-
-/* @screen lg{
-   .image-extension a{
-    max-width: 250px;
-   }
-
 } */
 
-/* @media screen(lg){
-    .image-extension a{
-     max-width: 250px;
-    }
- 
- } */
+

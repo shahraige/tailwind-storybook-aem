@@ -1,29 +1,16 @@
 module.exports = {
+  future: {
+    purgeLayersByDefault: true,
+  },
     purge: {
-      mode: 'jit',
+      mode: 'layers',
+      layers: ['base','components','utilities'],
       content: [
         './components/**/*.js',
         './src/**/*.js',
       ],
     },
-    // theme: {
-    //   screens: {
-    //     'sm': '640px',
-    //     // => @media (min-width: 640px) { ... }
-  
-    //     'md': '768px',
-    //     // => @media (min-width: 768px) { ... }
-  
-    //     'lg': '1024px',
-    //     // => @media (min-width: 1024px) { ... }
-  
-    //     'xl': '1280px',
-    //     // => @media (min-width: 1280px) { ... }
-  
-    //     '2xl': '1536px',
-    //     // => @media (min-width: 1536px) { ... }
-    //   }
-    // },
+    
     theme: {
       fontFamily : {
         'sans': 'Roboto, Arial, sans-serif',
@@ -31,11 +18,12 @@ module.exports = {
         'body': ['Roboto', 'Arial', 'sans-serif'],
       },
       screens: {
-        sm: '576px',
+         sm: '480px',
         md: '768px',
-        lg: '992px',
-        xl: '1200px',
-        xxl: '1400px',
+        lg: '1024px',
+        xl: '1280px',
+        xxl: '1360px',
+        xxxl: '1680px',
       },
 
       container: {
