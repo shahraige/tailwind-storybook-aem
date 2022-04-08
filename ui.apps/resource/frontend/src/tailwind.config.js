@@ -7,7 +7,8 @@ module.exports = {
       layers: ['base','components','utilities'],
       content: [
         './components/**/*.js',
-        './src/**/*.js',
+        './src/**/*.{js,jsx,ts,tsx,vue}',
+        './public/**/*.html', 
       ],
     },
     
@@ -89,6 +90,6 @@ module.exports = {
     },
 
     plugins: [
-      require('tw-elements/dist/plugin')
+      require('tw-elements/dist/plugin'),
     ],
 }

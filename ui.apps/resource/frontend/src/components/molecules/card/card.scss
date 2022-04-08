@@ -1,3 +1,9 @@
+// @import '../../../styles/hbk-111/tailwind-dev.scss';
+
+// .card {
+//     @extend .flex;
+// }
+
 @media screen {
     [data-site-id="#{$site-id}"] {
         .card {

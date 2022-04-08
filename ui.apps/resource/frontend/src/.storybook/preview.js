@@ -5,7 +5,7 @@ import crfTheme from "./crfTheme";
 
 // global scss  
 import "../styles/hbk-111/storybook.scss";
-import "../styles/hbk-111/tailwind-dev.scss";
+// import "../styles/hbk-111/tailwind-dev.scss";
 
 // //viewport addons
 addParameters({
