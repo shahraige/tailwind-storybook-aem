@@ -20,7 +20,7 @@ const Footer = () => {
                     link_url : '#'
                 },
                 {
-                    title: 'Organisations and Memberships',
+                    title: 'Organisations & Memberships',
                     link_url : '#'
                 },
                 {
@@ -100,9 +100,9 @@ const Footer = () => {
     ]
     return(
         <footer className='footer section'>
-            <div className='footer__inner bg-primary lg:pt-28 lg:pb-8 text-white'>
+            <div className='footer__inner bg-primary pt-28 pb-8 text-white'>
                 <div className='container'>
-                    <div className='footer__top pb-12 grid grid-cols-3 gap-x-6'>
+                    <div className='footer__top pb-12 grid gap-y-8 md:gap-y-0 md:grid-cols-3 md:gap-x-6'>
                         {footer_items && footer_items.length>0 && footer_items.map( (value,key) => {
                            return(
                             <ul>
@@ -111,7 +111,7 @@ const Footer = () => {
                                  href={value.link_url}>{value.title}</a>
                                 {value.menu_list && value.menu_list.length>0 && value.menu_list.map((item) => {
                                     return(
-                                        <li className='my-4'>
+                                        <li className='my-2 lg:my-4'>
                                             <a className='hover:underline' href={item.link_url}>{item.title}</a>
                                         </li>
                                     );
@@ -122,11 +122,11 @@ const Footer = () => {
                     </div>
                     <div className='footer__bottom'>
                         <ButtonLink
-                        customClass="text-white mb-5"
+                        customClass="text-white mb-4"
                         btn_text="Modern Slavery Statement"
                         buttonlink_href="#"
                         />
-                        <div className='flex mb-11'>
+                        <div className='flex mb-9'>
                             <ButtonLink
                             customClass="text-white"
                             btn_text="Imprint"
