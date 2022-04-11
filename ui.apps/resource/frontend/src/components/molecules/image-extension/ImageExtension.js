@@ -2,7 +2,7 @@ import React from 'react';
 import HtmlComment from '../../particles/html-comment/HtmlComment';
 
 const ImageExtension = (props) => (
-  <div className="image-extension section mb-11">
+  <div className="image-extension section">
     <HtmlComment text="Start image-extension component markup, Copy from here" />
 
     <div className={`${props.image_position || ''} image-container flex`}>
