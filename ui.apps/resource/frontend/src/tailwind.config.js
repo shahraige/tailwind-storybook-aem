@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   future: {
     purgeLayersByDefault: true,
@@ -13,11 +15,6 @@ module.exports = {
     },
     
     theme: {
-      fontFamily : {
-        'sans': 'Roboto, Arial, sans-serif',
-        'heading': ['Roboto', 'Arial', 'sans-serif'],
-        'body': ['Roboto', 'Arial', 'sans-serif'],
-      },
       screens: {
         sm: '480px',
         md: '768px',
@@ -37,6 +34,10 @@ module.exports = {
       },
 
       extend: {
+        fontFamily : {
+          'roboto': ['Roboto', 'Arial', 'sans-serif'],
+          'sans' : [ "'Roboto'", ...defaultTheme.fontFamily.sans],
+        },
         minHeight: {
           'inherit': 'inherit',
         },
@@ -79,6 +80,7 @@ module.exports = {
         base: ['16px', '20px'],
         lg: ['20px', '28px'],
         xl: ['24px', '32px'],
+        72: ['72px' , '88px'],
         }
     },
 

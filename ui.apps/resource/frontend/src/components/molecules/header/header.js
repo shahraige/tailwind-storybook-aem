@@ -63,7 +63,7 @@ const Header = (props) => {
                         
                         </div>
                         <div 
-                        className={`collapse navbar-collapse transition-none delay-0 duration-0 inset-x-0 lg:inset-x-auto ${toggle ? 'fixed w-full overflow-y-auto':'' }`} 
+                        className={`bg-white z-50 collapse navbar-collapse transition-none delay-0 duration-0 inset-x-0 lg:inset-x-auto ${toggle ? 'fixed w-full overflow-y-auto':'' }`} 
                         id="navbarSupportedContent">
                             <MainNavigation top_nav_items={top_nav_items}/>
                         </div>

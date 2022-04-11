@@ -28,6 +28,11 @@ module.exports = {
       include: path.resolve(__dirname, '../'),
     });
 
+    config.resolve.modules = [
+      ...(config.resolve.modules || []),
+      path.resolve('./'),
+    ];
+
     // Return the altered config
     return config;
   },

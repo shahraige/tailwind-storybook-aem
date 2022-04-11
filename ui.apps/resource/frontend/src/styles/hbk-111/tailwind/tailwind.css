@@ -2,49 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+@layer base {
    @font-face {
    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+    src: local('Roboto Regular'), local('Roboto-Regular'), url("/public/fonts/Roboto/Roboto-Regular.ttf") format('truetype');
    }
    @font-face {
       font-family: 'Roboto';
       font-style: italic;
       font-weight: 400;
       font-display: swap;
-      src: local('Roboto Italic'), local('Roboto-Italic'), url(fonts/Roboto/Roboto-Italic.ttf) format('truetype');
+      src: local('Roboto Italic'), local('Roboto-Italic'), url("/public/fonts/Roboto/Roboto-Italic.ttf") format('truetype');
    }
    @font-face {
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 500;
       font-display: swap;
-      src: local('Roboto Medium'), local('Roboto-Medium'), url(fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+      src: local('Roboto Medium'), local('Roboto-Medium'), url("/public/fonts/Roboto/Roboto-Medium.ttf") format('truetype');
     }
     @font-face {
       font-family: 'Roboto';
       font-style: italic;
       font-weight: 500;
       font-display: swap;
-      src: local('Roboto MediumItalic'), local('Roboto-MediumItalic'), url(fonts/Roboto/Roboto-MediumItalic.ttf) format('truetype');
+      src: local('Roboto MediumItalic'), local('Roboto-MediumItalic'), url("/public/fonts/Roboto/Roboto-MediumItalic.ttf") format('truetype');
     }
     @font-face {
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 700;
       font-display: swap;
-      src: local('Roboto Bold'), local('Roboto-Bold'), url(fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+      src: local('Roboto Bold'), local('Roboto-Bold'), url("/public/fonts/Roboto/Roboto-Bold.ttf") format('truetype');
     }
     @font-face {
       font-family: 'Roboto';
       font-style: italic;
       font-weight: 700;
       font-display: swap;
-      src: local('Roboto BoldItalic'), local('Roboto-BoldItalic'), url(fonts/Roboto/Roboto-BoldItalic.ttf) format('truetype');
+      src: local('Roboto BoldItalic'), local('Roboto-BoldItalic'), url("/public/fonts/Roboto/Roboto-BoldItalic.ttf") format('truetype');
     }
-} */
+}
 
 

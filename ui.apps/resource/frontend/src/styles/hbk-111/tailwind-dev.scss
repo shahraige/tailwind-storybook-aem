@@ -356,7 +356,7 @@ ul {
  */
 
 html {
-  font-family: Inter, sans-serif; /* 1 */
+  font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -573,6 +573,78 @@ video {
 *, ::before, ::after {
   --tw-border-opacity: 1;
   border-color: rgba(63, 63, 63, var(--tw-border-opacity));
+}
+
+@font-face {
+  font-family: 'Roboto';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src: local('Roboto Regular'), local('Roboto-Regular'), url("/public/fonts/Roboto/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src: local('Roboto Italic'), local('Roboto-Italic'), url("/public/fonts/Roboto/Roboto-Italic.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  font-display: swap;
+
+  src: local('Roboto Medium'), local('Roboto-Medium'), url("/public/fonts/Roboto/Roboto-Medium.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+
+  font-style: italic;
+
+  font-weight: 500;
+
+  font-display: swap;
+
+  src: local('Roboto MediumItalic'), local('Roboto-MediumItalic'), url("/public/fonts/Roboto/Roboto-MediumItalic.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  font-display: swap;
+
+  src: local('Roboto Bold'), local('Roboto-Bold'), url("/public/fonts/Roboto/Roboto-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+
+  font-style: italic;
+
+  font-weight: 700;
+
+  font-display: swap;
+
+  src: local('Roboto BoldItalic'), local('Roboto-BoldItalic'), url("/public/fonts/Roboto/Roboto-BoldItalic.ttf") format('truetype');
 }
 
 .container {
@@ -23643,19 +23715,28 @@ textarea.form-control.is-invalid {
 }
 
 .font-sans {
-  font-family: Inter, sans-serif;
+  font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.font-heading {
-  font-family: Roboto, Arial, sans-serif;
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-mono {
+  font-family: ui-monospace, monospace;
 }
 
 .font-body {
   font-family: Inter, sans-serif;
 }
 
-.font-mono {
-  font-family: ui-monospace, monospace;
+.font-roboto {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.text-72 {
+  font-size: 72px;
+  line-height: 88px;
 }
 
 .text-sm {
@@ -26893,51 +26974,6 @@ textarea.form-control.is-invalid {
 .content-none {
   content: none;
 }
-
-/* @layer base {
-   @font-face {
-   font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto/Roboto-Regular.ttf) format('truetype');
-   }
-   @font-face {
-      font-family: 'Roboto';
-      font-style: italic;
-      font-weight: 400;
-      font-display: swap;
-      src: local('Roboto Italic'), local('Roboto-Italic'), url(fonts/Roboto/Roboto-Italic.ttf) format('truetype');
-   }
-   @font-face {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: local('Roboto Medium'), local('Roboto-Medium'), url(fonts/Roboto/Roboto-Medium.ttf) format('truetype');
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-style: italic;
-      font-weight: 500;
-      font-display: swap;
-      src: local('Roboto MediumItalic'), local('Roboto-MediumItalic'), url(fonts/Roboto/Roboto-MediumItalic.ttf) format('truetype');
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: local('Roboto Bold'), local('Roboto-Bold'), url(fonts/Roboto/Roboto-Bold.ttf) format('truetype');
-    }
-    @font-face {
-      font-family: 'Roboto';
-      font-style: italic;
-      font-weight: 700;
-      font-display: swap;
-      src: local('Roboto BoldItalic'), local('Roboto-BoldItalic'), url(fonts/Roboto/Roboto-BoldItalic.ttf) format('truetype');
-    }
-} */
 
 @media (min-width: 480px) {
   .sm\:container {
@@ -44840,19 +44876,28 @@ textarea.form-control.is-invalid {
   }
 
   .sm\:font-sans {
-    font-family: Inter, sans-serif;
+    font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .sm\:font-heading {
-    font-family: Roboto, Arial, sans-serif;
+  .sm\:font-serif {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .sm\:font-mono {
+    font-family: ui-monospace, monospace;
   }
 
   .sm\:font-body {
     font-family: Inter, sans-serif;
   }
 
-  .sm\:font-mono {
-    font-family: ui-monospace, monospace;
+  .sm\:font-roboto {
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  .sm\:text-72 {
+    font-size: 72px;
+    line-height: 88px;
   }
 
   .sm\:text-sm {
@@ -65940,19 +65985,28 @@ textarea.form-control.is-invalid {
   }
 
   .md\:font-sans {
-    font-family: Inter, sans-serif;
+    font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .md\:font-heading {
-    font-family: Roboto, Arial, sans-serif;
+  .md\:font-serif {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .md\:font-mono {
+    font-family: ui-monospace, monospace;
   }
 
   .md\:font-body {
     font-family: Inter, sans-serif;
   }
 
-  .md\:font-mono {
-    font-family: ui-monospace, monospace;
+  .md\:font-roboto {
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  .md\:text-72 {
+    font-size: 72px;
+    line-height: 88px;
   }
 
   .md\:text-sm {
@@ -87040,19 +87094,28 @@ textarea.form-control.is-invalid {
   }
 
   .lg\:font-sans {
-    font-family: Inter, sans-serif;
+    font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .lg\:font-heading {
-    font-family: Roboto, Arial, sans-serif;
+  .lg\:font-serif {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .lg\:font-mono {
+    font-family: ui-monospace, monospace;
   }
 
   .lg\:font-body {
     font-family: Inter, sans-serif;
   }
 
-  .lg\:font-mono {
-    font-family: ui-monospace, monospace;
+  .lg\:font-roboto {
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  .lg\:text-72 {
+    font-size: 72px;
+    line-height: 88px;
   }
 
   .lg\:text-sm {
@@ -108140,19 +108203,28 @@ textarea.form-control.is-invalid {
   }
 
   .xl\:font-sans {
-    font-family: Inter, sans-serif;
+    font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .xl\:font-heading {
-    font-family: Roboto, Arial, sans-serif;
+  .xl\:font-serif {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .xl\:font-mono {
+    font-family: ui-monospace, monospace;
   }
 
   .xl\:font-body {
     font-family: Inter, sans-serif;
   }
 
-  .xl\:font-mono {
-    font-family: ui-monospace, monospace;
+  .xl\:font-roboto {
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  .xl\:text-72 {
+    font-size: 72px;
+    line-height: 88px;
   }
 
   .xl\:text-sm {
@@ -129240,19 +129312,28 @@ textarea.form-control.is-invalid {
   }
 
   .xxl\:font-sans {
-    font-family: Inter, sans-serif;
+    font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .xxl\:font-heading {
-    font-family: Roboto, Arial, sans-serif;
+  .xxl\:font-serif {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .xxl\:font-mono {
+    font-family: ui-monospace, monospace;
   }
 
   .xxl\:font-body {
     font-family: Inter, sans-serif;
   }
 
-  .xxl\:font-mono {
-    font-family: ui-monospace, monospace;
+  .xxl\:font-roboto {
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  .xxl\:text-72 {
+    font-size: 72px;
+    line-height: 88px;
   }
 
   .xxl\:text-sm {
@@ -150340,19 +150421,28 @@ textarea.form-control.is-invalid {
   }
 
   .xxxl\:font-sans {
-    font-family: Inter, sans-serif;
+    font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .xxxl\:font-heading {
-    font-family: Roboto, Arial, sans-serif;
+  .xxxl\:font-serif {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .xxxl\:font-mono {
+    font-family: ui-monospace, monospace;
   }
 
   .xxxl\:font-body {
     font-family: Inter, sans-serif;
   }
 
-  .xxxl\:font-mono {
-    font-family: ui-monospace, monospace;
+  .xxxl\:font-roboto {
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  .xxxl\:text-72 {
+    font-size: 72px;
+    line-height: 88px;
   }
 
   .xxxl\:text-sm {
