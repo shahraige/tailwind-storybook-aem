@@ -19,7 +19,7 @@ module.exports = {
         'body': ['Roboto', 'Arial', 'sans-serif'],
       },
       screens: {
-         sm: '480px',
+        sm: '480px',
         md: '768px',
         lg: '1024px',
         xl: '1280px',
@@ -30,6 +30,7 @@ module.exports = {
       container: {
         center: true,
         padding : "20px",
+
       },
 
       boxShadow : {
@@ -91,5 +92,24 @@ module.exports = {
 
     plugins: [
       require('tw-elements/dist/plugin'),
+      function ({ addComponents }) {
+        addComponents({
+          '.container': {
+            maxWidth: '100%',
+            '@screen sm': {
+              maxWidth: '1200px',
+            },
+            '@screen md': {
+              maxWidth: '1200px',
+            },
+            '@screen lg': {
+              maxWidth: '1200px',
+            },
+            '@screen xl': {
+              maxWidth: '1200px',
+            },
+          }
+        })
+      }
     ],
 }
