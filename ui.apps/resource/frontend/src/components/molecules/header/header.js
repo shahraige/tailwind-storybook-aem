@@ -39,13 +39,15 @@ const Header = (props) => {
                         </ul>
                     </div>
                 </div>
-                <nav className={`w-full lg:flex items-center justify-between navbar navbar-expand-lg bg-white border-b border-gray-55 ${toggle ? '':'shadow-custom-1' } `}>
+                <nav className={`w-full lg:flex items-center justify-between navbar navbar-expand-lg bg-white border-b border-gray-100 ${toggle ? '':'shadow-custom-1' } `}>
                     <div className='container w-full flex items-center justify-between relative'>
                         <div className={`w-full flex flex-wrap items-center justify-between py-7 lg:py-0`}>
                             <ImageExtension 
                                 image_href="#"
                                 image_position="items-center"
-                                image_src="https://media.hbkworld.com/transform/b98b1541-d4bb-4652-acea-808e81320eb6/HBK-secondary-logo-RGB?io=transform:crop,width:877,height:120"/>
+                                lg_image_src="https://media.hbkworld.com/transform/b98b1541-d4bb-4652-acea-808e81320eb6/HBK-secondary-logo-RGB?io=transform:crop,width:877,height:120"
+                                md_image_src="https://media.hbkworld.com/transform/50bc121e-9b14-4fb4-a3c9-314e87f13b3d/HBK-Primary-Logo-RGB?io=transform:crop,width:865,height:300"
+                                sm_image_src="https://media.hbkworld.com/transform/50bc121e-9b14-4fb4-a3c9-314e87f13b3d/HBK-Primary-Logo-RGB?io=transform:crop,width:865,height:300"/>
                             <div 
                             className={`${toggle ? 'animate-icon':'' } relative navbar-toggler w-6 h-5 `}
                             data-bs-toggle="collapse" 

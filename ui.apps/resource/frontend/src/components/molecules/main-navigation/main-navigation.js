@@ -164,7 +164,7 @@ const MainNavigation =(props)=>{
                                             <ul className={`md:hidden`}>
                                                 {top_nav_items && top_nav_items.length>0 && top_nav_items.map((value)=>{
                                                     return(
-                                                        <li className='py-3 px-7 bg-gray-50'>
+                                                        <li className='py-3 px-5 bg-gray-50'>
                                                             <a className='text-base text-gray-200 hover:underline' href={value.link_url}>{value.title}</a>
                                                         </li>
                                                     );
@@ -184,7 +184,7 @@ const MainNavigation =(props)=>{
                 <ul className={`md:hidden mob-topnav-menu ${showMenu ? 'slide-menu':''}`}>
                     {top_nav_items && top_nav_items.length>0 && top_nav_items.map((value)=>{
                         return(
-                            <li className='py-3 px-7 bg-gray-50'>
+                            <li className='py-3 px-5 bg-gray-50'>
                                 <a className='text-base text-gray-200 hover:underline' href={value.link_url}>{value.title}</a>
                             </li>
                         );

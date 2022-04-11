@@ -36,11 +36,11 @@
                
                 @include media-breakpoint-down(lg) {
                     height: calc(100vh - 128px);
-                    top: 128px;
+                    top: 129.5px;
                 }
                 @include media-breakpoint-down(sm) {
                     height: calc(100vh - 88px);
-                    top: 88px;
+                    top: 89.5px;
                 }
             }
         }
