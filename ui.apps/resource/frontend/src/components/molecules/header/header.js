@@ -40,8 +40,8 @@ const Header = (props) => {
                     </div>
                 </div>
                 <nav className={`w-full lg:flex items-center justify-between navbar navbar-expand-lg bg-white border-b border-gray-55 ${toggle ? '':'shadow-custom-1' } `}>
-                    <div className='lg:container w-full flex items-center justify-between relative'>
-                        <div className={`w-full flex flex-wrap items-center justify-between px-5 lg:px-0 py-7 lg:py-0`}>
+                    <div className='container w-full flex items-center justify-between relative'>
+                        <div className={`w-full flex flex-wrap items-center justify-between py-7 lg:py-0`}>
                             <ImageExtension 
                                 image_position="items-center"
                                 image_src="https://media.hbkworld.com/transform/b98b1541-d4bb-4652-acea-808e81320eb6/HBK-secondary-logo-RGB?io=transform:crop,width:877,height:120"/>
@@ -60,7 +60,7 @@ const Header = (props) => {
                         
                         </div>
                         <div 
-                        className={`collapse navbar-collapse transition-none delay-0 duration-0 ${toggle ? 'fixed w-full overflow-y-auto':'' }`} 
+                        className={`collapse navbar-collapse transition-none delay-0 duration-0 inset-x-0 lg:inset-x-auto ${toggle ? 'fixed w-full overflow-y-auto':'' }`} 
                         id="navbarSupportedContent">
                             <MainNavigation top_nav_items={top_nav_items}/>
                         </div>

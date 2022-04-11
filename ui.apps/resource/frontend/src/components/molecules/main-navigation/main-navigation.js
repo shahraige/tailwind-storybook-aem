@@ -106,7 +106,7 @@ const MainNavigation =(props)=>{
                         return(
                             <li 
                             key={key} 
-                            className={`${active == key ? 'active': ''} nav-item  py-3 pl-7 pr-8 lg:py-6 lg:px-0 lg:relative lg:mr-11 lg:last:mr-0 dropdown dropdown-hover`}>
+                            className={`${active == key ? 'active': ''} nav-item  py-3 pl-5 pr-8 lg:py-6 lg:px-0 lg:relative lg:mr-11 lg:last:mr-0 dropdown dropdown-hover`}>
                                 <a 
                                 className={`nav-link active w-full text-ternary text-base font-medium flex items-center justify-between  dropdown-toggle`}
                                 onClick={() => expandMenu(key, value.children)}
