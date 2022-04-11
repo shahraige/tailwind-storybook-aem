@@ -178,7 +178,7 @@ export default {
  
 const Template = (args) => 
 <ColumnControl {...args}>
-    <div class="bg-red-500 col-span-full md:col-span-8 flex items-center p-4">
+    <div class="bg-primary col-span-full md:col-span-8 flex items-center p-4">
         <div class="">
             <h2>COMPONENT</h2>
             <p>Box 1</p>
@@ -186,20 +186,20 @@ const Template = (args) =>
         </div>
     </div>
 
-    <div class="bg-yellow-200 col-span-full md:col-span-4 flex items-center p-4">
+    <div class="bg-gray-55 col-span-full md:col-span-4 flex items-center p-4">
         <div class="">
             <h2>COMPONENT</h2>
             <p>Box 2</p>
         </div>
     </div>  
 
-    <div class="bg-purple-200 col-span-full md:col-auto">
+    <div class="bg-secondary col-span-full md:col-auto">
         <div class="p-4">
             <h2>COMPONENT</h2>
             <p>Box 3</p>
         </div>
     </div>  
-    <div class="bg-blue-500 col-span-full md:col-auto">
+    <div class="bg-gray-50 col-span-full md:col-auto">
         <div class="p-4">
             <h2>COMPONENT</h2>
             <p>Box 4</p>

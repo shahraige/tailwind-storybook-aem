@@ -24,7 +24,7 @@ const Tab = props => {
                     px-6
                     py-3
                     my-2
-                    hover:border-transparent hover:bg-gray-100
+                    hover:border-transparent hover:bg-gray-55
                     focus:border-transparent
                     active
                     " id="tabs-home-tab" data-bs-toggle="pill" data-bs-target="#tabs-home" role="tab" aria-controls="tabs-home"
@@ -42,7 +42,7 @@ const Tab = props => {
                     px-6
                     py-3
                     my-2
-                    hover:border-transparent hover:bg-gray-100
+                    hover:border-transparent hover:bg-gray-55
                     focus:border-transparent
                     " id="tabs-profile-tab" data-bs-toggle="pill" data-bs-target="#tabs-profile" role="tab"
                     aria-controls="tabs-profile" aria-selected="false">Profile</a>
@@ -59,7 +59,7 @@ const Tab = props => {
                     px-6
                     py-3
                     my-2
-                    hover:border-transparent hover:bg-gray-100
+                    hover:border-transparent hover:bg-gray-55
                     focus:border-transparent
                     " id="tabs-messages-tab" data-bs-toggle="pill" data-bs-target="#tabs-messages" role="tab"
                     aria-controls="tabs-messages" aria-selected="false">Messages</a>
@@ -78,7 +78,7 @@ const Tab = props => {
                     px-6
                     py-3
                     my-2
-                    hover:border-transparent hover:bg-gray-100
+                    hover:border-transparent hover:bg-gray-55
                     focus:border-transparent
                     " id="tabs-contact-tab" data-bs-toggle="pill" data-bs-target="#tabs-contact" role="tab"
                     aria-controls="tabs-contact" aria-selected="false">Contact</a>

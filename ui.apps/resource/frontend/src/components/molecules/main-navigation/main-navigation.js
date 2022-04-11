@@ -145,7 +145,7 @@ const MainNavigation =(props)=>{
                                                         </svg>
                                                     </span>
 
-                                                    <li className='py-3 pr-5 pl-12 lg:px-5 cursor-pointer text-gray-200 text-base lg:hover:text-primary lg:hover:underline lg:hover:bg-gray-100'>
+                                                    <li className='py-3 pr-5 pl-12 lg:px-5 cursor-pointer text-gray-200 text-base lg:hover:text-primary lg:hover:underline lg:hover:bg-gray-55'>
                                                         <a className='font-medium' href={value.link_url}>{value.title}</a>
                                                     </li>
 
@@ -154,7 +154,7 @@ const MainNavigation =(props)=>{
 
                                             {value.children && value.children.length>0 && value.children.map((child,index)=>{
                                                 return(
-                                                    <li key={index} className='py-3 pr-5 pl-12 lg:px-5 cursor-pointer text-gray-200 text-base lg:hover:text-primary lg:hover:underline lg:hover:bg-gray-100'>
+                                                    <li key={index} className='py-3 pr-5 pl-12 lg:px-5 cursor-pointer text-gray-200 text-base lg:hover:text-primary lg:hover:underline lg:hover:bg-gray-55'>
                                                         <a href={child.link_url}>{child.title}</a>
                                                     </li>
                                                 );

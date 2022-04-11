@@ -67,8 +67,8 @@ module.exports = {
         white : "#FFFFFF",
         gray : {
           50 : '#f5f5f5',
-          55 : '#e0e0e0',
-          100: '#fafafa',
+          55: '#fafafa',
+          100 : '#e0e0e0',
           200: '#3f3f3f',
         },
         'black-rgba': 'rgba(0, 0, 0, 0.54)'
