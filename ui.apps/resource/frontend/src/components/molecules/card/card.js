@@ -25,7 +25,7 @@ const Card = (props) =>(
             <div className="grid md:grid-cols-3 pt-20 gap-x-5 items-start">
                 {items && items.length>0 && items.map((value)=>{
                     return(
-                        <div className='border border-gray-55 p-8 shadow-custom-1 mb-28 md:mb-0'>
+                        <div className='border border-gray-100 p-8 shadow-custom-1 mb-28 md:mb-0'>
                             <div className='h-40 -mt-28 mx-auto'>
                                 <img src={value.image} className="h-full mx-auto"/>
                             </div>

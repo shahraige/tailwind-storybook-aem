@@ -101,7 +101,7 @@ const MainNavigation =(props)=>{
         <div className='main-navigation section'>
             <HtmlComment text="* main-navigation cmp markup starts here *" />
             <div className='main-navigation__inner'>
-                <ul className={`flex flex-col lg:flex-row navbar-nav ${showMenu ? 'slide-menu':''}`}>
+                <ul className={`bg-white flex flex-col lg:flex-row navbar-nav ${showMenu ? 'slide-menu':''}`}>
                     {navigation_items && navigation_items.length>0 && navigation_items.map((value, key)=>{
                         return(
                             <li 
