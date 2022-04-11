@@ -43,6 +43,7 @@ const Header = (props) => {
                     <div className='container w-full flex items-center justify-between relative'>
                         <div className={`w-full flex flex-wrap items-center justify-between py-7 lg:py-0`}>
                             <ImageExtension 
+                                image_href="#"
                                 image_position="items-center"
                                 image_src="https://media.hbkworld.com/transform/b98b1541-d4bb-4652-acea-808e81320eb6/HBK-secondary-logo-RGB?io=transform:crop,width:877,height:120"/>
                             <div 
