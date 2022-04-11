@@ -132,7 +132,7 @@ const MainNavigation =(props)=>{
                                     <>
                                         {/* *** Sub-menu *** */}
                                         <ul 
-                                        className='hidden dropdown-menu lg:-left-1/2 bg-white lg:shadow-md lg:border lg:border-gray-50 lg:w-205 lg:top-full'
+                                        className='hidden dropdown-menu lg:left-1/2 lg:transform lg:-translate-x-1/2 bg-white lg:shadow-md lg:border lg:border-gray-50 lg:w-205 lg:top-full'
                                         aria-labelledby="navbarDropdown">
                                             
                                             {(showMenu ? 
