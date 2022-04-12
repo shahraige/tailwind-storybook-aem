@@ -1,0 +1,42 @@
+
+  [data-site-id="#{$site-id}"] {
+      .teaser-gallery{
+          &__item{
+              &:hover{
+                  .button-link{
+                    .arrow-container{
+                        width: 24px !important;
+                        @extend .bg-secondary;
+                        @extend .border-secondary;
+                    }
+                  }
+              }
+
+              &.hover-card{
+                  .card{
+                    position: relative;
+
+                    .button-link{
+                        margin-left: auto;
+                    }
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        height: 4px;
+                        width: 0;
+                        @extend .bg-secondary;
+                        transition: all .25s ease-in-out;
+                    }
+                
+                    &:hover{
+                        &::before{
+                            width: 100%;
+                        }
+                    }
+                  }
+              }
+          }
+      }
+  }

@@ -26,10 +26,8 @@ const HeroCarousel = props => {
             }}
             loop={loop}
             >
-
                 {props.children}
             
-      
             <div className='custom-arrow-container absolute bottom-0.5 h-9 pb-3 left-1/2 transform -translate-x-1/2 w-44 px-4 flex justify-between items-center z-50'>
                 <ButtonLink
                 button_type="left-tail-arrow"

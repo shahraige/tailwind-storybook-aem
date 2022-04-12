@@ -35,11 +35,11 @@ export default {
          control: { type: "boolean" },
          defaultValue : 'false'
       },
-      arrows : {
-         name: "Arrows",
-         control: { type: "boolean" },
-         defaultValue : 'true'
-      },
+      // arrows : {
+      //    name: "Arrows",
+      //    control: { type: "boolean" },
+      //    defaultValue : true
+      // },
       
    }
 };

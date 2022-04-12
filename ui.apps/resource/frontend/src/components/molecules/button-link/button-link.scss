@@ -6,6 +6,7 @@
             @extend .cursor-pointer;
             @extend .flex;
             @extend .items-center;
+            text-decoration: none !important;
 
             .arrow-container{
                 border-width: 1.2px;

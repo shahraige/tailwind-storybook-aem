@@ -23,7 +23,7 @@ const ButtonLink = (props) => {
       {
         // check is not modal enable then return first otherwise second
         !enableModal ? (
-          <a className={` hover:underline px-10 py-4 text-base  inline-block ${button_styles ? 'bg-' + button_styles : ''} ${button_textColor || ''}  ${button_width || ''} ${button_width || ''} ${props.button_small_tab? 'btn-small-tab':''} ${button_type || ''} ${customClass}`}
+          <a className={`hover:underline px-10 py-4 text-base  inline-block ${button_styles ? 'bg-' + button_styles : ''} ${button_textColor || ''}  ${button_width || ''} ${button_width || ''} ${props.button_small_tab? 'btn-small-tab':''} ${button_type || ''} ${customClass}`}
             href={buttonlink_href || ''}
             target={buttonlink_target || ''}
             title={buttonlink_title || ''}
@@ -53,16 +53,30 @@ const ButtonLink = (props) => {
             ) : ''}
 
             {button_type == 'left-tail-arrow' ? 
-              <div className='arrow-container border border-gray-200 bg-gray-200 hover:bg-secondary hover:border-secondary cursor-pointer w-4'>
-                <span className='arrow'></span> 
-              </div>
-            : props.btn_text || ''}
+              <>
+                <div className='arrow-container border border-gray-200 bg-gray-200 hover:bg-secondary hover:border-secondary cursor-pointer w-4'>
+                  <span className='arrow'></span> 
+                </div>
+                {props.btn_text ? 
+                  <span className='ml-3'>
+                  { props.btn_text ? props.btn_text : ''}
+                  </span>
+                : ''}
+              </>
+            : ''}
 
             {button_type == 'right-tail-arrow' ? 
-              <div className='arrow-container border border-gray-200 bg-gray-200 hover:bg-secondary hover:border-secondary cursor-pointer w-4'>
-                <span className='arrow'></span> 
-              </div> 
-            : props.btn_text || ''}
+              <>
+                {props.btn_text ? 
+                  <span className='mr-3'>
+                  { props.btn_text ? props.btn_text : ''}
+                  </span>
+                : ''}
+                <div className='arrow-container border border-gray-200 bg-gray-200 hover:bg-secondary hover:border-secondary cursor-pointer w-4'>
+                  <span className='arrow'></span> 
+                </div> 
+              </>
+            : ''}
 
             {/* {button_type == 'left-tail-arrow' ? 
               <svg class="ng-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 13">
@@ -78,7 +92,7 @@ const ButtonLink = (props) => {
               </svg>
             : props.btn_text || ''} */}
 
-            {button_type == 'line' ? <span>{props.btn_text || ''}</span> : props.btn_text || ''}
+            {button_type == 'line' ? <span>{props.btn_text || ''}</span> : ''}
           </a>
         ) : (
           // when modal enable just replace target to data-toggle and data-target poperty
