@@ -37,6 +37,7 @@ module.exports = {
         fontFamily : {
           'roboto': ['Roboto', 'Arial', 'sans-serif'],
           'sans' : [ "'Roboto'", ...defaultTheme.fontFamily.sans],
+          'montserrat' : ['Montserrat','sans-serif'],
         },
         minHeight: {
           'inherit': 'inherit',
@@ -58,6 +59,9 @@ module.exports = {
         },
         borderWidth : {
           '3' : '3px'
+        },
+        letterSpacing : {
+          'custom-1' : '1px'
         }
       },
 
@@ -66,6 +70,9 @@ module.exports = {
         secondary : '#33b6b1',
         ternary : '#3f3f3f',
         white : "#FFFFFF",
+        teal : {
+          100 : '#006c8e',
+        },
         gray : {
           50 : '#f5f5f5',
           55: '#fafafa',

@@ -23,7 +23,8 @@ const button_styles_options = {
 const button_type_options = {
     default: "",
     round : "round",
-    arrow : "arrow",
+    "left-tail-arrow" : "left-tail-arrow",
+    "right-tail-arrow" : "right-tail-arrow",
 };
 
 // Button Width
@@ -124,11 +125,13 @@ Button_round.args = {
     button_type : "round"
 };
 
-export const Button_arrow = Template.bind({});
-Button_arrow.args = {
-    btn_text: "this is button",
-    button_styles: "primary",
-    button_type : "arrow"
+export const Left_tail_arrow = Template.bind({});
+Left_tail_arrow.args = {
+    button_type : "left-tail-arrow"
+};
+export const Right_tail_arrow = Template.bind({});
+Right_tail_arrow.args = {
+    button_type : "right-tail-arrow"
 };
 
 export const Outline = Template.bind({});

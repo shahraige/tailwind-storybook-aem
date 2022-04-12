@@ -23,7 +23,7 @@ const ButtonLink = (props) => {
       {
         // check is not modal enable then return first otherwise second
         !enableModal ? (
-          <a className={` hover:underline px-10 py-4 text-base inline-block ${button_styles ? 'bg-' + button_styles : ''} ${button_textColor || ''}  ${button_width || ''} ${button_width || ''} ${props.button_small_tab? 'btn-small-tab':''} ${button_type || ''} ${customClass}`}
+          <a className={` hover:underline px-10 py-4 text-base  inline-block ${button_styles ? 'bg-' + button_styles : ''} ${button_textColor || ''}  ${button_width || ''} ${button_width || ''} ${props.button_small_tab? 'btn-small-tab':''} ${button_type || ''} ${customClass}`}
             href={buttonlink_href || ''}
             target={buttonlink_target || ''}
             title={buttonlink_title || ''}
@@ -40,6 +40,44 @@ const ButtonLink = (props) => {
                 </g>
             </svg>
             ) : ''}
+            {button_type == 'download' ? (
+            <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1">
+                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                    <g id="icon/download" stroke="currentcolor" stroke-width="3.6">
+                        <line x1="16.7535981" y1="1.92006989" x2="16.7535981" y2="23.5066771" id="Path-5-Copy-2"></line>
+                        <polyline id="Path-6-Copy-2" stroke-linejoin="round" transform="translate(16.443548, 20.635055) rotate(-270.000000) translate(-16.443548, -20.635055) " points="12.287463 27.9947279 20.5996338 20.1801611 12.287463 13.2753818"></polyline>
+                        <polyline id="Path-5" stroke-linejoin="round" points="2.01977539 24.4173609 2.01977539 31.0223014 30.9802246 31.0223014 30.9802246 24.4173609"></polyline>
+                    </g>
+                </g>
+            </svg>
+            ) : ''}
+
+            {button_type == 'left-tail-arrow' ? 
+              <div className='arrow-container border border-gray-200 bg-gray-200 hover:bg-secondary hover:border-secondary cursor-pointer w-4'>
+                <span className='arrow'></span> 
+              </div>
+            : props.btn_text || ''}
+
+            {button_type == 'right-tail-arrow' ? 
+              <div className='arrow-container border border-gray-200 bg-gray-200 hover:bg-secondary hover:border-secondary cursor-pointer w-4'>
+                <span className='arrow'></span> 
+              </div> 
+            : props.btn_text || ''}
+
+            {/* {button_type == 'left-tail-arrow' ? 
+              <svg class="ng-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 13">
+                <path class="head" d="M19.4 6.4L13 0l-1.4 1.4 4 4H4.8v2h10.8l-4 4 1.4 1.4 6.4-6.4z"/>
+                <path class="tail" d="M0 5.4h9.7v2H0z"/>
+              </svg>
+            : props.btn_text || ''}
+
+            {button_type == 'right-tail-arrow' ? 
+              <svg class="ng-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 13">
+                <path class="head" d="M19.4 6.4L13 0l-1.4 1.4 4 4H4.8v2h10.8l-4 4 1.4 1.4 6.4-6.4z"/>
+                <path class="tail" d="M0 5.4h9.7v2H0z"/>
+              </svg>
+            : props.btn_text || ''} */}
+
             {button_type == 'line' ? <span>{props.btn_text || ''}</span> : props.btn_text || ''}
           </a>
         ) : (

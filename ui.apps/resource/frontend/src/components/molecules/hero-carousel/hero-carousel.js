@@ -1,56 +1,43 @@
 import React from 'react'
-import HeadlineText from '../headline-text/HeadlineText'
 import HtmlComment from '../../particles/html-comment/HtmlComment'
+import ButtonLink from '../button-link/ButtonLink';
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-import ImageExtension from '../image-extension/ImageExtension';
 
 SwiperCore.use([Navigation, Pagination]);
 
 const HeroCarousel = props => {
-    const {  } = props;
+    const {spaceBetween, slidesPerView , loop , carousel_items_1} = props;
 
     return (
-        <div className="hero-carousel section">
+        <div className="carousel section">
            <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
+            spaceBetween={ Number(spaceBetween) }
+            slidesPerView={ Number(slidesPerView) }
             modules={[Pagination, Navigation]}
-            navigation
+            navigation={{
+                nextEl: '.right-tail-arrow',
+                prevEl: '.left-tail-arrow',
+            }}
             pagination={{
                 type: "fraction",
             }}
-            loop={true}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            loop={loop}
             >
-            <SwiperSlide>
-                <div className='h-full w-full absolute bg-cover bg-no-repeat bg-center bg-custom-gradient' style={{ backgroundImage : `url('https://www.hbkworld.com/en/_jcr_content/root/container/container_copy/container_copy/carousel_1850916336/item_1642772195202.coreimg.jpeg/1643208200731/shutterstock-1393633001.jpeg')`}}>
-                    <div className='pt-36 container'>
 
-                    <h2 className='text-72 relative text-primary font-bold'>HBK works to achieve a bright and green future</h2>
-                    </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className='h-full w-full absolute bg-cover bg-no-repeat bg-center bg-custom-gradient' style={{ backgroundImage : `url('https://www.hbkworld.com/en/_jcr_content/root/container/container_copy/container_copy/carousel_1850916336/item_1642772195202.coreimg.jpeg/1643208200731/shutterstock-1393633001.jpeg')`}}>
-                    <div className='pt-36 container'>
-
-                    <h2 className='text-72 relative text-primary font-bold'>HBK works to achieve a bright and green future</h2>
-                    </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className='h-full w-full absolute bg-cover bg-no-repeat bg-center bg-custom-gradient' style={{ backgroundImage : `url('https://www.hbkworld.com/en/_jcr_content/root/container/container_copy/container_copy/carousel_1850916336/item_1642772195202.coreimg.jpeg/1643208200731/shutterstock-1393633001.jpeg')`}}>
-                    <div className='pt-36 container'>
-
-                    <h2 className='text-72 relative text-primary font-bold'>HBK works to achieve a bright and green future</h2>
-                    </div>
-                </div>
-            </SwiperSlide>
+                {props.children}
             
+      
+            <div className='custom-arrow-container absolute bottom-0.5 h-9 pb-3 left-1/2 transform -translate-x-1/2 w-44 px-4 flex justify-between items-center z-50'>
+                <ButtonLink
+                button_type="left-tail-arrow"
+                />
+                <ButtonLink
+                button_type="right-tail-arrow"
+                />
+            </div>
             </Swiper>
         </div>
     )

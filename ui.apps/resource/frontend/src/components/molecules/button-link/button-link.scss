@@ -1,7 +1,77 @@
 [data-site-id="#{$site-id}"] {
-    .button-link{
-        .btn{
-            
+    .button-link {
+        .right-tail-arrow{
+            padding:  2px !important;
+            margin-top: 10px;
+            @extend .cursor-pointer;
+            @extend .flex;
+            @extend .items-center;
+
+            .arrow-container{
+                border-width: 1.2px;
+                position: relative;
+                width: 16px;
+                transition: all 0.3s ease;
+
+                &>.arrow,
+                .arrow::after {
+                    border-width: 0.6px;
+                    width: 10px;
+                    position: absolute;
+                    right: -3px;
+                    top: 3px;
+                    transform: rotate(-45deg);
+                    border-color: inherit;
+                    @extend .cursor-pointer;
+                }
+
+                .arrow::after {
+                    content: "";
+                    background-color: inherit;
+                    top: -6px;
+                    right: -6px;
+                    transform: rotate(90deg);
+                }
+            }
         }
+
+        .left-tail-arrow{
+            @extend .right-tail-arrow;
+            transform: rotate(180deg);
+            justify-content: flex-start;
+          
+        }
+
+        &:hover{
+            .arrow-container{
+                width: 24px !important;
+                @extend .bg-secondary;
+                @extend .border-secondary;
+            }
+        }
+
+        // svg {
+        //     cursor: pointer;
+        //     width: 22px;
+        //     .tail {
+        //     //   transform: translateX(5px);
+        //       transition: all .5s ease;
+        //     }
+        //     .head {
+        //       transform: translateX(-3px);
+        //       transition: all .5s ease;
+        //     }
+        //     &:hover {
+        //       .tail {
+        //         transform: translateX(0);
+        //         transition: all .5s ease-int-out;
+        //       }
+        //       .head {
+        //         transform: translateX(0);
+        //         transition: all .5s ease-int-out;
+        //       }
+        //     }
+        //   }
+      
     }
 }

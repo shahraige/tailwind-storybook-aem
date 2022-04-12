@@ -1,12 +1,19 @@
 [data-site-id="#{$site-id}"] {
-    .hero-carousel{
-
+    .carousel{
         .swiper-container{
             padding-bottom : 55px;
         }
         .swiper-slide{
             max-height : calc(100vh - 120px);
-            min-height: 634px;
+            @include media-breakpoint-up(lg){
+                min-height: 634px;
+            }
+            @include media-breakpoint-down(lg){
+                min-height: 432px;
+            }
+            @include media-breakpoint-down(sm){
+                min-height: 232px;
+            }
             .bg-custom-gradient{
                 &::before{
                     content: '';
@@ -16,6 +23,27 @@
                     width: 66%;
                     height: 100%;
                     background: linear-gradient(270deg,rgba(255,255,255,0) 0,#fff 100%);
+                }
+            }
+        }
+
+        .button-link{
+            width: 30px;
+        }
+
+        .hero-carousel-slide{
+            .headline-text{
+                .cmp-text{
+                    h2{
+                        @include media-breakpoint-down(lg){
+                            font-size: rem(42px);
+                            line-height: rem(52px);
+                        }
+                        @include media-breakpoint-down(sm){
+                            font-size: rem(24px);
+                            line-height: rem(28px);
+                        }
+                    }
                 }
             }
         }
