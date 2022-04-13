@@ -72,6 +72,7 @@ module.exports = {
         white : "#FFFFFF",
         teal : {
           100 : '#006c8e',
+          200 : '#006C8D',
         },
         gray : {
           50 : '#f5f5f5',

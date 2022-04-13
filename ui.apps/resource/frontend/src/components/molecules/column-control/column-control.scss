@@ -1,6 +1,11 @@
 @media screen {
     [data-site-id="#{$site-id}"] {
-        .column-control {
+        .column-control-wrapper {
+            .row-span-full{
+                &>div{
+                    height: 100%;
+                }
+            }
         }
     }
 }

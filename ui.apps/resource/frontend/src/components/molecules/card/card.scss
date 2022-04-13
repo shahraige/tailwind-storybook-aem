@@ -1,12 +1,39 @@
-// @import '../../../styles/hbk-111/tailwind-dev.scss';
+[data-site-id="#{$site-id}"] {
+    .card {
+        .card-blog-image{
+            height: inherit;
+            position: relative;
 
-// .card {
-//     @extend .flex;
-// }
+            .card__image{
+                max-width: 100%;
+                max-height: 148px;
+            }
 
-@media screen {
-    [data-site-id="#{$site-id}"] {
-        .card {
+            .card__footer{
+                @extend .pt-5;
+                @extend .absolute;
+                @extend .bottom-6;
+                @extend .w-full;
+                @extend .inset-x-8;
+            }
+      
+        }
+
+        .card-blog{
+            border: 0;
+            box-shadow: none;
+
+            .card__body{
+                .button-link{
+                    a{
+                        @extend .font-bold;
+                        @extend .text-ternary;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
