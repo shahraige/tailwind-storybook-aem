@@ -12,11 +12,22 @@
                   }
               }
 
+              &.default{
+                  .headline-text{
+                      .cmp-text{
+                          p{
+                              line-height: 1.5;
+                          }
+                      }
+                  }
+              }
+
               &.hover-card{
                   .card{
                     position: relative;
 
                     .button-link{
+                        width: 25px;
                         margin-left: auto;
                     }
 

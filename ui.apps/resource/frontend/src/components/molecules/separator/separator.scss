@@ -1,0 +1,11 @@
+
+[data-site-id="#{$site-id}"] {
+    .cmp-separator{
+        &__horizontal-rule{
+            &.gradient-bg{
+                background: linear-gradient(to right,rgb(0, 51, 90),rgb(51, 182, 177));
+                border: 0;
+            }
+        }
+    }
+}

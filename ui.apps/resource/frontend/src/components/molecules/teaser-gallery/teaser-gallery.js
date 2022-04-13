@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonLink from '../button-link/ButtonLink'
+import Button from '../button-link/button'
 import Card from '../card/card'
 import HeadlineText from '../headline-text/HeadlineText'
 import ImageExtension from '../image-extension/ImageExtension'
@@ -30,15 +30,13 @@ const TeaserGallery = (props) =>{
     <div className="teaser-gallary section">
         <div className="teaser-gallary__inner">
             <div className='container'>
-                <div className='grid grid-cols-3 gap-x-6'>
+                <div className='grid md:grid-cols-3 gap-y-6 md:gap-y-10 lg:gap-y-12 md:gap-x-6'>
                 {teaser_type == "default" ? 
-                    (teaser_gallery_item_1 && teaser_gallery_item_1.length>0 && teaser_gallery_item_1.map((value)=>{
+                    (teaser_gallery_item_1 && teaser_gallery_item_1.length>0 && teaser_gallery_item_1.map((value, key)=>{
                         return(
-                            <a href="#" className='teaser-gallery__item'>
+                            <a href="#" className={`teaser-gallery__item ${teaser_type || ''}`} key={key}>
                                 <div className='mb-6'>
-                                    <ImageExtension 
-                                        image_src={value.img}
-                                    />
+                                    <img className='max-w-full' src={value.img} alt=""/>
                                 </div>
                                 <div className='mb-8'>
                                     <HeadlineText>
@@ -46,7 +44,7 @@ const TeaserGallery = (props) =>{
                                         <p className='text-ternary text-base'>{value.description}</p>
                                     </HeadlineText>
                                 </div>
-                                <ButtonLink btn_text={value.title} button_type="right-tail-arrow"/>
+                                <Button btn_text={value.title} button_type="right-tail-arrow"/>
                             </a>
                         );
                     }))
@@ -54,16 +52,16 @@ const TeaserGallery = (props) =>{
                 : 
                 
                 teaser_type == "hover-card" ? 
-                    (teaser_gallery_item_1 && teaser_gallery_item_1.length>0 && teaser_gallery_item_1.map((value)=>{
+                    (teaser_gallery_item_1 && teaser_gallery_item_1.length>0 && teaser_gallery_item_1.map((value, key)=>{
                         return(
-                            <a href="#" className={`teaser-gallery__item ${teaser_type || ''}`}>
-                                <Card padding="pt-8 pr-10 pb-6 pl-5">
+                            <a href="#" className={`teaser-gallery__item ${teaser_type || ''}`} key={key}>
+                                <Card padding="pt-8 pr-9 pb-6 pl-5">
                                     <div className='mb-8'>
                                         <HeadlineText>
                                             <h2 className='font-montserrat text-base font-bold mb-6 text-ternary'>{value.title}</h2>
                                         </HeadlineText>
                                     </div>
-                                    <ButtonLink button_type="right-tail-arrow"/>
+                                    <Button button_type="right-tail-arrow"/>
                                 </Card>
                             </a>
                         );

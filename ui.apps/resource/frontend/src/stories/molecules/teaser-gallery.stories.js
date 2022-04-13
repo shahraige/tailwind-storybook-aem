@@ -6,16 +6,16 @@ export default {
    component: TeaserGallery,
    argTypes: {
        teaser_type : {
-        name: "Number of rows",
+        name: "Type",
         defaultValue: "",
         control: { 
             type: "select", 
-            options: [
+            options: 
                 {
                     "default" : "default",
                     "hover-card" : "hover-card"
                 }
-            ] },
+           },
        }
    }
 };
@@ -28,9 +28,9 @@ TeaserGallery_default.args = {
     teaser_type : "default"
 }
 
-export const hoverCard_default = Template.bind({});
+export const hoverCard = Template.bind({});
 
-hoverCard_default.args = {
+hoverCard.args = {
     teaser_type : "hover-card"
 }
 

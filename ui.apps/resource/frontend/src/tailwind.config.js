@@ -36,7 +36,7 @@ module.exports = {
       extend: {
         fontFamily : {
           'roboto': ['Roboto', 'Arial', 'sans-serif'],
-          'sans' : [ "'Roboto'", ...defaultTheme.fontFamily.sans],
+          'sans' : [ 'Roboto', ...defaultTheme.fontFamily.sans],
           'montserrat' : ['Montserrat','sans-serif'],
         },
         minHeight: {
@@ -79,7 +79,7 @@ module.exports = {
           100 : '#e0e0e0',
           200: '#3f3f3f',
         },
-        'black-rgba': 'rgba(0, 0, 0, 0.54)'
+        'black-rgba': 'rgba(0, 0, 0, 0.54)',
       },
 
       fontSize: {
