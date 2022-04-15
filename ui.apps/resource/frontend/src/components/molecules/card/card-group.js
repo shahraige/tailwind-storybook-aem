@@ -49,19 +49,28 @@ const items3 =[
         date: '22 March 2022',
         title : "Environmental Measurements with B&K 2245",
         description : "In this second part of our interview, Jens Wiegand, HBK’s Chief Technology Officer (CTO) and Senior Vice President Electronics & Software shares his thoughts on the role technology plays in shortening product development cycles without compromising quality and predicts the next big breakthroughs for product...",
-       
+       duration : "1 Hour",
+       language : "English",
+       type: "Free",
+       timings : "22 Mar: 16:00 Berlin (CET/CEST)"
     },
     {
         date: '29 March 2022',
         title : "Noise at Work Measurements With B&K 2245",
         description : "Electric vehicles (EVs) are so quiet at low speeds that they can be a danger to pedestrians, cyclists and other road users. So the challenge for car manufacturers is to create sounds that are detectable but not annoying. ",
-        
+        duration : "1 Hour",
+        language : "English",
+        type: "Free",
+        timings : "22 Mar: 16:00 Berlin (CET/CEST)"
     },
     {
         date: '30 March 2022',
         title : "Source-Path-Contribution Analysis: Theory and Applications for Interface and Blocked Forces Identification",
         description : "Optimizing product development in a rapidly changing market: Part 1. With high customer expectations, relentless competition and time criticality, businesses across the world are under pressure to shorten their product development cycles, while reducing cost and maintaining quality. We asked Jens Wiegand, Chief Technology Officer...",
-      
+        duration : "1 Hour",
+        language : "English",
+        type: "Free",
+        timings : "22 Mar: 16:00 Berlin (CET/CEST)"
     },
  
  ];
@@ -72,7 +81,7 @@ const CardGroup = (props) =>{
     return(
         <div class="column-control-wrapper">
             <div className="container mx-auto"> 
-                <div className="grid grid-cols-12 pt-20 gap-x-5">
+                <div className="grid md:grid-cols-12 pt-20 gap-y-5 md:gap-y-0 gap-x-5">
                     {type == "card-icon" ? 
                           (items1 && items1.length>0 && items1.map((value)=>{
                                 return(
@@ -99,7 +108,7 @@ const CardGroup = (props) =>{
                     type == "card-blog-image" ? 
                         (items2 && items2.length>0 && items2.map((value)=>{
                             return(
-                                <div class="col-span-full row-span-full md:col-span-4">
+                                <div class="md:row-span-full md:col-span-4">
                                     <Card 
                                     padding={padding} 
                                     type={type}>
@@ -126,12 +135,12 @@ const CardGroup = (props) =>{
                     type == "card-blog" ? 
                         (items3 && items3.length>0 && items3.map((value)=>{
                             return(
-                                <div class="col-span-full row-span-full md:col-span-4">
+                                <div class="md:row-span-full md:col-span-4">
                                     <Card 
                                     padding={padding} 
                                     type={type}>
                                         <div className='card__header'>
-                                            <div className='date w-full mt-2 mb-3 uppercase text-teal-200 font-semibold inline-block'>{value.date}</div>
+                                            <div className='date w-full mt-2 mb-3 uppercase text-teal-100 font-semibold inline-block'>{value.date}</div>
                                         </div>
                                     
                                         <div className="card__body mb-6">
@@ -139,6 +148,20 @@ const CardGroup = (props) =>{
                                             <HeadlineText>
                                                 <p className='mt-4 text-ternary'>{value.description}</p>
                                             </HeadlineText>
+                                            <div className='text-ternary mt-7'>
+                                                <HeadlineText>
+                                                    <p >Duration: {value.duration}</p>
+                                                    <p>Language: {value.language}</p>
+                                                    <p>{value.type}</p>
+                                                </HeadlineText>
+                                            </div>
+                                            <div className='text-ternary mt-7'>
+                                            <HeadlineText>
+                                                <p>Start Time:</p>
+                                                <p>{value.timings}</p>
+                                            </HeadlineText>
+                                            </div>
+                                         
                                         </div>
 
                                         <div className='card__footer'>

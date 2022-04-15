@@ -34,6 +34,13 @@
                     }
                 }
             }
+            .card__footer{
+                .button-link{
+                    a{
+                        @extend .text-ternary;
+                    }
+                }
+            }
         }
     }
 }

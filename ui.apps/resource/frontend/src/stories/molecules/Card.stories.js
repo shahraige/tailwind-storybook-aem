@@ -29,6 +29,7 @@ export const Card_icon = Template.bind({});
 
 Card_icon.args = {
    padding : "p-8",
+   margin : ' mb-28 md:mb-0',
    type : "card-icon"
 }
 
