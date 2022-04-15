@@ -1,6 +1,10 @@
 @media screen {
     [data-site-id="#{$site-id}"] {
         .column-control-wrapper {
+            .md\:row-span-full,
+            .lg\:row-span-full,
+            .xl\:row-span-full,
+            .xxl\:row-span-full,
             .row-span-full{
                 &>div{
                     height: 100%;

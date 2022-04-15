@@ -1,5 +1,51 @@
 [data-site-id="#{$site-id}"] {
     .button-link {
+
+        .skew-hover{
+            overflow: hidden;
+            font-size: rem(12px);
+            line-height: 1.2;
+            @extend .relative;
+            @extend .py-4;
+            @extend .px-8;
+            @extend .border-2;
+            @extend .border-primary;
+            @extend .text-primary;
+            @extend .font-semibold;
+            @extend .bg-white;
+            @extend .uppercase;
+
+            span{
+                transition: .45s;
+            }
+
+            &:after{
+                content: "";
+                @extend .absolute;
+                @extend .w-0;
+                @extend .bg-primary;
+                transition: .45s;
+                left: 50%;
+                bottom: -2px;
+                height: 120%;
+                transform: skewX(-15deg);
+                z-index: 1;
+            }
+
+            &:hover{
+                text-decoration: none;
+                span{
+                    @extend .text-white;
+                    @extend .relative;
+                    z-index: 2;
+                }
+                &::after{
+                    left: -10%;
+                    width: 120%;
+                }
+            }
+        }
+
         .right-tail-arrow{
             padding:  2px !important;
             margin-top: 10px;

@@ -21,7 +21,7 @@ const button_styles_options = {
 
 //Button Types
 const button_type_options = {
-    default: "",
+    default: "skew-hover",
     round : "round",
     "left-tail-arrow" : "left-tail-arrow",
     "right-tail-arrow" : "right-tail-arrow",
@@ -115,7 +115,7 @@ const Template = (args) => <ButtonLink {...args} />;
 export const Button_default = Template.bind({});
 Button_default.args = {
     btn_text: "this is button",
-    button_styles: "primary"
+    button_type: "skew-hover"
 };
 
 export const Button_round = Template.bind({});

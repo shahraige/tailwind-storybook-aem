@@ -29,7 +29,12 @@ const ButtonLink = (props) => {
             title={buttonlink_title || ''}
             role="button">
 
-            {button_type == 'left-tail-arrow' ? 
+            {button_type == 'skew-hover' ? 
+            <span>{props.btn_text}</span>
+
+            :
+            
+            button_type == 'left-tail-arrow' ? 
               <>
                 <div className='arrow-container border border-gray-200 bg-gray-200 hover:bg-secondary hover:border-secondary cursor-pointer w-4'>
                   <span className='arrow'></span> 
