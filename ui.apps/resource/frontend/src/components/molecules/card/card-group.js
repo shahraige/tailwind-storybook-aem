@@ -81,11 +81,11 @@ const CardGroup = (props) =>{
     return(
         <div class="column-control-wrapper">
             <div className="container mx-auto"> 
-                <div className="grid md:grid-cols-12 pt-20 gap-y-5 md:gap-y-0 gap-x-5">
+                <div className="grid md:grid-cols-12  gap-y-5 md:gap-y-0 gap-x-5">
                     {type == "card-icon" ? 
                           (items1 && items1.length>0 && items1.map((value)=>{
                                 return(
-                                    <div class="col-span-full md:col-span-4">
+                                    <div class="col-span-full md:col-span-4 pt-20">
                                         <Card 
                                         padding={padding} 
                                         type={type}>
@@ -108,7 +108,7 @@ const CardGroup = (props) =>{
                     type == "card-blog-image" ? 
                         (items2 && items2.length>0 && items2.map((value)=>{
                             return(
-                                <div class="md:row-span-full md:col-span-4">
+                                <div class="md:row-span-full md:col-span-4 pt-20">
                                     <Card 
                                     padding={padding} 
                                     type={type}>
