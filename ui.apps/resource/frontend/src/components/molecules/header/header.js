@@ -25,7 +25,7 @@ const Header = (props) => {
     return (
         <div className="header section">
             <HtmlComment text="* Header cmp markup starts here *" />
-            <div className='header__inner absolute w-full top-0'>
+            <div className='header__inner fixed w-full top-0'>
                 <div className='header__top bg-gray-50 py-2 hidden md:block'>
                     <div className='container'>
                         <ul className='flex justify-end p-0'>

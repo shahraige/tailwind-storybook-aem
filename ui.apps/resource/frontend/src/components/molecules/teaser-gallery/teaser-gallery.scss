@@ -25,6 +25,7 @@
               &.hover-card{
                   .card{
                     position: relative;
+                    @extend .bg-white;
 
                     .button-link{
                         width: 25px;

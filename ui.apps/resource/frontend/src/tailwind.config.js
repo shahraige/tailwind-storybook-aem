@@ -66,6 +66,7 @@ module.exports = {
       },
 
       colors : {
+        transparent: 'transparent',
         primary : '#00335a',
         secondary : '#33b6b1',
         ternary : '#3f3f3f',
@@ -75,6 +76,7 @@ module.exports = {
           200 : '#006C8D',
         },
         gray : {
+          40 : '#f2f2f2',
           50 : '#f5f5f5',
           55: '#fafafa',
           100 : '#e0e0e0',

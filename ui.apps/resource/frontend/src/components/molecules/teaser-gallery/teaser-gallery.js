@@ -22,6 +22,39 @@ const teaser_gallery_item_1 = [
     },
 ]
 
+const teaser_gallery_item_2 = [
+    {   
+       
+        title : 'Electric Power',
+        description : 'Whether automotive, aerospace, manufacturing, production, or energy generation and distribution: they all need electric power, and e-mobility is key on our way towards an emission-free future',
+    },
+    {   
+        
+        title : 'Aerospace & Defence',
+        description : 'The aerospace and defence industry has led the way in innovation for more than a century. Ground-breaking developments for commercial and business aircraft, military, spacecraft, rockets, satellites ',
+    },
+    {   
+        
+        title : 'Services',
+        description : 'HBK Services and Solutions empower our customers and engineers throughout the world to deploy and maintain test and measurement technologies as well as to optimise the usage of data',
+    },
+    {   
+        
+        title : 'About',
+        description : 'HBK Services and Solutions empower our customers and engineers throughout the world to deploy and maintain test and measurement technologies as well as to optimise the usage of data',
+    },
+    {   
+        
+        title : 'Academy',
+        description : 'HBK Services and Solutions empower our customers and engineers throughout the world to deploy and maintain test and measurement technologies as well as to optimise the usage of data',
+    },
+    {   
+        
+        title : 'Contact',
+        description : 'HBK Services and Solutions empower our customers and engineers throughout the world to deploy and maintain test and measurement technologies as well as to optimise the usage of data',
+    },
+]
+
 const TeaserGallery = (props) =>{
 
     const {teaser_type} = props;
@@ -52,7 +85,7 @@ const TeaserGallery = (props) =>{
                 : 
                 
                 teaser_type == "hover-card" ? 
-                    (teaser_gallery_item_1 && teaser_gallery_item_1.length>0 && teaser_gallery_item_1.map((value, key)=>{
+                    (teaser_gallery_item_2 && teaser_gallery_item_2.length>0 && teaser_gallery_item_2.map((value, key)=>{
                         return(
                             <a href="#" className={`teaser-gallery__item ${teaser_type || ''}`} key={key}>
                                 <Card padding="pt-8 pr-9 pb-6 pl-5">

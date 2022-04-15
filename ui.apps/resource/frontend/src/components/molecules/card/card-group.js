@@ -80,7 +80,7 @@ const CardGroup = (props) =>{
     const {padding, type} = props;
     return(
         <div class="column-control-wrapper">
-            <div className="container mx-auto"> 
+            <div className="container"> 
                 <div className="grid md:grid-cols-12  gap-y-5 md:gap-y-0 gap-x-5">
                     {type == "card-icon" ? 
                           (items1 && items1.length>0 && items1.map((value)=>{

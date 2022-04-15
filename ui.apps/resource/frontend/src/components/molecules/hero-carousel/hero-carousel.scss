@@ -3,6 +3,11 @@
         .swiper-container{
             padding-bottom : 55px;
         }
+
+        .swiper-pagination-fraction{
+            font-weight: 700;
+        }
+        
         .swiper-slide{
             max-height : calc(100vh - 120px);
             @include media-breakpoint-up(lg){
@@ -27,8 +32,10 @@
             }
         }
 
-        .button-link{
-            width: 30px;
+        .custom-arrow-container{
+            .button-link{
+                width: 30px;
+            }
         }
 
         .hero-carousel-slide{

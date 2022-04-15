@@ -4,10 +4,19 @@
             height: inherit;
             position: relative;
 
-            .card__image{
-                max-width: 100%;
-                max-height: 148px;
+            @include media-breakpoint-up(lg){
+                .card__image{
+                    max-width: 100%;
+                    max-height: 148px;
+                }
             }
+            @include media-breakpoint-down(lg){
+                .card__image{
+                    max-width: 100%;
+                    max-height: 95px;
+                }
+            }
+          
 
             .card__footer{
                 @extend .pt-5;
