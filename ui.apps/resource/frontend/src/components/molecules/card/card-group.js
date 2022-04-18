@@ -79,103 +79,98 @@ const items3 =[
 const CardGroup = (props) =>{
     const {padding, type} = props;
     return(
-        <div class="column-control-wrapper">
-            <div className="container"> 
-                <div className="grid md:grid-cols-12  gap-y-5 md:gap-y-0 gap-x-5">
-                    {type == "card-icon" ? 
-                          (items1 && items1.length>0 && items1.map((value)=>{
-                                return(
-                                    <div class="col-span-full md:col-span-4 pt-20">
-                                        <Card 
-                                        padding={padding} 
-                                        type={type}>
-                                            <div className='card__header'>
-                                                <div className='card__image  h-40 mb-7 -mt-28 mx-auto'>
-                                                    <img src={value.image} className="h-full mx-auto"/>
-                                                </div>
-                                            </div>
-                                            <div className="card__body">
-                                                <HeadlineText>
-                                                <h2 className='font-bold'>{value.title}</h2>
-                                                <p className='mt-4'>{value.description}</p>
-                                                </HeadlineText>
-                                            </div>
-                                        </Card>
+            <>
+                {type == "card-icon" ? 
+                    (items1 && items1.length>0 && items1.map((value, index)=>{
+                        return(
+                            <div key={index} className="col-span-full md:col-span-4 pt-20">
+                                <Card 
+                                padding={padding} 
+                                type={type}>
+                                    <div className='card__header'>
+                                        <div className='card__image  h-40 mb-7 -mt-28 mx-auto'>
+                                            <img src={value.image} className="h-full mx-auto"/>
+                                        </div>
                                     </div>
-                                );
-                            }))
-                    : 
-                    type == "card-blog-image" ? 
-                        (items2 && items2.length>0 && items2.map((value)=>{
-                            return(
-                                <div class="md:row-span-full md:col-span-4 pt-20">
-                                    <Card 
-                                    padding={padding} 
-                                    type={type}>
-                                        <div className='card__header'>
-                                                <div className='card__image  h-40 -mt-24 mx-auto bg-cover bg-right bg-no-repeat' style={{backgroundImage : `url(${value.image})`}} />
-                                                <div className='date w-full text-right mt-2 mb-3 italic text-teal-100 inline-block'>{value.date}</div>
-                                        </div>
-                                    
-                                        <div className="card__body mb-6">
-                                            <HeadlineText>
-                                                <h2 className='font-bold text-xl text-ternary'>{value.title}</h2>
-                                                <p className='mt-4'>{value.description}</p>
-                                            </HeadlineText>
-                                        </div>
-
-                                        <div className='card__footer'>
-                                            <ButtonLink btn_text='Read More' button_type='right-tail-arrow'/>
-                                        </div>
-                                    </Card>
+                                    <div className="card__body">
+                                        <HeadlineText>
+                                        <h2 className='font-bold'>{value.title}</h2>
+                                        <p className='mt-4'>{value.description}</p>
+                                        </HeadlineText>
+                                    </div>
+                                </Card>
+                            </div>
+                        );
+                    }))
+                : 
+                type == "card-blog-image" ? 
+                    (items2 && items2.length>0 && items2.map((value, index)=>{
+                        return(
+                            <div key={index} className="md:row-span-full md:col-span-4 pt-20">
+                            <Card 
+                            padding={padding} 
+                            type={type}>
+                                <div className='card__header'>
+                                        <div className='card__image  h-40 -mt-24 mx-auto bg-cover bg-right bg-no-repeat' style={{backgroundImage : `url(${value.image})`}} />
+                                        <div className='date w-full text-right mt-2 mb-3 italic text-teal-100 inline-block'>{value.date}</div>
                                 </div>
-                            );
-                        }))
-                    : 
-                    type == "card-blog" ? 
-                        (items3 && items3.length>0 && items3.map((value)=>{
-                            return(
-                                <div class="md:row-span-full md:col-span-4">
-                                    <Card 
-                                    padding={padding} 
-                                    type={type}>
-                                        <div className='card__header'>
-                                            <div className='date w-full mt-2 mb-3 uppercase text-teal-100 font-semibold inline-block'>{value.date}</div>
-                                        </div>
-                                    
-                                        <div className="card__body mb-6">
-                                            <ButtonLink btn_text={`${value.title}`} />
-                                            <HeadlineText>
-                                                <p className='mt-4 text-ternary'>{value.description}</p>
-                                            </HeadlineText>
-                                            <div className='text-ternary mt-7'>
-                                                <HeadlineText>
-                                                    <p >Duration: {value.duration}</p>
-                                                    <p>Language: {value.language}</p>
-                                                    <p>{value.type}</p>
-                                                </HeadlineText>
-                                            </div>
-                                            <div className='text-ternary mt-7'>
-                                            <HeadlineText>
-                                                <p>Start Time:</p>
-                                                <p>{value.timings}</p>
-                                            </HeadlineText>
-                                            </div>
-                                         
-                                        </div>
-
-                                        <div className='card__footer'>
-                                            <ButtonLink btn_text='Go To Event' button_type='right-tail-arrow'/>
-                                        </div>
-                                    </Card>
+                            
+                                <div className="card__body mb-6">
+                                    <HeadlineText>
+                                        <h2 className='font-bold text-xl text-ternary'>{value.title}</h2>
+                                        <p className='mt-4'>{value.description}</p>
+                                    </HeadlineText>
                                 </div>
-                            );
-                        }))
-                    : ''}
-                  
-                </div>          
-            </div>
-        </div>
+
+                                <div className='card__footer'>
+                                    <ButtonLink btn_text='Read More' button_type='right-tail-arrow'/>
+                                </div>
+                            </Card>
+                            </div>
+                        );
+                    }))
+                : 
+                type == "card-blog" ? 
+                    (items3 && items3.length>0 && items3.map((value, index)=>{
+                        return(
+                            <div key={index} className="md:row-span-full md:col-span-4">
+                                <Card 
+                                padding={padding} 
+                                type={type}>
+                                    <div className='card__header'>
+                                        <div className='date w-full mt-2 mb-3 uppercase text-teal-100 font-semibold inline-block'>{value.date}</div>
+                                    </div>
+                                
+                                    <div className="card__body mb-6">
+                                        <ButtonLink btn_text={`${value.title}`} />
+                                        <HeadlineText>
+                                            <p className='mt-4 text-ternary'>{value.description}</p>
+                                        </HeadlineText>
+                                        <div className='text-ternary mt-7'>
+                                            <HeadlineText>
+                                                <p >Duration: {value.duration}</p>
+                                                <p>Language: {value.language}</p>
+                                                <p>{value.type}</p>
+                                            </HeadlineText>
+                                        </div>
+                                        <div className='text-ternary mt-7'>
+                                        <HeadlineText>
+                                            <p>Start Time:</p>
+                                            <p>{value.timings}</p>
+                                        </HeadlineText>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div className='card__footer'>
+                                        <ButtonLink btn_text='Go To Event' button_type='right-tail-arrow'/>
+                                    </div>
+                                </Card>
+                            </div>
+                        );
+                    }))
+                : ''}
+            </>    
     );
 }
 export default CardGroup;

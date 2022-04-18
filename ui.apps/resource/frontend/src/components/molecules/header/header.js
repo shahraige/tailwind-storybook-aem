@@ -29,9 +29,9 @@ const Header = (props) => {
                 <div className='header__top bg-gray-50 py-2 hidden md:block'>
                     <div className='container'>
                         <ul className='flex justify-end p-0'>
-                            {top_nav_items && top_nav_items.length>0 && top_nav_items.map((value)=>{
+                            {top_nav_items && top_nav_items.length>0 && top_nav_items.map((value, index)=>{
                                 return(
-                                <li className='mr-5 last:mr-0'>
+                                <li key={index} className='mr-5 last:mr-0'>
                                     <a className='text-base text-gray-200 hover:underline' href={value.link_url}>{value.title}</a>
                                 </li>
                                 );

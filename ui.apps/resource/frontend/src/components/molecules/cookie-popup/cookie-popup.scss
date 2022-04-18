@@ -1,0 +1,40 @@
+[data-site-id="#{$site-id}"] {
+    .cookie-popup{
+        .modal__header{
+            .image-extension{
+                img{
+                    max-width: 180px;
+                }
+            }
+
+            span{
+                font-size: rem(10.5px);
+            }
+
+            .button-link{
+                line-height: 0;
+               
+                a{
+                    font-size: rem(8.4px);
+                    line-height: 0;
+                    @extend .font-bold;
+                    @extend .underline;
+
+                }
+            }
+        }
+
+        .modal-body{
+            .button-link{
+                margin-top: 15px;
+
+                a{
+                    @extend .font-montserrat;
+                    @extend .underline;
+                    @extend .text-black-20;
+                    font-size: rem(15px);
+                }
+            }
+        }
+    }
+}

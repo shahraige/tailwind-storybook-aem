@@ -103,15 +103,15 @@ const Footer = () => {
             <div className='footer__inner bg-primary pt-28 pb-8 text-white'>
                 <div className='container'>
                     <div className='footer__top pb-12 grid gap-y-8 md:gap-y-0 md:grid-cols-3 md:gap-x-6'>
-                        {footer_items && footer_items.length>0 && footer_items.map( (value,key) => {
+                        {footer_items && footer_items.length>0 && footer_items.map( (value,index) => {
                            return(
-                            <ul>
+                            <ul key={index}>
                                 <a
                                  className='pb-4 border-b-3 font-bold text-base border-secondary w-full block'
                                  href={value.link_url}>{value.title}</a>
-                                {value.menu_list && value.menu_list.length>0 && value.menu_list.map((item) => {
+                                {value.menu_list && value.menu_list.length>0 && value.menu_list.map((item , key) => {
                                     return(
-                                        <li className='my-2 lg:my-4'>
+                                        <li key={key} className='my-2 lg:my-4'>
                                             <a className='hover:underline' href={item.link_url}>{item.title}</a>
                                         </li>
                                     );
@@ -122,28 +122,28 @@ const Footer = () => {
                     </div>
                     <div className='footer__bottom'>
                         <ButtonLink
-                        customClass="text-white mb-4"
+                        customclassName="text-white mb-4"
                         btn_text="Modern Slavery Statement"
                         buttonlink_href="#"
                         />
                         <div className='flex mb-9'>
                             <ButtonLink
-                            customClass="text-white"
+                            customclassName="text-white"
                             btn_text="Imprint"
                             buttonlink_href="#"
                             />
                             <ButtonLink
-                            customClass="text-white"
+                            customclassName="text-white"
                             btn_text="Cookie Policy"
                             buttonlink_href="#"
                             />
                             <ButtonLink
-                            customClass="text-white"
+                            customclassName="text-white"
                             btn_text="Privacy Policy"
                             buttonlink_href="#"
                             />
                         </div>
-                        <div class="copyright">
+                        <div className="copyright">
                             <small>© 2022 Hottinger Brüel &amp; Kjær</small>
                         </div>
                     </div>

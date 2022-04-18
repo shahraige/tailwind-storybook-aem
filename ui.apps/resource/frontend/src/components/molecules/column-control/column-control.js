@@ -35,9 +35,11 @@ const ColumnControl = (props) => {
                 </div>
             </div>
             :
-            <div className={`${container ? 'container mx-auto':''}`}>
-                <div className={`grid ${fullHeight ? 'min-h-inherit' : ''} ${n_rows && n_rows.length > 0 ? n_rows : ''}  ${container_padding || ''} ${flowDirection && flowDirection.length>0 ? flowDirection: ''} grid-cols-12 ${lg_cols && lg_cols.length>0 ? `lg:grid-cols-${lg_cols}`:''} ${md_cols && md_cols.length>0 ? `md:grid-cols-${md_cols}`:''}  ${gap || ''} ${gapX || ''} ${gapY || ''} ${horizontalAlignment || ''} ${verticalAlignment || ''}`}>
-                    {props.children}
+            <div className='column-control-wrapper'>
+                <div className={`${container ? 'container mx-auto':''}`}>
+                    <div className={`grid ${fullHeight ? 'min-h-inherit' : ''} ${n_rows && n_rows.length > 0 ? n_rows : ''}  ${container_padding || ''} ${flowDirection && flowDirection.length>0 ? flowDirection: ''} grid-cols-12 ${lg_cols && lg_cols.length>0 ? `lg:grid-cols-${lg_cols}`:''} ${md_cols && md_cols.length>0 ? `md:grid-cols-${md_cols}`:''}  ${gap || ''} ${gapX || ''} ${gapY || ''} ${horizontalAlignment || ''} ${verticalAlignment || ''}`}>
+                        {props.children}
+                    </div>
                 </div>
             </div>
             }

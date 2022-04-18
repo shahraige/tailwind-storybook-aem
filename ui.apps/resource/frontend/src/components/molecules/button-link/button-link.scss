@@ -46,6 +46,41 @@
             }
         }
 
+        .cookie-btn{
+            &__light{
+                padding: 15px;
+                font-size: rem(15px);
+                @extend .font-bold;
+                @extend .uppercase;
+                @extend .rounded;
+                @extend .bg-gray-60;
+                border: solid 1px #888888;
+                @extend .text-black-20;
+                @extend .flex-none;
+
+                &:hover{
+                    background-color: #dddddd;
+                }
+            }
+            &__dark{
+                padding: 15px;
+                font-size: rem(15px);
+                @extend .font-bold;
+                @extend .uppercase;
+                @extend .rounded;
+                @extend .bg-primary;
+                @extend .text-white;
+                @extend .flex-none;
+                @extend .border;
+                @extend .border-primary;
+
+                &:hover{
+                    @extend .bg-secondary;
+                    @extend .border-secondary;
+                }
+            }
+        }
+
         .right-tail-arrow{
             padding:  2px !important;
             margin-top: 10px;

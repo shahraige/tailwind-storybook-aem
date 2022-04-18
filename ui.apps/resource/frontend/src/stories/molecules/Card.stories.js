@@ -23,7 +23,14 @@ export default {
    }
 };
 
-const Template = (args) => <CardGroup {...args}/>;
+const Template = (args) => 
+<div class="column-control-wrapper">
+      <div className="container"> 
+         <div className="grid md:grid-cols-12  gap-y-5 md:gap-y-0 gap-x-5">
+            <CardGroup {...args}/>
+         </div>
+      </div>
+</div>;
 
 export const Card_icon = Template.bind({});
 

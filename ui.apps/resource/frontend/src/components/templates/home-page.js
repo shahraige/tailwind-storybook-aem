@@ -52,7 +52,7 @@ const HomePage = () =>{
             loop={true}>
                 {carousel_items_1 && carousel_items_1.length > 0 && carousel_items_1.map((value, key) => {
                     return(
-                        <SwiperSlide>
+                        <SwiperSlide key={key}>
                         <div className='hero-carousel-slide'>
                                 <div className='h-full w-full absolute bg-cover bg-no-repeat bg-center bg-custom-gradient' style={{ backgroundImage : `url(${value.img})`}}>
                                     <div className='pt-6 md:pt-28 lg:pt-36 container relative font-montserrat'>
@@ -157,7 +157,11 @@ const HomePage = () =>{
                  </div>
             </ColumnControl>
 
-            <CardGroup  padding ="px-8 pb-14 pt-8" type = "card-blog-image"/>
+            <ColumnControl
+            gapX="md:gap-x-6"
+            container="true">
+                <CardGroup  padding ="px-8 pb-14 pt-8" type = "card-blog-image"/>
+            </ColumnControl>
 
             <Separator border_color="border-transparent"  marginY="my-16"/>
 
@@ -172,32 +176,28 @@ const HomePage = () =>{
                  </div>
             </ColumnControl>
 
-            {/* <ColumnControl
+            <ColumnControl
             container="true">
-              <HeroCarousel
-            spaceBetween={50}
-            slidesPerView={1}
-            loop={true}>
-                <SwiperSlide>
-                    <CardGroup type = "card-blog"/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardGroup type = "card-blog"/>
-                </SwiperSlide>
-            </HeroCarousel>
-            </ColumnControl> */}
-
-            <HeroCarousel
-            spaceBetween={50}
-            slidesPerView={1}
-            loop={true}>
-                <SwiperSlide>
-                    <CardGroup type = "card-blog"/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <CardGroup type = "card-blog"/>
-                </SwiperSlide>
-            </HeroCarousel>
+                 <div className='col-span-full'>
+                    <HeroCarousel
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}>
+                        <SwiperSlide>
+                            <ColumnControl
+                            gapX="md:gap-x-6">
+                                <CardGroup type = "card-blog"/>
+                            </ColumnControl>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <ColumnControl
+                            gapX="md:gap-x-6">
+                                <CardGroup type = "card-blog"/>
+                            </ColumnControl>
+                        </SwiperSlide>
+                    </HeroCarousel>
+                 </div>
+            </ColumnControl>
 
             <Separator border_color="border-transparent"  marginY="my-16"/>
 

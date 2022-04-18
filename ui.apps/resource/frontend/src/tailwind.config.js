@@ -79,10 +79,14 @@ module.exports = {
           40 : '#f2f2f2',
           50 : '#f5f5f5',
           55: '#fafafa',
+          60: '#f6f6f6',
           100 : '#e0e0e0',
           200: '#3f3f3f',
         },
         'black-rgba': 'rgba(0, 0, 0, 0.54)',
+        black : {
+          20 : '#222',
+        }
       },
 
       fontSize: {
