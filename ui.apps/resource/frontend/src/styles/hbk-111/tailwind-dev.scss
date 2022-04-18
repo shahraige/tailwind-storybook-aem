@@ -745,6 +745,11 @@ video {
   src: local('Montserrat BoldItalic'), local('Montserrat-BoldItalic'), url("/public/fonts/Montserrat/Montserrat-BoldItalic.ttf") format('truetype');
 }
 
+body{
+  --tw-text-opacity: 1;
+  color: rgba(63, 63, 63, var(--tw-text-opacity));
+}
+
 .container {
   width: 100%;
   margin-right: auto;

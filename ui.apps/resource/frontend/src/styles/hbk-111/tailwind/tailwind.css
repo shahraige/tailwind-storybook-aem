@@ -103,6 +103,10 @@
          font-display: swap;
          src: local('Montserrat BoldItalic'), local('Montserrat-BoldItalic'), url("/public/fonts/Montserrat/Montserrat-BoldItalic.ttf") format('truetype');
        }
+
+       body{
+         @apply text-ternary;
+       }
 }
 
 

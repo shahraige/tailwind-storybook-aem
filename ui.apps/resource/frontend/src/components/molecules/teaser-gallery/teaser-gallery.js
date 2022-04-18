@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../button-link/button'
 import Card from '../card/card'
 import HeadlineText from '../headline-text/HeadlineText'
+import HtmlComment from '../../particles/html-comment/HtmlComment'
 import ImageExtension from '../image-extension/ImageExtension'
 
 const teaser_gallery_item_1 = [
@@ -62,6 +63,7 @@ const TeaserGallery = (props) =>{
     return(
     <div className="teaser-gallary section">
         <div className="teaser-gallary__inner">
+            <HtmlComment text="* Teaser gallery cmp markup starts here *" />
             <div className='container'>
                 <div className='grid md:grid-cols-3 gap-y-6 md:gap-y-10 lg:gap-y-12 md:gap-x-6'>
                 {teaser_type == "default" ? 
@@ -100,9 +102,9 @@ const TeaserGallery = (props) =>{
                         );
                     }))
                 : ''}
-                   
                 </div>
             </div>
+            <HtmlComment text="* Teaser gallery cmp markup ends here *" />
         </div>
     </div>
     );

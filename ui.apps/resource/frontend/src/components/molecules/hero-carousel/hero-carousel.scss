@@ -6,8 +6,9 @@
 
         .swiper-pagination-fraction{
             font-weight: 700;
+            @extend .text-ternary;
         }
-        
+
         .swiper-slide{
             max-height : calc(100vh - 120px);
             @include media-breakpoint-up(lg){
