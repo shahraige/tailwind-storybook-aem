@@ -12,8 +12,9 @@ export default {
             type: "select", 
             options: 
                 {
-                    "default" : "default",
-                    "hover-card" : "hover-card"
+                    "teaser-vertical" : "teaser-vertical",
+                    "teaser-text" : "teaser-text",
+                    "teaser-stage" : "teaser-stage",
                 }
            },
        }
@@ -22,15 +23,22 @@ export default {
 
 const Template = (args) => <TeaserGallery  {...args}/>;
 
-export const TeaserGallery_default = Template.bind({});
+export const teaser_Vertical = Template.bind({});
 
-TeaserGallery_default.args = {
-    teaser_type : "default"
+teaser_Vertical.args = {
+    teaser_type : "teaser-vertical"
 }
 
-export const hoverCard = Template.bind({});
+export const teaserText = Template.bind({});
 
-hoverCard.args = {
-    teaser_type : "hover-card"
+teaserText.args = {
+    teaser_type : "teaser-text"
 }
+
+export const teaser_stage = Template.bind({});
+
+teaser_stage.args = {
+    teaser_type : "teaser-stage"
+}
+
 

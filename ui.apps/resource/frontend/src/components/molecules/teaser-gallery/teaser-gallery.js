@@ -56,6 +56,24 @@ const teaser_gallery_item_2 = [
     },
 ]
 
+const teaser_gallery_item_3 = [
+    {   
+        img: 'https://www.hbkworld.com/en/industries/aerospace-defence/_jcr_content/root/container/container_707760284/columncontrol/col_1/teaser_218016410.coreimg.jpeg/1652969081706/aerospace-and-defence-aircrafts.jpeg',
+        title : 'Civil & Defence Aircraft',
+        description : 'Qualifying propulsion systems and airframes for certification',
+    },
+    {   
+        img: 'https://www.hbkworld.com/en/industries/aerospace-defence/_jcr_content/root/container/container_707760284/columncontrol/col_2/teaser_1318613898.coreimg.jpeg/1652969138815/space-vehicles-and-sattelite-qualifitcation.jpeg',
+        title : 'Space Vehicles & Satellite Qualification',
+        description : 'Noise and vibration testing and modal analysis for enhanced reliability',
+    },
+    {   
+        img: 'https://www.hbkworld.com/en/industries/aerospace-defence/_jcr_content/root/container/container_707760284/columncontrol/col_1/teaser_1692593680.coreimg.jpeg/1652969158215/naval-defense.jpeg',
+        title : 'Services',
+        description : 'Comprehensive acoustic and structural testing and monitoring solutions',
+    },
+]
+
 const TeaserGallery = (props) =>{
 
     const {teaser_type} = props;
@@ -66,38 +84,60 @@ const TeaserGallery = (props) =>{
             <HtmlComment text="* Teaser gallery cmp markup starts here *" />
             <div className='container'>
                 <div className='grid md:grid-cols-3 gap-y-6 md:gap-y-10 lg:gap-y-12 md:gap-x-6'>
-                {teaser_type == "default" ? 
+                {teaser_type == "teaser-vertical" ? 
                     (teaser_gallery_item_1 && teaser_gallery_item_1.length>0 && teaser_gallery_item_1.map((value, key)=>{
                         return(
-                            <a href="#" className={`teaser-gallery__item ${teaser_type || ''}`} key={key}>
+                            <a href="#" className={`teaser__item ${teaser_type || ''}`} key={key}>
+                                <div className='teaser-item__wrapper'>
+                                    <div className='mb-6'>
+                                        <img className='max-w-full' src={value.img} alt=""/>
+                                    </div>
+                                    <div className='mb-8'>
+                                        <HeadlineText>
+                                            <h2 className='teaser__title'>{value.title}</h2>
+                                            <p className='teaser__description'>{value.description}</p>
+                                        </HeadlineText>
+                                    </div>
+                                    <Button btn_text={value.title} button_type="right-tail-arrow"/>
+                                </div>
+                            </a>
+                        );
+                    }))
+                : 
+
+                teaser_type == "teaser-stage" ? 
+                (teaser_gallery_item_3 && teaser_gallery_item_3.length>0 && teaser_gallery_item_3.map((value, key)=>{
+                    return(
+                        <a href="#" className={`teaser__item ${teaser_type || ''}`} key={key}>
+                            <div className='teaser-item__wrapper'>
                                 <div className='mb-6'>
                                     <img className='max-w-full' src={value.img} alt=""/>
                                 </div>
                                 <div className='mb-8'>
                                     <HeadlineText>
-                                        <h2 className='font-montserrat text-base font-bold mb-6 text-ternary'>{value.title}</h2>
-                                        <p className='text-ternary text-base'>{value.description}</p>
+                                        <p className='teaser__pretitle'>COMING SOON</p>
+                                        <h2 className='teaser__title'>{value.title}</h2>
+                                        <p className='teaser__description'>{value.description}</p>
                                     </HeadlineText>
                                 </div>
-                                <Button btn_text={value.title} button_type="right-tail-arrow"/>
-                            </a>
-                        );
-                    }))
-
+                            </div>
+                        </a>
+                    );
+                }))
                 : 
                 
-                teaser_type == "hover-card" ? 
+                teaser_type == "teaser-text" ? 
                     (teaser_gallery_item_2 && teaser_gallery_item_2.length>0 && teaser_gallery_item_2.map((value, key)=>{
                         return(
-                            <a href="#" className={`teaser-gallery__item ${teaser_type || ''}`} key={key}>
-                                <Card padding="pt-8 pr-9 pb-6 pl-5">
+                            <a href="#" className={`teaser__item ${teaser_type || ''}`} key={key}>
+                                <div className='teaser-item__wrapper'>
                                     <div className='mb-8'>
                                         <HeadlineText>
-                                            <h2 className='font-montserrat text-base font-bold mb-6 text-ternary'>{value.title}</h2>
+                                            <h2 className='teaser__title'>{value.title}</h2>
                                         </HeadlineText>
                                     </div>
                                     <Button button_type="right-tail-arrow"/>
-                                </Card>
+                                </div>
                             </a>
                         );
                     }))

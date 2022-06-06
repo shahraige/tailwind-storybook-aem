@@ -1,54 +1,127 @@
-
-  [data-site-id="#{$site-id}"] {
-      .teaser-gallery{
-          &__item{
-              &:hover{
-                  .button-link{
-                    .arrow-container{
+[data-site-id="#{$site-id}"] {
+    .teaser {
+        &__item {
+            &:hover {
+                .button-link {
+                    .arrow-container {
                         width: 24px !important;
                         @extend .bg-secondary;
                         @extend .border-secondary;
                     }
-                  }
-              }
+                }
+            }
 
-              &.default{
-                  .headline-text{
-                      .cmp-text{
-                          p{
-                              line-height: 1.5;
-                          }
-                      }
-                  }
-              }
+            &.teaser-vertical {
+                .headline-text {
+                    .cmp-text {
+                        p {
+                            line-height: 1.5;
+                        }
 
-              &.hover-card{
-                  .card{
+                        .teaser__title {
+                            @extend .font-montserrat, .text-base, .font-bold, .mb-6, .text-ternary;
+                        }
+
+                        .teaser__description{
+                            @extend .text-ternary, .text-base; 
+                        }
+                    }
+                }
+            }
+
+            &.teaser-text {
+                &>.teaser-item__wrapper {
+                    @extend .pt-8;
+                    @extend .pr-9;
+                    @extend .pb-6;
+                    @extend .pl-5;
+                    @extend .border;
+                    @extend .border-gray-100;
+                    @extend .shadow-custom-1;
+
                     position: relative;
                     @extend .bg-white;
 
-                    .button-link{
+
+                    .button-link {
                         width: 25px;
                         margin-left: auto;
                     }
 
-                    &::before{
+                    &::before {
                         content: '';
                         position: absolute;
                         bottom: 0;
+                        left: 0;
                         height: 4px;
                         width: 0;
                         @extend .bg-secondary;
                         transition: all .25s ease-in-out;
                     }
-                
-                    &:hover{
-                        &::before{
+
+                    &:hover {
+                        &::before {
                             width: 100%;
                         }
                     }
-                  }
-              }
-          }
-      }
-  }
+
+                    .teaser__title {
+                        @extend .font-montserrat, .text-base, .font-bold, .mb-6, .text-ternary;
+                    }
+
+                    .teaser__description{
+                        @extend .text-ternary, .text-base; 
+                    }
+                }
+            }
+
+            &.teaser-stage {
+                .teaser-item__wrapper {
+                    @extend .relative;
+                    @extend .p-10;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 66%;
+                        height: 100%;
+                        // background: linear-gradient(268deg, rgba(0, 0, 0, 0) 0, #3e3e3e 100%);
+                        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0, rgb(255, 255, 255) 100%);
+                    }
+
+                    img {
+                        @extend .absolute;
+                        @extend .w-full;
+                        @extend .h-full;
+                        @extend .inset-0;
+                        @extend .object-cover;
+                    }
+
+                    .headline-text {
+                        position: relative;
+                        z-index: 1;
+
+                        .teaser__pretitle {
+                            font-size: rem(18px);
+                            line-height: rem(24px);
+                            @extend .text-teal-100, .mb-4;
+                        }
+
+                        .teaser__title {
+                            @extend .font-montserrat, .text-base, .font-bold, .mb-6, .text-ternary;
+                            letter-spacing: 1;
+                            font-size: rem(24px);
+                            line-height: rem(30px)
+                        }
+
+                        .teaser__description{
+                            @extend .text-ternary, .text-base; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
