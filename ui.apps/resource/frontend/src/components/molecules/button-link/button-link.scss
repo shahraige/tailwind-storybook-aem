@@ -81,48 +81,6 @@
             }
         }
 
-        .right-tail-arrow{
-            padding:  2px !important;
-            margin-top: 10px;
-            @extend .cursor-pointer;
-            @extend .flex;
-            @extend .items-center;
-            text-decoration: none !important;
-
-            .arrow-container{
-                border-width: 1.2px;
-                position: relative;
-                width: 16px;
-                transition: all 0.3s ease;
-
-                &>.arrow,
-                .arrow::after {
-                    border-width: 0.6px;
-                    width: 10px;
-                    position: absolute;
-                    right: -3px;
-                    top: 3px;
-                    transform: rotate(-45deg);
-                    border-color: inherit;
-                    @extend .cursor-pointer;
-                }
-
-                .arrow::after {
-                    content: "";
-                    background-color: inherit;
-                    top: -6px;
-                    right: -6px;
-                    transform: rotate(90deg);
-                }
-            }
-        }
-
-        .left-tail-arrow{
-            @extend .right-tail-arrow;
-            transform: rotate(180deg);
-            justify-content: flex-start;
-        }
-
         &:hover{
             .arrow-container{
                 width: 24px !important;
@@ -154,5 +112,44 @@
         //     }
         //   }
       
+        .right-arrow, .left-arrow{
+            z-index: 2;
+            width: 34px;
+            height: 34px;
+            filter: brightness(0);
+            transition: all .2s ease;
+            background-repeat: no-repeat;
+            background-position: -4px center;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iSWNvbl8tX0Fycm93Xy1fSG92ZXJHcmVlbiIgZGF0YS1uYW1lPSJJY29uIC0gQXJyb3cgLSBIb3ZlckdyZWVuIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDIxIDE2Ij4KICA8cGF0aCBpZD0iUGF0aF8xMCIgZGF0YS1uYW1lPSJQYXRoIDEwIiBkPSJNMTMsMCwxMS41NDUsMS40NTVsNS41MDYsNS41MDZIMFY5LjAzOUgxNy4wNTJsLTUuNTA2LDUuNTA2TDEzLDE2bDgtOFoiIGZpbGw9IiMzM2I2YjEiLz4KPC9zdmc+Cg==);
+            user-select: none;
+            text-decoration: none;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            padding: 10px;
+            color: rgba(0,0,0,0.9);
+            fill: rgba(0,0,0,0.9);
+            
+            svg{
+                width: 14px;
+                height: 14px;
+                display: none;
+            }
+
+            &:hover{
+                filter: grayscale(0);
+                transition: all .2s ease;
+                background-position: 0 center;
+                color: #959ea9;
+            }
+        }
+
+        .right-arrow {
+            right: 0;
+        }
+        .left-arrow {
+            transform: rotate(180deg);
+            left: 0;
+        }
     }
 }

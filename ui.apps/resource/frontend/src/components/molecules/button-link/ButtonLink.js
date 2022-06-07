@@ -36,9 +36,9 @@ const ButtonLink = (props) => {
             
             button_type == 'left-tail-arrow' ? 
               <>
-                <div className='arrow-container border border-gray-200 bg-gray-200 hover:bg-secondary hover:border-secondary cursor-pointer w-4'>
-                  <span className='arrow'></span> 
-                </div>
+                 <span class="left-arrow">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg>
+                </span>
                 {props.btn_text ? 
                   <span className='ml-3'>
                   { props.btn_text ? props.btn_text : ''}
@@ -53,9 +53,9 @@ const ButtonLink = (props) => {
                   { props.btn_text ? props.btn_text : ''}
                   </span>
                 : ''}
-                <div className='arrow-container border border-gray-200 bg-gray-200 hover:bg-secondary hover:border-secondary cursor-pointer w-4'>
-                  <span className='arrow'></span> 
-                </div> 
+                <span class="right-arrow">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg>
+                </span>
               </>
             : 
             props.btn_text }
