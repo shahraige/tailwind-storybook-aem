@@ -1,13 +1,10 @@
 [data-site-id="#{$site-id}"] {
     .teaser {
         &__item {
-            &:hover {
-                .button-link {
-                    .arrow-container {
-                        width: 24px !important;
-                        @extend .bg-secondary;
-                        @extend .border-secondary;
-                    }
+
+            .button-link {
+                .right-arrow{
+                    top: unset;
                 }
             }
 
@@ -27,6 +24,14 @@
                         }
                     }
                 }
+                
+                .button-link {
+                    position: relative;
+                    .right-arrow{
+                        right: unset;
+                        bottom: -6px;
+                    }
+                }
             }
 
             &.teaser-text {
@@ -44,8 +49,10 @@
 
 
                     .button-link {
-                        width: 25px;
-                        margin-left: auto;
+                        .right-arrow{
+                            bottom: 24px;
+                            right: 20px;
+                        }
                     }
 
                     &::before {
@@ -62,6 +69,14 @@
                     &:hover {
                         &::before {
                             width: 100%;
+                        }
+
+                        .button-link{
+                            .right-arrow{
+                                filter: grayscale(0);
+                                transition: all .25s ease;
+                                background-position: 0 center;
+                            }
                         }
                     }
 
