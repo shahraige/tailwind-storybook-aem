@@ -16,17 +16,25 @@ module.exports = {
     
     theme: {
       screens: {
+        xs: '320px',
         sm: '480px',
         md: '768px',
         lg: '1024px',
         xl: '1280px',
-        xxl: '1360px',
-        xxxl: '1680px',
+        // xxl: '1360px',
+        // xxxl: '1680px',
       },
 
       container: {
         center: true,
-        padding : "20px",
+        padding: {
+          DEFAULT: '0',
+          xs:'20px',
+          sm: '20px',
+          md: '20px',
+          lg: '40px',
+          xl:'0px'
+        },
       },
 
       boxShadow : {

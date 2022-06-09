@@ -83,7 +83,7 @@ const TeaserGallery = (props) =>{
         <div className="teaser-gallary__inner">
             <HtmlComment text="* Teaser gallery cmp markup starts here *" />
             <div className='container'>
-                <div className='grid md:grid-cols-3 gap-y-6 md:gap-y-10 lg:gap-y-12 md:gap-x-6'>
+                <div className='grid md:grid-cols-3 gap-y-6 md:gap-y-10 lg:gap-y-12 md:gap-x-5'>
                 {teaser_type == "teaser-vertical" ? 
                     (teaser_gallery_item_1 && teaser_gallery_item_1.length>0 && teaser_gallery_item_1.map((value, key)=>{
                         return(

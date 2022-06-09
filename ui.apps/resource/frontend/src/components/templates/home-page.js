@@ -71,7 +71,7 @@ const HomePage = () =>{
             <Separator border_color="border-transparent"  marginY="my-16"/>
 
             <ColumnControl
-            gapX="md:gap-x-6"
+            gapX="md:gap-x-5"
             container="true"
             >
                 <div className='col-span-full md:col-span-6'>
@@ -101,7 +101,7 @@ const HomePage = () =>{
             <section className='bg-gray-40 py-10'>
                 <Separator border_color="border-transparent"  marginY="my-10"/>
                 <ColumnControl
-                gapX="md:gap-x-6"
+                gapX="md:gap-x-5"
                 container="true"
                 >
                     <div className='col-span-full md:col-span-6'>
@@ -125,7 +125,7 @@ const HomePage = () =>{
             </section>
 
             <ColumnControl
-            gapX="md:gap-x-6"
+            gapX="md:gap-x-5"
             container="true"
             container_padding="pt-16"
             >
@@ -158,7 +158,7 @@ const HomePage = () =>{
             </ColumnControl>
 
             <ColumnControl
-            gapX="md:gap-x-6"
+            gapX="md:gap-x-5"
             container="true">
                 <CardGroup  padding ="px-8 pb-14 pt-8" type = "card-blog-image"/>
             </ColumnControl>
@@ -185,13 +185,13 @@ const HomePage = () =>{
                     loop={true}>
                         <SwiperSlide>
                             <ColumnControl
-                            gapX="md:gap-x-6">
+                            gapX="md:gap-x-5">
                                 <CardGroup type = "card-blog"/>
                             </ColumnControl>
                         </SwiperSlide>
                         <SwiperSlide>
                             <ColumnControl
-                            gapX="md:gap-x-6">
+                            gapX="md:gap-x-5">
                                 <CardGroup type = "card-blog"/>
                             </ColumnControl>
                         </SwiperSlide>
