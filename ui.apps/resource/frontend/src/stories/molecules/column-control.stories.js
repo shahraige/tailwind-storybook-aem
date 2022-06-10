@@ -237,3 +237,11 @@ ColumnControlBgImg.args = {
     fullHeight : true
 }
 
+export const ColumnControlBgColor = Template2.bind({});
+ColumnControlBgColor.args = {
+    enableBgColor : true,
+    bgColor : '#2246',
+    minHeight: '400px',
+    fullHeight : true
+}
+
