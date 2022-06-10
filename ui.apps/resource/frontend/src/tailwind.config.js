@@ -13,6 +13,9 @@ module.exports = {
         './public/**/*.html', 
       ],
     },
+    corePlugins: {
+      container: false
+    },
     
     theme: {
       screens: {
@@ -23,19 +26,27 @@ module.exports = {
         xl: '1280px',
         // xxl: '1360px',
         // xxxl: '1680px',
+        // xs: {'min': '320px', 'max': '479px'},
+        // sm: {'min': '480px', 'max': '767px'},
+        // md: {'min': '768px', 'max': '1023px'},
+        // lg: {'min': '1024px', 'max': '1279px'},
+        // xl: {'min': '1280px', 'max': '1535px'},
+        // 2xl: {'min': '1536px'},
+        // => @media (min-width: 1536px) { ... }
+        
       },
 
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: '0',
-          xs:'20px',
-          sm: '20px',
-          md: '20px',
-          lg: '40px',
-          xl:'0px'
-        },
-      },
+      // container: {
+      //   center: true,
+      //   padding: {
+      //     DEFAULT: '0',
+      //     xs:'20px',
+      //     sm: '20px',
+      //     md: '20px',
+      //     lg: '40px',
+      //     xl:'0px'
+      //   },
+      // },
 
       boxShadow : {
         'custom-1' : '0 2px 4px 0 rgba(0, 0, 0 , 0.07)'
@@ -119,14 +130,16 @@ module.exports = {
         addComponents({
           '.container': {
             maxWidth: '100%',
-            '@screen sm': {
-              maxWidth: '1200px',
-            },
-            '@screen md': {
-              maxWidth: '1200px',
+            marginRight: 'auto',
+            marginLeft: 'auto',
+            '@screen xs': {
+              paddingLeft : '20px',
+              paddingRight : '20px',
             },
             '@screen lg': {
-              maxWidth: '1200px',
+              maxWidth: '944px',
+              paddingLeft : '0px',
+              paddingRight : '0px',
             },
             '@screen xl': {
               maxWidth: '1200px',

@@ -213,7 +213,7 @@ const Template2 = (args) =>
         <h1>COLUMN CONTROL WITH BG</h1>
     </div>
 
-    <div class="bg-black bg-opacity-25 p-4 col-span-full md:col-span-6">
+    <div class="bg-primary bg-opacity-25 p-4 col-span-full md:col-span-6">
         <h1 class="text-white">COLUMN CONTROL WITH BG</h1>
     </div>
 </ColumnControl>;

@@ -750,54 +750,6 @@ body{
   color: rgba(63, 63, 63, var(--tw-text-opacity));
 }
 
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0;
-  padding-left: 0;
-}
-
-@media (min-width: 320px) {
-  .container {
-    max-width: 320px;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-}
-
-@media (min-width: 480px) {
-  .container {
-    max-width: 480px;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -5874,23 +5826,22 @@ textarea.form-control.is-invalid {
 
 .container {
   max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 320px) {
   .container {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 1200px;
+    max-width: 944px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -28142,54 +28093,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 320px) {
-  .xs\:container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  @media (min-width: 320px) {
-    .xs\:container {
-      max-width: 320px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 480px) {
-    .xs\:container {
-      max-width: 480px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .xs\:container {
-      max-width: 768px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .xs\:container {
-      max-width: 1024px;
-      padding-right: 40px;
-      padding-left: 40px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .xs\:container {
-      max-width: 1280px;
-      padding-right: 0px;
-      padding-left: 0px;
-    }
-  }
-
   .xs\:sr-only {
     position: absolute;
     width: 1px;
@@ -50290,54 +50193,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 480px) {
-  .sm\:container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  @media (min-width: 320px) {
-    .sm\:container {
-      max-width: 320px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 480px) {
-    .sm\:container {
-      max-width: 480px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .sm\:container {
-      max-width: 768px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .sm\:container {
-      max-width: 1024px;
-      padding-right: 40px;
-      padding-left: 40px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .sm\:container {
-      max-width: 1280px;
-      padding-right: 0px;
-      padding-left: 0px;
-    }
-  }
-
   .sm\:sr-only {
     position: absolute;
     width: 1px;
@@ -72438,54 +72293,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 768px) {
-  .md\:container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  @media (min-width: 320px) {
-    .md\:container {
-      max-width: 320px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 480px) {
-    .md\:container {
-      max-width: 480px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .md\:container {
-      max-width: 768px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .md\:container {
-      max-width: 1024px;
-      padding-right: 40px;
-      padding-left: 40px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .md\:container {
-      max-width: 1280px;
-      padding-right: 0px;
-      padding-left: 0px;
-    }
-  }
-
   .md\:sr-only {
     position: absolute;
     width: 1px;
@@ -94586,54 +94393,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 1024px) {
-  .lg\:container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  @media (min-width: 320px) {
-    .lg\:container {
-      max-width: 320px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 480px) {
-    .lg\:container {
-      max-width: 480px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .lg\:container {
-      max-width: 768px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .lg\:container {
-      max-width: 1024px;
-      padding-right: 40px;
-      padding-left: 40px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .lg\:container {
-      max-width: 1280px;
-      padding-right: 0px;
-      padding-left: 0px;
-    }
-  }
-
   .lg\:sr-only {
     position: absolute;
     width: 1px;
@@ -116734,54 +116493,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 1280px) {
-  .xl\:container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  @media (min-width: 320px) {
-    .xl\:container {
-      max-width: 320px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 480px) {
-    .xl\:container {
-      max-width: 480px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .xl\:container {
-      max-width: 768px;
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .xl\:container {
-      max-width: 1024px;
-      padding-right: 40px;
-      padding-left: 40px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .xl\:container {
-      max-width: 1280px;
-      padding-right: 0px;
-      padding-left: 0px;
-    }
-  }
-
   .xl\:sr-only {
     position: absolute;
     width: 1px;
